@@ -39,3 +39,26 @@ header nav a:hover{
 header .form{
     justify-content: flex-end;
 }
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+.imagenes{
+    width: 180px;
+    height: 250px;
+}
+
+.generales {
+color: white;
+}
+
+.peliculas {
+    color: white;
+}
+
+.fechas {
+    color: white;
+}
+
