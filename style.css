@@ -92,3 +92,11 @@ color: red;
     font-weight: 600; /* es el que descargue que era el semi bold */ 
     font-size: 50px; 
 }
+
+.detalle {
+    background-color: white;
+}
+.vol2 {
+    width: 500px;
+    height: 500px;
+}
