@@ -24,8 +24,7 @@ header .contenedor{
     align-items: center;
 }
 header .logo{
-    width: 190px;
-    height: 190px;
+    width: 200px;
 }
 header nav a{
     color: #AAA;
