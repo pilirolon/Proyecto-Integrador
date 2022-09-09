@@ -122,3 +122,23 @@ footer {
     size: 14px;
     text-align: left;
 }
+
+/* media queries responsive design FALTA CAMBIAR LAS MEDIDAS A LAS QUE PIDEN!!! y hacer responsive todo lo de abajo*/
+
+@media screen and (max-width: 800px){
+    header .logotipo {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    header .contenedor {
+        flex-direction: column; 
+        text-align: center;
+        font-size: 14px;
+    }
+    .pelicula-principal{
+        font-size: 12px; 
+    }
+    .pelicula-principal .descripcion {
+        max-width: 100%;
+    }
+}
