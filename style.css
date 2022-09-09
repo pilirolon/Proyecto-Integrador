@@ -33,6 +33,8 @@ header nav a{
     margin-right: 20px;
     font-family: 'Open Sans', sans-serif;
 }
+/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
+
 header nav a:hover,
 header nav a.activo {
     color: #FFF;
@@ -66,4 +68,15 @@ color: red;
 .fechas {
     color: wheat ;
     text-align: center;
+}
+/* Aca hice lo de la pelicula principal */
+
+.pelicula-principal {
+    font-size: 16px;
+    min-height: 40.62vh;
+    color: #FFF;
+    background: url(./img/Pinocho.jpeg);
+    background-position: center center; /* dos centers: lo centre de forma horizontal y luego vertical */
+    background-size: cover;
+    margin-bottom: 50px;
 }
