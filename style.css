@@ -1,16 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: black;
-
+    font-family: 'Open Sans', sans-serif;
 }
-.logo {
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding: 30px 0;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
     width: 190px;
     height: 190px;
 }
-
-.inicio{
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: larger;
-    background-color: red;
+header nav a{
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
 }
-
+header nav a:hover{
+    color: #FFF;
+}
+header .form{
+    justify-content: flex-end;
+}
