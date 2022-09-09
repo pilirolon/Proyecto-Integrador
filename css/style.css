@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding: 30px;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    width: 190px;
+    height: 190px;
+}
+header nav a{
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+header nav a:hover{
+    color: #FFF;
+}
+header .form{
+    justify-content: flex-end;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 50px;
+}
+
+.imagenes{
+    width: 180px;
+    height: 250px;
+    margin: 30px;
+}
+
+.generales {
+    color:red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.peliculas {
+    color: white;
+    text-align: center;
+}
+
+.fechas {
+    color: wheat ;
+    text-align: center;
+}
+
