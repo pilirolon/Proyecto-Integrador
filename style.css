@@ -73,10 +73,22 @@ color: red;
 
 .pelicula-principal {
     font-size: 16px;
-    min-height: 40.62vh;
+    min-height: 80vh;
     color: #FFF;
     background: url(./img/Pinocho.jpeg);
     background-position: center center; /* dos centers: lo centre de forma horizontal y luego vertical */
     background-size: cover;
-    margin-bottom: 50px;
+    margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
+    display: flex; 
+    /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
+    align-items: end; 
+}
+/* aca le quise sacar los margenes de arriba y abajo porque no me dejaba mover el texto para abajo */
+.pelicula-principal .contenedor {
+    margin: 0 auto;
+    margin: 5vh;
+}
+.pelicula-principal .titulo {
+    font-weight: 600; /* es el que descargue que era el semi bold */ 
+    font-size: 50px; 
 }
