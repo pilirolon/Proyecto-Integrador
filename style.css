@@ -116,3 +116,9 @@ color: red;
     color: black;
 }
 /* Para el efecto HOVER: es cuando el usuario interactua con un elemento del dispositivo, pero no lo activa. Es decir, cuando el usuario se desliza por un elemento con el cursor. Cuando el usuario haga esto, el boton cambiara su color a blanco con letra negra.*/ 
+
+footer {
+    color: #AAA;
+    size: 14px;
+    text-align: left;
+}
