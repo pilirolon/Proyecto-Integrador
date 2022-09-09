@@ -43,22 +43,26 @@ header .form{
 .container {
     display: flex;
     flex-wrap: nowrap;
+    margin: 30px
 
 }
 .imagenes{
     width: 180px;
     height: 250px;
+    margin: 30px;
 }
 
 .generales {
-color: white;
+color: red;
 }
 
 .peliculas {
     color: white;
+    text-align: center;
 }
 
 .fechas {
-    color: white;
+    color: wheat ;
+    text-align: center;
 }
 
