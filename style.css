@@ -32,14 +32,18 @@ header nav a{
     margin-right: 20px;
     font-family: 'Open Sans', sans-serif;
 }
+
 /* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
 
 header nav a:hover,
 header nav a.activo {
     color: #FFF;
 }
-header .form{
-    justify-content: flex-end;
+
+header .lupita{
+    font-family: 'Open sans';
+    color: #AAA;
+    background: rgb(0, 0, 0, 0.5);
 }
 
 .container {
@@ -51,8 +55,7 @@ header .form{
 .imagenes{
     width: 180px;
     height: 250px;
-    margin: 30px;
-    
+    margin: 30px;  
 }
 .generales {
 color: red;
@@ -104,8 +107,7 @@ color: red;
     border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
     padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
     color: #FFF;
-    margin-right: 20px; 
-    cursor: pointer; 
+    margin-right: 20px;  
     font-size: 18px; 
 }
 .pelicula-principal .boton i{
