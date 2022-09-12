@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.imagen {
+    height: 500px;
+    width: 400px;
+}
+ .info{
+    color: white;
+ }
+
+ .titulo {
+    color: red;
+    text-align: center;
+ }

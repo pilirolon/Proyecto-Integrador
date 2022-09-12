@@ -50,6 +50,7 @@ header .form{
     width: 180px;
     height: 250px;
     margin: 30px;
+    background-color: red;
 }
 
 .generales {
@@ -66,4 +67,6 @@ header .form{
     color: wheat ;
     text-align: center;
 }
+
+
 

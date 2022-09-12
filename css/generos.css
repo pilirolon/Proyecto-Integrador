@@ -1,0 +1,82 @@
+
+body{
+    background-color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.general{
+    color: red;
+}
+.accion {
+    color: white;
+    background-color: grey;
+    display: flex;
+    align-content: center;
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+
+}
+
+.aventuras {
+    color: white;
+    background-color: grey;
+    display: flex;
+    align-content: center;
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+
+}
+
+.ciencia {
+    color: white;
+    background-color: grey;
+    display: flex;
+    align-content: center;
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+
+}
+
+.comedia {
+    color: white;
+    background-color: grey;
+    display: flex;
+    align-content: center;
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+
+}
+
+.drama {
+    color: white;
+    background-color: grey;
+    display: flex;
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+
+}
+
+.fantasia {
+    color: white;
+    background-color: grey;
+    display: flex;
+    align-content: center;
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+
+}
+
+.musical {
+    color: white;
+    background-color: grey;
+    display: flex;
+    align-content: center;
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+}
