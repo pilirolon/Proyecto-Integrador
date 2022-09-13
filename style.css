@@ -144,3 +144,14 @@ footer {
         max-width: 100%;
     }
 }
+
+.fotos{
+    color: white;
+        border-style: solid;
+        border-width: 2px;
+        border-color: white;
+        border-radius: 15px;
+        padding: 8px;
+}/*aca hice que las peliculas tengan el borde ese*/
+
+
