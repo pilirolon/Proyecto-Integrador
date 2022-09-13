@@ -6,7 +6,7 @@
 
 body{
     background-color: black;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-;
 }
 
 .contenedor {
@@ -15,7 +15,7 @@ body{
 }
 
 header{
-    padding: 30px 0;
+    padding: 30px ;
 }
 
 header .contenedor{
@@ -65,11 +65,14 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 .peliculas {
     color: white;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .fechas {
     color: wheat ;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 /* Aca hice lo de la pelicula principal */
 

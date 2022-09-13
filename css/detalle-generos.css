@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px
+
+}
+.imagenes{
+    width: 180px;
+    height: 250px;
+    margin: 30px; 
+}
+
+body{
+    background-color: black;
+}
+
+.general {
+    color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 60px;
+    text-align: center;
+
+}
+.imagenes{
+    width: 180px;
+    height: 250px;
+    margin: 30px;  
+}
+.generales {
+    color: wheat ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.peliculas {
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.fechas {
+    color: wheat ;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
