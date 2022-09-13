@@ -1,6 +1,10 @@
 body{
     background-color: black;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
+    background-image: url(../img/18c78136-51ac-42f5-b514-aafce9ae96bc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: exclusion;
 }
 .imagen {
     height: 500px;
@@ -13,4 +17,7 @@ body{
  .titulo {
     color: red;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.733);
  }
+
+ 
