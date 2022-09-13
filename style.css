@@ -58,7 +58,7 @@ header .lupita{
     margin: 30px;  
 }
 .generales {
-color: red;
+color: rgb(247, 91, 91);
 }
 
 .peliculas {
@@ -147,11 +147,12 @@ footer {
 
 .fotos{
     color: white;
+    background-color: rgba(250, 81, 81, 0.639);
         border-style: solid;
         border-width: 2px;
-        border-color: white;
+        border-color: rgb(0, 0, 0);
         border-radius: 15px;
-        padding: 8px;
+        padding: 12px;
 }/*aca hice que las peliculas tengan el borde ese*/
 
 
