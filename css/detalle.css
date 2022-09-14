@@ -13,12 +13,14 @@ body{
 }
  .info{
     color: white;
+
  }
 
  .titulo {
     font-family: 'Creepster', cursive;
     color: rgba(255, 255, 255, 0.706);
     font-size: 400%;
+    margin: 2%;
     
    
  }
@@ -51,3 +53,14 @@ body{
     color: black;
 }
 
+
+.detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.espacio{
+    width: 30%;
+    margin: 1%;
+}
