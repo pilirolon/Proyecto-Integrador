@@ -58,13 +58,10 @@ ul {
    margin-right: 15px;
 }
 .boton:hover{
-<<<<<<< HEAD
    background: #FFF;
    color: black;
-=======
     background: #FFF;
     color: black;
->>>>>>> f47041a68eabfd1207a4f4c7cb6634f5382842a4
 }
 
 
@@ -77,4 +74,37 @@ ul {
 .espacio{
     width: 30%;
     margin: 1%;
+}
+
+header{
+    padding: 30px 0;
+    background-color: black;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    width: 200px;
+}
+header nav a{
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
+
+header nav a:hover,
+header nav a.activo {
+    color: #FFF;
+}
+
+header .lupita{
+    font-family: 'Open sans';
+    color: #AAA;
+    background: rgb(0, 0, 0, 0.5);
 }
