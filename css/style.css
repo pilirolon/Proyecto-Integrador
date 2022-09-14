@@ -80,7 +80,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     font-size: 16px;
     min-height: 80vh;
     color: #FFF;
-    background: url(./img/Pinocho.jpeg);
+    background: url(../img/Pinocho.jpeg);
     background-position: center center; /* dos centers: lo centre de forma horizontal y luego vertical */
     background-size: cover;
     margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
