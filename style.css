@@ -152,9 +152,12 @@ footer {
 .fotos{
     color: white;
     background-color: rgba(250, 81, 81, 0.639);
+<<<<<<< HEAD
 }
  
 .container {
+=======
+>>>>>>> 87a7d2420aadfd5489a04f5e6df1c52deb0a581b
         border-style: solid;
         border-width: 2px;
         border-color: rgb(0, 0, 0);
