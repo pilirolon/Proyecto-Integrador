@@ -1,52 +1,110 @@
 body{
-    background-color: black;
-    font-family: 'Playfair Display', serif;
-    background-image: url(../img/18c78136-51ac-42f5-b514-aafce9ae96bc.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: exclusion;
+   background-color: black;
+   font-family: 'Playfair Display', serif;
+   background-image: url(../img/18c78136-51ac-42f5-b514-aafce9ae96bc.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-blend-mode: exclusion;
 }
 .imagen {
-    height: 500px;
-    width: 400px;
-    margin: 40px;
+   height: 500px;
+   width: 400px;
+   margin: 40px;
+}
+.info{
+   color: white;
 }
  .info{
     color: white;
+
  }
 
  .titulo {
     font-family: 'Creepster', cursive;
     color: rgba(255, 255, 255, 0.706);
     font-size: 400%;
+    margin: 2%;
     
    
  }
 
- .bloque{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 300%;
- }
+.titulo {
+   font-family: 'Creepster', cursive;
+   color: rgba(255, 255, 255, 0.706);
+   font-size: 400%;
+}
 
- ul {
-    list-style: none;
+.bloque{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 300%;
+}
+
+ul {
+   list-style: none;
 }
 
 .boton{ 
-    background: rgb(0, 0, 0, 0.5);
-    border: none; 
-    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
-    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
-    color: #FFF;
-    margin-right: 20px;  
-    font-size: 18px; 
+   background: rgb(0, 0, 0, 0.5);
+   border: none; 
+   border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
+   padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
+   color: #FFF;
+   margin-right: 20px;  
+   font-size: 18px; 
 }
 .boton i{
-    margin-right: 15px;
+   margin-right: 15px;
 }
 .boton:hover{
+   background: #FFF;
+   color: black;
     background: #FFF;
     color: black;
- 
+}
+
+
+.detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.espacio{
+    width: 30%;
+    margin: 1%;
+}
+
+header{
+    padding: 30px 0;
+    background-color: black;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    width: 200px;
+}
+header nav a{
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
+
+header nav a:hover,
+header nav a.activo {
+    color: #FFF;
+}
+
+header .lupita{
+    font-family: 'Open sans';
+    color: #AAA;
+    background: rgb(0, 0, 0, 0.5);
+}
