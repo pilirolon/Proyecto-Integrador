@@ -9,7 +9,6 @@ body{
 .imagen {
     height: 500px;
     width: 400px;
-    float: left;
 }
  .info{
     color: white;
