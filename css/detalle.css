@@ -14,6 +14,17 @@ body{
 .info{
    color: white;
 }
+ .info{
+    color: white;
+
+ }
+
+ .titulo {
+    font-family: 'Creepster', cursive;
+    color: rgba(255, 255, 255, 0.706);
+    font-size: 400%;
+    margin: 2%;
+ }
 
 .body2 {
    background-image: url(/img/fondo.jpg);
@@ -56,5 +67,51 @@ ul {
    color: black;
    background: #FFF;
    color: black;
+    background: #FFF;
+    color: black;
 }
 
+
+.detalle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.espacio{
+    width: 30%;
+    margin: 1%;
+}
+
+header{
+    padding: 30px 0;
+    background-color: black;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    width: 200px;
+}
+header nav a{
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
+
+header nav a:hover,
+header nav a.activo {
+    color: #FFF;
+}
+
+header .lupita{
+    font-family: 'Open sans';
+    color: #AAA;
+    background: rgb(0, 0, 0, 0.5);
+}

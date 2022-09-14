@@ -127,7 +127,7 @@ footer {
 
 /* media queries responsive design FALTA CAMBIAR LAS MEDIDAS A LAS QUE PIDEN!!! y hacer responsive todo lo de abajo*/
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 420px){
     header .logotipo {
         margin-bottom: 10px;
         font-size: 15px;
@@ -143,6 +143,10 @@ footer {
     .pelicula-principal .descripcion {
         max-width: 100%;
     }
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 30px; }
 }
 
 .fotos{
@@ -156,4 +160,12 @@ footer {
         margin: 2%;
 }/*aca hice que las peliculas tengan el borde ese*/
 
+=======
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 12px;
+    margin: 2%;
+}
 
