@@ -45,7 +45,12 @@ ul {
    margin-right: 15px;
 }
 .boton:hover{
+<<<<<<< HEAD
    background: #FFF;
    color: black;
+=======
+    background: #FFF;
+    color: black;
+>>>>>>> f47041a68eabfd1207a4f4c7cb6634f5382842a4
 }
 
