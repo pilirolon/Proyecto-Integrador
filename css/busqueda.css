@@ -1,3 +1,4 @@
+
 header{
     padding: 30px 0;
     background-color: black;
@@ -29,4 +30,20 @@ header .lupita{
     font-family: 'Open sans';
     color: #AAA;
     background: rgb(0, 0, 0, 0.5);
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    color: #AAA;
 }
