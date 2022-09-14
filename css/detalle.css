@@ -15,12 +15,19 @@ body{
    color: white;
 }
 
+.body2 {
+   background-image: url(/img/fondo.jpg);
+}
+
 .titulo {
-   font-family: 'Creepster', cursive;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    color: rgba(255, 255, 255, 0.706);
    font-size: 400%;
 }
 
+.titulos {
+   color: red;
+}
 .bloque{
    display: flex;
    flex-direction: row;
@@ -45,12 +52,9 @@ ul {
    margin-right: 15px;
 }
 .boton:hover{
-<<<<<<< HEAD
    background: #FFF;
    color: black;
-=======
-    background: #FFF;
-    color: black;
->>>>>>> f47041a68eabfd1207a4f4c7cb6634f5382842a4
+   background: #FFF;
+   color: black;
 }
 
