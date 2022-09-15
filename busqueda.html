@@ -1,27 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "css/busqueda.css">
+    <link rel="stylesheet" href="css/busqueda.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <title>Busqueda</title>
 </head>
+
 <body>
     <header>
-        <div class = "contenedor">
+        <div class="contenedor">
             <img class="logo" src="./img/logo crop.jpeg" alt="logo">
-                <nav class="inicio">
-                    <a href="#"> Inicio </a>
-                    <a href="#"> Series </a>
-                    <a href="#"> Películas </a>
-                    <a href="#"> Documentales </a>
-                    <a href="#"> Añadido recientemente </a>
-                    <a href="#"> Mi Lista </a>
-                </nav>
-                <form class ="lupita" action="" method="get">
-                <input class ="lupita" type="text" name="nombre" placeholder="¿Qué quiere ver?" value="">
+            <nav class="inicio">
+                <a href="#"> Inicio </a>
+                <a href="#"> Series </a>
+                <a href="#"> Películas </a>
+                <a href="#"> Generos </a>
+                <a href="#"> Favoritos </a>
+                <a href="#" class="activo"> Añadido recientemente </a>
+            </nav>
+            <form class="lupita" action="" method="get">
+                <input class="lupita" type="text" name="nombre" placeholder="¿Qué quiere ver?" value="">
+        </div>
+    </header>
+
+    <main>
+        <div class="busqueda">
+            <div class="resultados">
+                <h3>Resultados de Busqueda</h3>
+                <p>Explora títulos relacionados con:</p>
+                <a href="#"> Comedias </a> |
+                <a href="#"> Comedias Románticas </a> |
+                <a href="#"> Comedias de acción </a> |
+                <a href="#"> Comedias familiares </a> |
             </div>
-    </header>    
+            <div class="contenedor">
+                <div class="contenedor-peliculas">
+                    <div class="galeria">
+                        <div class="pelicula">
+                            <img src="./img/10diaspeli.jpeg" alt="10diaspeli">
+                        </div>
+                        <div class="pelicula">
+                            <img src="./img/b6893fad74db29f663c5b61a5e8c69b15fec69a54f712a49c5835e42a53e3d1d._RI_V_TTW_.jpg"
+                                alt="10thingspeli">
+                        </div>
+                        <div class="pelicula">
+                            <img src="./img/esposamentira.jpg" alt="esposamentira">
+                        </div>
+                        <div class="pelicula">
+                            <img src="./img/soncomoniños.jpg" alt="soncomoniños">
+                        </div>
+                        <div class="pelicula">
+                            <img src="./img/locaporlascompras.jpg" alt="locacompras">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pelicula">
+            <img src="./img/thenotebook.jpg" alt="thenotebook">
+        </div>
+    </main>
+
+
+
+
 </body>
+
 </html>

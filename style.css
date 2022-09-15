@@ -9,6 +9,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+/* esto aplica a la pelicula principal (pinocho) y a todas las peliculas de abajo porque les pusimos el class de contenedor al lado de poner titulos prinicipales */ 
 .contenedor {
     width: 90%;
     margin: auto;
@@ -50,7 +51,6 @@ header .lupita{
     display: flex;
     flex-wrap: nowrap;
     margin: 30px
-
 }
 .imagenes{
     width: 180px;
@@ -143,15 +143,17 @@ footer {
     .pelicula-principal .descripcion {
         max-width: 100%;
     }
-    .container {
-        display: flex;
-        flex-wrap: nowrap;
-        margin: 30px; }
 }
+
+.fotoss{
+/* VER TODO ESTO QUE NO FUNCIONA!! */ 
 
 .fotos{
     color: white;
     background-color: rgba(250, 81, 81, 0.639);
+}
+ 
+.fotos {
         border-style: solid;
         border-width: 2px;
         border-color: rgb(0, 0, 0);
@@ -159,13 +161,3 @@ footer {
         padding: 12px;
         margin: 2%;
 }/*aca hice que las peliculas tengan el borde ese*/
-
-=======
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(0, 0, 0);
-    border-radius: 15px;
-    padding: 12px;
-    margin: 2%;
-}
-

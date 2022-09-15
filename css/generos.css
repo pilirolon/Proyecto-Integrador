@@ -1,7 +1,7 @@
 
 body{
     background-color: black;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 header{
@@ -23,8 +23,6 @@ header nav a{
     font-family: 'Open Sans', sans-serif;
 }
 
-/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
-
 header nav a:hover,
 header nav a.activo {
     color: #FFF;
@@ -38,7 +36,7 @@ header .lupita{
 
 .general{
     color: red;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Open sans', sans-serif;
     font-size: 60px;
     text-align: center;
 }
@@ -66,12 +64,7 @@ header .lupita{
     height: 55px;
     width: 150px;
     font-size: larger;
-    
-    
-
-
 }
-
 
 .imagenes{
     width: 350px;
