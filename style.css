@@ -9,6 +9,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+/* esto aplica a la pelicula principal (pinocho) y a todas las peliculas de abajo porque les pusimos el class de contenedor al lado de poner titulos prinicipales */ 
 .contenedor {
     width: 90%;
     margin: auto;
@@ -50,7 +51,6 @@ header .lupita{
     display: flex;
     flex-wrap: nowrap;
     margin: 30px
-
 }
 .imagenes{
     width: 180px;
@@ -127,7 +127,7 @@ footer {
 
 /* media queries responsive design FALTA CAMBIAR LAS MEDIDAS A LAS QUE PIDEN!!! y hacer responsive todo lo de abajo*/
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 420px){
     header .logotipo {
         margin-bottom: 10px;
         font-size: 15px;
@@ -146,14 +146,18 @@ footer {
 }
 
 .fotoss{
+/* VER TODO ESTO QUE NO FUNCIONA!! */ 
+
+.fotos{
     color: white;
     background-color: rgba(250, 81, 81, 0.639);
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(0, 0, 0);
-    border-radius: 15px;
-    padding: 12px;
-    margin: 2%;
 }
-
-
+ 
+.fotos {
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(0, 0, 0);
+        border-radius: 15px;
+        padding: 12px;
+        margin: 2%;
+}/*aca hice que las peliculas tengan el borde ese*/
