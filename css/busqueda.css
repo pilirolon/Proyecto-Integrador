@@ -1,3 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+}
 
 header{
     padding: 30px 0;
@@ -53,7 +63,7 @@ body{
     margin-right: 15px;
 }
 
-.comedia {
+.resultados {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
@@ -61,13 +71,13 @@ body{
     flex-wrap: nowrap;
     justify-content: space-between;
 }
-.comedia a {
+.resultados a {
     text-decoration: none;
     color: white;
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
 }
-.comedia a:hover {
+.resultados a:hover {
     color: red;
 }
 .busqueda h3{
@@ -75,3 +85,26 @@ body{
     font-family: 'Open sans', sans-serif;
     font-size: 15px;
 }
+.contenedor{
+    display: flex;
+    align-items: center;
+}
+.contenedor-peliculas{
+    width: 100%;
+    padding: 20px 0;
+    /* abajo y arriba 20, 0 a la izq y derecha*/ 
+}
+.contenedor-peliculas .galeria{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.contenedor-peliculas .galeria .pelicula{
+    justify-content: space-between;
+    min-width: 20%;
+
+}
+.contenedor-peliculas .galeria .pelicula img{
+        width: 180px;
+        height: 250px;
+        margin: 30px; 
+    }
