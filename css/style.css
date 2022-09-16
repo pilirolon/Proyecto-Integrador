@@ -52,16 +52,6 @@ header .lupita{
     margin: 30px
 
 }
-.imagenes{
-    width: 180px;
-    height: 250px;
-    margin: 30px;  
-}
-.generales {
-color: red;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
 /* Aca hice lo de la pelicula principal */
 .pelicula-principal {
     font-size: 16px;
@@ -162,11 +152,22 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     min-width: 20%;
 }
 
-/* ESTO FALTA AGREGAR !!!! */ 
-.contenedor-peliculas .galeria .pelicula.hover{
-    transform: scale(1.2); /* que crezca la pelicula con el cursor*/
-    transform-origin: center; /*que crezca de forma proporcionada del centro hacia afuera*/
+.boton-heart {
+    background: rgb(0, 0, 0, 0.5);
+    border: none; 
+    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
+    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
+    color: #FFF;
+    margin-right: 20px;  
+    font-size: 18px;  
 }
+.boton-heart:hover{
+    background: #FFF;
+    color: black;
+}
+
+/* ESTO FALTA AGREGAR !!!! */ 
+
 .contenedor-peliculas .galeria .pelicula img{
         width: 180px;
         height: 250px;
@@ -182,24 +183,15 @@ footer {
 
 .pelicula {
     color: white;
-    background-color: rgb(201, 190, 190);
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 15px;
-    padding: 12px;
-    margin: 2%;
-}
-
-.pelicula {
-    color: white;
-    text-align: center;
+    padding: 5px;
     font-family: 'open sans', sans-serif;
+    text-align: center;
 }
 
 .titulo{
     font-family: "open sans", sans-serif;
     color: white;
+
 }
 .fechas {
     color: #AAA ;
@@ -207,6 +199,8 @@ footer {
     font-family: 'Arial, Helvetica', sans-serif;
 
 }
+
+
 
 /* MEDIA QUERIE */
 
@@ -229,12 +223,25 @@ footer {
     }
     .contenedor {
         max-width: 100%;
+        font-size: 10px;
     }
     .contenedor .contenedor-peliculas .galeria .pelicula img {
         height: 80%;
         width: 80%;
+        margin-bottom: 2px;
     }
-}
+    .contenedor .contenedor-peliculas .galeria{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* cada columna va a abarcar lo mismo*/
+        gap: 20px;
+    }
+    .contenedor .flecha-izquierda, 
+    .contenedor .flecha-derecha {
+        display: none;
+    }
+
+
+    }
 
 
 
