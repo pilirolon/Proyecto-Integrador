@@ -89,6 +89,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     align-items: end; 
 }
 /* aca le quise sacar los margenes de arriba y abajo porque no me dejaba mover el texto para abajo */
+
 .pelicula-principal .contenedor {
     margin: 0 auto;
     margin: 5vh;
@@ -121,26 +122,78 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     background: #FFF;
     color: black;
 }
-.fotos {
-    background-color: rgba(250, 81, 81, 0.639);
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(0, 0, 0);
-    border-radius: 15px;
-    padding: 12px;
-    margin: 2%;
-}/*aca hice que las peliculas tengan el borde ese*/
-
-/* Para el efecto HOVER: es cuando el usuario interactua con un elemento del dispositivo, pero no lo activa. Es decir, cuando el usuario se desliza por un elemento con el cursor. Cuando el usuario haga esto, el boton cambiara su color a blanco con letra negra.*/ 
-
-footer {
-    color: #AAA;
-    size: 14px;
-    text-align: left;
+.contenedor{
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
+.contenedor .flecha-izquierda,
+.contenedor .flecha-derecha{
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    line-height: 40px;
+    width: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 500; /* que la flecha quede arriba de los elementos*/ 
+    transition: .2s ease all;
+}
+.contenedor .flecha-izquierda:hover,
+.contenedor .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
 
-/* media queries responsive design FALTA CAMBIAR LAS MEDIDAS A LAS QUE PIDEN!!! y hacer responsive todo lo de abajo*/
+.contenedor .flecha-izquierda{
+    left: 0;
+}
+
+.contenedor .flecha-derecha{
+    right: 0;
+}
+
+.contenedor-peliculas{
+    width: 100%;
+    padding: 20px 0;
+    /* abajo y arriba 20, 0 a la izq y derecha*/ 
+    overflow-x: scroll;
+    scroll-behavior: smooth; /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */ 
+}
+
+.contenedor-peliculas .galeria{
+    display: flex;
+    flex-wrap: nowrap; /* para que las imagenes queden una al lado de la otra */
+}
+
+.contenedor-peliculas .galeria .pelicula{
+    transition: .3s ease all; /* es para el efecto hover */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); /* el .3 es la transparencia*/
+    justify-content: space-between;
+    min-width: 20%;
+}
+
+/* ESTO FALTA AGREGAR !!!! */ 
+.contenedor-peliculas .galeria .pelicula.hover{
+    transform: scale(1.2); /* que crezca la pelicula con el cursor*/
+    transform-origin: center; /*que crezca de forma proporcionada del centro hacia afuera*/
+}
+.contenedor-peliculas .galeria .pelicula img{
+        width: 180px;
+        height: 250px;
+        margin: 30px; 
+        vertical-align: top; /* quitar margen que agregan los navegadores */
+    }
+
+footer {
+        color: #AAA;
+        size: 14px;
+        text-align: left;
+}
+    
+/* MEDIA QUERIE */
 
 @media (max-width: 800px){
     header .logotipo {
@@ -152,11 +205,20 @@ footer {
         text-align: center;
         font-size: 14px;
     }
-    .pelicula-principal{
+    
+    .pelicula-principal .contenedor{
         font-size: 12px; 
     }
     .pelicula-principal .descripcion {
         max-width: 100%;
     }
-
+    .contenedor {
+        max-width: 100%;
+    }
+    .contenedor .contenedor-peliculas .galeria .pelicula img {
+        height: 80%;
+        width: 80%;
+    }
 }
+
+
