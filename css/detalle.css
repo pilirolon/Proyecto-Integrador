@@ -2,7 +2,16 @@ body{
    background-color: black;
    font-family: 'Playfair Display', serif;
    background-image: url(../img/fotomujer.jpg);
+   background-repeat: no-repeat;
    
+}
+
+.riverdale{
+
+        background-color: black;
+        font-family: 'Playfair Display', serif;
+        background-image: url(../img/fotomujer.jpg);
+        background-repeat: no-repeat;
 }
 .imagen {
    height: 500px;
@@ -19,10 +28,6 @@ body{
    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
  }
 
-
-.body2 {
-   background-image: url(/img/fondo.jpg);
-}
 
 .titulo {
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -116,13 +121,11 @@ header .lupita{
    font-size: 16px;
     min-height: 80vh;
     color: #FFF;
-    background-image: url('https://www.youtube.com/embed/khsBhSaDmx4');
-    background-position: center center; /* dos centers: lo centre de forma horizontal y luego vertical */
-    background-size: cover;
     margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
     display: flex; 
     /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
     align-items: end; 
+    justify-content: flex-start;
 }
 
 @media (max-width: 800px){
