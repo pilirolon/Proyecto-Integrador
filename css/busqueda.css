@@ -120,6 +120,7 @@ body{
 .contenedor-peliculas .galeria{
     display: flex;
     flex-wrap: nowrap; /* para que las imagenes queden una al lado de la otra */
+    text-align: center;
 }
 
 .contenedor-peliculas .galeria .pelicula{
@@ -139,6 +140,20 @@ body{
         height: 250px;
         margin: 30px; 
         vertical-align: top; /* quitar margen que agregan los navegadores */
+    }
+
+.boton-heart {
+        background: rgb(0, 0, 0, 0.5);
+        border: none; 
+        border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
+        padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
+        color: #FFF;
+        margin-right: 20px;  
+        font-size: 18px;  
+    }
+.boton-heart:hover{
+        background: #FFF;
+        color: black;
     }
 
 footer {
@@ -171,10 +186,16 @@ footer {
     .contenedor {
         max-width: 100%;
     }
-    .contenedor .contenedor-peliculas .galeria .pelicula img {
-        height: 80%;
-        width: 80%;
+    .contenedor .contenedor-peliculas .galeria{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* cada columna va a abarcar lo mismo*/
+        gap: 20px;
     }
+    .contenedor .flecha-izquierda, 
+    .contenedor .flecha-derecha {
+        display: none;
+    }
+
 }
 
 
