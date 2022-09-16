@@ -64,9 +64,10 @@ header .lupita{
     height: 55px;
     width: 150px;
     font-size: larger;
+    list-style: none;
 }
 
-.imagenes{
+.imagene{
     width: 350px;
     height: 200px;
     margin: 15px ;
