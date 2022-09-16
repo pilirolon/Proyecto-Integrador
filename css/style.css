@@ -178,12 +178,11 @@ footer {
         color: #AAA;
         size: 14px;
         text-align: left;
-
 }
 
 .pelicula {
     color: white;
-    background-color: rgb(207, 200, 200);
+    background-color: rgb(201, 190, 190);
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -205,7 +204,7 @@ footer {
 .fechas {
     color: #AAA ;
     text-align: center;
-    font-family: 'Open sans', sans-serif;
+    font-family: 'Arial, Helvetica', sans-serif;
 
 }
 
