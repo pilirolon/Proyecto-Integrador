@@ -62,18 +62,6 @@ color: red;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.peliculas {
-    color: white;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.fechas {
-    color: wheat ;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
 /* Aca hice lo de la pelicula principal */
 .pelicula-principal {
     font-size: 16px;
@@ -195,16 +183,32 @@ footer {
 
 .pelicula {
     color: white;
-    background-color: rgba(255, 255, 255, 0.562);
+    background-color: rgb(207, 200, 200);
     border-style: solid;
     border-width: 2px;
     border-color: black;
     border-radius: 15px;
     padding: 12px;
     margin: 2%;
+}
+
+.pelicula {
+    color: white;
+    text-align: center;
+    font-family: 'open sans', sans-serif;
+}
+
+.titulo{
+    font-family: "open sans", sans-serif;
+    color: white;
+}
+.fechas {
+    color: #AAA ;
+    text-align: center;
+    font-family: 'Open sans', sans-serif;
 
 }
-    
+
 /* MEDIA QUERIE */
 
 @media (max-width: 800px){
@@ -232,7 +236,6 @@ footer {
         width: 80%;
     }
 }
-
 
 
 
