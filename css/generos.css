@@ -54,16 +54,28 @@ header .lupita{
 
 }
 
-.titulos {
-    color: white;
-    background-color: grey;
+.generos {
     display: flex;
     align-items: center;  
     justify-content: center;
+}
+
+.generos .titulos {
+    background: rgba(242, 240, 240, 0.5);
+    border: none; 
+    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
+    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
+    color: black;
+    margin-right: 20px;  
+    font-size: 18px; 
     height: 55px;
     width: 150px;
-    font-size: larger;
-    list-style: none;
+    text-decoration: none;
+}
+
+.generos .titulos:hover{
+    background: rgb(19, 19, 19);
+    color: #FFF;
 }
 
 .imagenes{

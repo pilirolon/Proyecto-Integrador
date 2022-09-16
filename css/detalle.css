@@ -2,7 +2,16 @@ body{
    background-color: black;
    font-family: 'Playfair Display', serif;
    background-image: url(../img/fotomujer.jpg);
+   background-repeat: no-repeat;
    
+}
+
+.riverdale{
+
+        background-color: black;
+        font-family: 'Playfair Display', serif;
+        background-image: url(../img/fotomujer.jpg);
+        background-repeat: no-repeat;
 }
 .imagen {
    height: 500px;
@@ -20,10 +29,6 @@ body{
  }
 
 
-.body2 {
-   background-image: url(/img/fondo.jpg);
-}
-
 .titulo {
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    color: rgba(255, 255, 255, 0.706);
@@ -38,10 +43,15 @@ body{
 }
 .bloque{
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    flex-wrap: wrap;
-   width: 300%;
+   align-items: center;
 }
+
+.sub-container {
+    display: flex;
+    flex-direction: row;
+    }
 
 ul {
    list-style: none;
@@ -113,16 +123,14 @@ header .lupita{
 }
 
 .trailer {
-   font-size: 16px;
-    min-height: 80vh;
+    font-size: 16px;
+    width: 85vw;
+    height: 50vw;
     color: #FFF;
-    background-image: url('https://www.youtube.com/embed/khsBhSaDmx4');
-    background-position: center center; /* dos centers: lo centre de forma horizontal y luego vertical */
-    background-size: cover;
     margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
     display: flex; 
     /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
-    align-items: end; 
+ 
 }
 
 @media (max-width: 800px){
