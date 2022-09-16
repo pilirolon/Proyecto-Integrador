@@ -14,10 +14,6 @@ header{
     background-color: black;
 }
 
-.fa-light {
-    
-}
-
 header .contenedor{
     display: flex;
     justify-content: space-between;
@@ -170,9 +166,21 @@ body{
         text-align: center;
         font-size: 14px;
     }
-    
-    
-
+    .busqueda {
+        flex-direction: column; 
+        text-align: center;
+        font-size: 14px;
+    }
+    .busqueda .resultados .a {
+        font-size: 8px;
+    }
+    .contenedor {
+        max-width: 100%;
+    }
+    .contenedor .contenedor-peliculas .galeria .pelicula img {
+        height: 80%;
+        width: 80%;
+    }
 }
 
 
