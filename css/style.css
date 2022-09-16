@@ -62,20 +62,7 @@ color: red;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.peliculas {
-    color: white;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.fechas {
-    color: wheat ;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
 /* Aca hice lo de la pelicula principal */
-
 .pelicula-principal {
     font-size: 16px;
     min-height: 80vh;
@@ -83,14 +70,14 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     background: url(../img/Pinocho.jpeg);
     background-position: center center; /* dos centers: lo centre de forma horizontal y luego vertical */
     background-size: cover;
-    margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
-    display: flex; 
-    /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
-    align-items: end; 
-}
+    margin-bottom: 50px;
+    display: flex;  /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
+    align-items: end;
+} 
+
 /* aca le quise sacar los margenes de arriba y abajo porque no me dejaba mover el texto para abajo */
 
-.pelicula-principal .contenedor {
+.pelicula-principal .peli {
     margin: 0 auto;
     margin: 5vh;
 }
@@ -192,7 +179,35 @@ footer {
         size: 14px;
         text-align: left;
 }
-    
+
+.pelicula {
+    color: white;
+    background-color: rgb(201, 190, 190);
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 15px;
+    padding: 12px;
+    margin: 2%;
+}
+
+.pelicula {
+    color: white;
+    text-align: center;
+    font-family: 'open sans', sans-serif;
+}
+
+.titulo{
+    font-family: "open sans", sans-serif;
+    color: white;
+}
+.fechas {
+    color: #AAA ;
+    text-align: center;
+    font-family: 'Arial, Helvetica', sans-serif;
+
+}
+
 /* MEDIA QUERIE */
 
 @media (max-width: 800px){
@@ -205,7 +220,7 @@ footer {
         text-align: center;
         font-size: 14px;
     }
-    
+
     .pelicula-principal .contenedor{
         font-size: 12px; 
     }
@@ -220,5 +235,6 @@ footer {
         width: 80%;
     }
 }
+
 
 

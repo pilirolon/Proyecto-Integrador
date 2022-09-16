@@ -43,10 +43,15 @@ body{
 }
 .bloque{
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    flex-wrap: wrap;
-   width: 300%;
+   align-items: center;
 }
+
+.sub-container {
+    display: flex;
+    flex-direction: row;
+    }
 
 ul {
    list-style: none;
@@ -118,14 +123,14 @@ header .lupita{
 }
 
 .trailer {
-   font-size: 16px;
-    min-height: 80vh;
+    font-size: 16px;
+    width: 85vw;
+    height: 50vw;
     color: #FFF;
     margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
     display: flex; 
     /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
-    align-items: end; 
-    justify-content: flex-start;
+ 
 }
 
 @media (max-width: 800px){
