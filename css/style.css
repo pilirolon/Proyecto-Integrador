@@ -121,6 +121,16 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
     background: #FFF;
     color: black;
 }
+.fotos {
+    background-color: rgba(250, 81, 81, 0.639);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 12px;
+    margin: 2%;
+}/*aca hice que las peliculas tengan el borde ese*/
+
 /* Para el efecto HOVER: es cuando el usuario interactua con un elemento del dispositivo, pero no lo activa. Es decir, cuando el usuario se desliza por un elemento con el cursor. Cuando el usuario haga esto, el boton cambiara su color a blanco con letra negra.*/ 
 
 footer {
@@ -129,9 +139,10 @@ footer {
     text-align: left;
 }
 
+
 /* media queries responsive design FALTA CAMBIAR LAS MEDIDAS A LAS QUE PIDEN!!! y hacer responsive todo lo de abajo*/
 
-@media screen and (max-width: 800px){
+@media (max-width: 800px){
     header .logotipo {
         margin-bottom: 10px;
         font-size: 15px;
@@ -147,4 +158,5 @@ footer {
     .pelicula-principal .descripcion {
         max-width: 100%;
     }
+
 }

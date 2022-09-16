@@ -120,3 +120,20 @@ header .lupita{
     /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
     align-items: end; 
 }
+
+@media (max-width: 800px){
+   header .logotipo {
+       margin-bottom: 10px;
+       font-size: 15px;
+   }
+   header .contenedor {
+       flex-direction: column; 
+       text-align: center;
+       font-size: 14px;
+   }
+   
+   
+
+}
+
+
