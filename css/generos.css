@@ -46,7 +46,6 @@ header .lupita{
     display:flex;
     flex-wrap: nowrap;
     justify-content: center;
-
 }
 
 .subtitulo {
@@ -67,7 +66,7 @@ header .lupita{
     list-style: none;
 }
 
-.imagene{
+.imagenes{
     width: 350px;
     height: 200px;
     margin: 15px ;
