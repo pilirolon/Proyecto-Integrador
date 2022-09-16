@@ -47,6 +47,14 @@ header .lupita{
     background: rgb(0, 0, 0, 0.5);
 }
 
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px
+    
+
+}
+
 .imagenes{
     width: 180px;
     height: 250px;
@@ -155,16 +163,20 @@ footer {
     }
 }
 
+
+
+
 .fotos{
     color: white;
     background-color: rgba(250, 81, 81, 0.639);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 12px;
+    margin: 2%;
 }
- 
-.fotos {
-        border-style: solid;
-        border-width: 2px;
-        border-color: rgb(0, 0, 0);
-        border-radius: 15px;
-        padding: 12px;
-        margin: 2%;
-}/*aca hice que las peliculas tengan el borde ese*/
+
+
+
+/*aca hice que las peliculas tengan el borde ese*/
