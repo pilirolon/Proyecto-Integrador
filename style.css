@@ -47,11 +47,6 @@ header .lupita{
     background: rgb(0, 0, 0, 0.5);
 }
 
-.container {
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 30px
-}
 .imagenes{
     width: 180px;
     height: 250px;
@@ -117,6 +112,21 @@ color: rgb(247, 91, 91);
     background: #FFF;
     color: black;
 }
+.peliculas-recomendadas {
+    margin-bottom: 70px;
+}
+
+.h3{
+    color: white;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+}
 /* Para el efecto HOVER: es cuando el usuario interactua con un elemento del dispositivo, pero no lo activa. Es decir, cuando el usuario se desliza por un elemento con el cursor. Cuando el usuario haga esto, el boton cambiara su color a blanco con letra negra.*/ 
 
 footer {
@@ -144,9 +154,6 @@ footer {
         max-width: 100%;
     }
 }
-
-.fotoss{
-/* VER TODO ESTO QUE NO FUNCIONA!! */ 
 
 .fotos{
     color: white;

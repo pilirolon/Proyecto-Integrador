@@ -88,23 +88,93 @@ body{
 .contenedor{
     display: flex;
     align-items: center;
+    position: relative;
 }
+
+.contenedor .flecha-izquierda,
+.contenedor .flecha-derecha{
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    line-height: 40px;
+    width: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 500; /* que la flecha quede arriba de los elementos*/ 
+    transition: .2s ease all;
+}
+.contenedor .flecha-izquierda:hover,
+.contenedor .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.contenedor .flecha-izquierda{
+    left: 0;
+}
+
+.contenedor .flecha-derecha{
+    right: 0;
+}
+
 .contenedor-peliculas{
     width: 100%;
     padding: 20px 0;
     /* abajo y arriba 20, 0 a la izq y derecha*/ 
+    overflow-x: scroll;
+    scroll-behavior: smooth; /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */ 
 }
+
 .contenedor-peliculas .galeria{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* para que las imagenes queden una al lado de la otra */
 }
+
 .contenedor-peliculas .galeria .pelicula{
+    transition: .3s ease all; /* es para el efecto hover */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); /* el .3 es la transparencia*/
     justify-content: space-between;
     min-width: 20%;
+}
 
+/* ESTO FALTA AGREGAR !!!! */ 
+.contenedor-peliculas .galeria .pelicula.hover{
+    transform: scale(1.2); /* que crezca la pelicula con el cursor*/
+    transform-origin: center; /*que crezca de forma proporcionada del centro hacia afuera*/
 }
 .contenedor-peliculas .galeria .pelicula img{
         width: 180px;
         height: 250px;
         margin: 30px; 
+        vertical-align: top; /* quitar margen que agregan los navegadores */
     }
+
+.trailer {
+    display: flex; 
+}
+
+/* MEDIA QUERIE NO ANDA*/
+
+@media screen and (max-width: 420px){
+    .header .logotipo {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    .header .contenedor {
+        flex-direction: column; 
+        text-align: center;
+        font-size: 14px;
+    }
+    .contenedor-peliculas .galeria {
+        overflow: visible; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .contenedor-peliculas .flecha-derecha,
+    .contenedor-peliculas .flecha-izquierda{
+        display: none;
+    }
+}
+
