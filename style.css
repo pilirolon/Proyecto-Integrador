@@ -120,6 +120,21 @@ color: rgb(247, 91, 91);
     background: #FFF;
     color: black;
 }
+.peliculas-recomendadas {
+    margin-bottom: 70px;
+}
+
+.h3{
+    color: white;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+}
 /* Para el efecto HOVER: es cuando el usuario interactua con un elemento del dispositivo, pero no lo activa. Es decir, cuando el usuario se desliza por un elemento con el cursor. Cuando el usuario haga esto, el boton cambiara su color a blanco con letra negra.*/ 
 
 footer {
@@ -151,6 +166,7 @@ footer {
 
 
  .fotos{
+.fotos{
     color: white;
     background-color: rgba(250, 81, 81, 0.639);
     border-style: solid;
