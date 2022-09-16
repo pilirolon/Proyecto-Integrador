@@ -141,6 +141,13 @@ body{
         vertical-align: top; /* quitar margen que agregan los navegadores */
     }
 
+footer {
+        color: #AAA;
+        size: 14px;
+        text-align: left;
+        font-family: "open sans", sans-serif;
+}
+
 /* MEDIA QUERIE */
 
 @media (max-width: 800px){
