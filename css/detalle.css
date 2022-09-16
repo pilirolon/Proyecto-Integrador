@@ -1,12 +1,15 @@
 body{
    background-color: black;
    font-family: 'Playfair Display', serif;
+   background-image: url(../img/fotomujer.jpg);
    
 }
 .imagen {
    height: 500px;
    width: 400px;
-   margin: 20px;
+   margin: 30px;
+   padding-bottom: 3%;
+   padding-left: 1%;
 }
 .info{
    color: white;
@@ -31,7 +34,7 @@ body{
 }
 
 .titulos {
-   color: red;
+   color:  rgba(255, 255, 255, 0.706);
 }
 .bloque{
    display: flex;
@@ -73,8 +76,9 @@ ul {
 }
 
 .espacio{
-    width: 30%;
+    width: 70%;
     margin: 1%;
+    padding-bottom: 2%;
 }
 
 header{
@@ -131,9 +135,8 @@ header .lupita{
        text-align: center;
        font-size: 14px;
    }
-   
-   
-
 }
 
-
+.norespires{
+    padding-left: 3%;
+}
