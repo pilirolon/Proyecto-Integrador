@@ -1,13 +1,23 @@
-*{
-    margin: 0%;
-    padding: 0%;
+ * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 body{
    background-color: black;
    font-family: 'Playfair Display', serif;
    background-image: url(../img/fotomujer.jpg);
    background-repeat: no-repeat;
+   
+}
+
+.riverdale{
+
+        background-color: black;
+        font-family: 'Playfair Display', serif;
+        background-image: url(../img/fotomujer.jpg);
+        background-repeat: no-repeat;
 }
 .imagen {
    height: 500px;
@@ -15,17 +25,14 @@ body{
    margin: 30px;
    padding-bottom: 3%;
    padding-left: 1%;
-   
 }
 .info{
    color: white;
-   padding-top: 50px;
 }
 
  .letras{
    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
  }
-
 
 
 .titulo {
@@ -42,15 +49,19 @@ body{
 }
 .bloque{
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    flex-wrap: wrap;
-   width: 300%;
+   align-items: center;
 }
+
+.sub-container {
+    display: flex;
+    flex-direction: row;
+    }
 
 ul {
    list-style: none;
 }
-
 .boton{ 
    background: rgb(0, 0, 0, 0.5);
    border: none; 
@@ -86,11 +97,8 @@ ul {
 }
 
 header{
-    padding: 1px ;
-    width: 100%;
-    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
-    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
-    background: rgba(0,0,0,0.9);
+    padding: 30px 0;
+    background-color: black;
 }
 
 header .contenedor{
@@ -108,7 +116,7 @@ header nav a{
     font-family: 'Open Sans', sans-serif;
 }
 
-header nav a:hover,
+header nav a:hover, 
 header nav a.activo {
     color: #FFF;
 }
@@ -120,22 +128,22 @@ header .lupita{
 }
 
 .trailer {
-   font-size: 16px;
-    min-height: 80vh;
+    font-size: 16px;
+    width: 85vw;
+    height: 50vw;
     color: #FFF;
-    background-image: url('https://www.youtube.com/embed/khsBhSaDmx4');
-    background-position: center center; /* dos centers: lo centre de forma horizontal y luego vertical */
-    background-size: cover;
     margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
     display: flex; 
     /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
-    align-items: end; 
-}
-.norespires{
-    padding-left: 3%;
-    padding-top: 25px;
+ 
 }
 
+footer {
+    color: #AAA;
+    size: 14px;
+    text-align: left;
+    font-family: "open sans", sans-serif;
+}
 
 @media (max-width: 800px){
    header .logotipo {
@@ -149,3 +157,6 @@ header .lupita{
    }
 }
 
+.norespires{
+    padding-left: 3%;
+}
