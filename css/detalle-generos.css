@@ -3,7 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+<<<<<<< HEAD
 .container {
+=======
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+    .container {
+>>>>>>> 5d619028bd2c0cbaf0e539691e01c2cff21531bb
     display: flex;
     flex-wrap: nowrap;
     margin: 30px
