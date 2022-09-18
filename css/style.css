@@ -166,8 +166,6 @@ header .lupita{
     color: black;
 }
 
-/* ESTO FALTA AGREGAR !!!! */ 
-
 .contenedor-peliculas .galeria .pelicula img{
         width: 180px;
         height: 250px;
@@ -200,7 +198,6 @@ footer {
     font-family: 'Arial, Helvetica', sans-serif;
 
 }
-
 
 
 /* MEDIA QUERIE */
