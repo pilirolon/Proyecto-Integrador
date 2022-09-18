@@ -5,8 +5,11 @@
 }
 
 header{
-    padding: 30px 0;
-    background-color: black;
+    padding: 10px ;
+    width: 100%;
+    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
+    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
+    background: rgba(0,0,0,0.9);
 }
 
 header .contenedor{
@@ -51,6 +54,7 @@ body{
 .busqueda{
     margin-left: 15px;
     margin-right: 15px;
+    padding: 2%;
 }
 
 .resultados {
@@ -60,6 +64,8 @@ body{
     margin-right: 20px;
     flex-wrap: nowrap;
     justify-content: space-between;
+    margin-top: 150px;
+    margin-bottom: 0px;
 }
 .resultados a {
     text-decoration: none;
@@ -110,7 +116,7 @@ body{
 
 .contenedor-peliculas{
     width: 100%;
-    padding: 20px 0;
+    padding: 2px 0;
     /* abajo y arriba 20, 0 a la izq y derecha*/ 
     overflow-x: scroll;
     scroll-behavior: smooth; /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */ 
