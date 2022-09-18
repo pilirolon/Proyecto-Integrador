@@ -1,24 +1,12 @@
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 .container {
-=======
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
-    .container {
->>>>>>> 2fb0a841baed5f466bd61255a7832ffa7466777a
     display: flex;
     flex-wrap: nowrap;
     margin: 30px
-
 }
 header{
     padding: 10px ;
@@ -101,6 +89,7 @@ footer {
     size: 14px;
     text-align: left;
     font-family: "open sans", sans-serif;
+    padding-top: 50px;
 }
 
 @media (max-width: 800px){
@@ -112,6 +101,9 @@ footer {
         flex-direction: column; 
         text-align: center;
         font-size: 14px;
+    }
+    header .lupita{
+        padding-top: 10px;
     }
 }
 

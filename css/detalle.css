@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-=======
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
->>>>>>> 2fb0a841baed5f466bd61255a7832ffa7466777a
 body{
    background-color: black;
    font-family: 'Playfair Display', serif;
@@ -36,14 +27,11 @@ body{
    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
  }
 
-
-
 .titulo {
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    color: rgba(255, 255, 255, 0.706);
    font-size: 400%;
    margin: 2%;
-
 
 }
 
@@ -141,6 +129,18 @@ header .lupita{
     /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
     align-items: end; 
 }
+.norespires{
+    padding-left: 3%;
+}
+
+footer {
+    color: #AAA;
+    size: 14px;
+    text-align: left;
+    font-family: "open sans", sans-serif;
+    padding-top: 50px;
+}
+
 
 @media (max-width: 800px){
    header .logotipo {
@@ -152,8 +152,9 @@ header .lupita{
        text-align: center;
        font-size: 14px;
    }
+   header .lupita{
+    padding-top: 10px;
+}
 }
 
-.norespires{
-    padding-left: 3%;
-}
+

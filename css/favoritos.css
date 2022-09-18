@@ -9,17 +9,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-<<<<<<< HEAD
-header {
-    padding: 30px 0;
-=======
 header{
-    padding: 10px ;
+    padding: 10px;
     width: 100%;
     position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
     z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
     background: rgba(0,0,0,0.9);
->>>>>>> 2fb0a841baed5f466bd61255a7832ffa7466777a
 }
 
 header .contenedor {
@@ -137,10 +132,14 @@ header .lupita {
     color: black;
 }
 
+.favoritos {
+    padding-top: 150px;
+}
+
 .seleccion{
     font-family: 'open sans', sans-serif;
-    color: white;
-    margin-left: 20px;
+    color: #fff;
+    margin-left: 80px;
 }
 
 footer {
@@ -148,20 +147,36 @@ footer {
     size: 14px;
     text-align: left;
     font-family: "open sans", sans-serif;
+    padding-top: 50px;
 }
 
 @media (max-width: 800px) {
+
     header .logotipo {
         margin-bottom: 10px;
         font-size: 15px;
     }
-
     header .contenedor {
         flex-direction: column;
         text-align: center;
         font-size: 14px;
     }
-
-
-
+    header .lupita{
+        padding-top: 10px;
+    }
+    .contenedor {
+        max-width: 100%;
+    }
+    .contenedor .contenedor-peliculas .galeria{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* cada columna va a abarcar lo mismo*/
+        gap: 20px;
+    }
+    .contenedor .flecha-izquierda, 
+    .contenedor .flecha-derecha {
+        display: none;
+    }
+    .favoritos{
+        padding-top: 200px;
+    }
 }

@@ -161,6 +161,7 @@ footer {
         size: 14px;
         text-align: left;
         font-family: "open sans", sans-serif;
+        padding-top: 50px;
 }
 
 /* MEDIA QUERIE */
@@ -175,10 +176,14 @@ footer {
         text-align: center;
         font-size: 14px;
     }
+    header .lupita{
+        padding-top: 10px;
+    }
     .busqueda {
         flex-direction: column; 
         text-align: center;
         font-size: 14px;
+        padding-top: 50px;
     }
     .busqueda .resultados .a {
         font-size: 8px;
@@ -195,7 +200,6 @@ footer {
     .contenedor .flecha-derecha {
         display: none;
     }
-
 }
 
 

@@ -63,7 +63,7 @@ header .lupita{
 /* Aca hice lo de la pelicula principal */
 .pelicula-principal {
     font-size: 16px;
-    min-height: 80vh;
+    min-height: 100vh;
     color: #FFF;
     background: url(../img/Pinocho.jpeg);
     background-position: center end; /* dos centers: lo centre de forma horizontal y luego vertical */
@@ -73,7 +73,6 @@ header .lupita{
     align-items: end;
     padding-top: 150px;
 } 
-
 
 /* aca le quise sacar los margenes de arriba y abajo porque no me dejaba mover el texto para abajo */
 
@@ -222,7 +221,9 @@ footer {
         text-align: center;
         font-size: 14px;
     }
-
+    header .lupita{
+        padding-top: 10px;
+    }
     .pelicula-principal .contenedor{
         font-size: 12px; 
     }
@@ -231,12 +232,6 @@ footer {
     }
     .contenedor {
         max-width: 100%;
-        font-size: 10px;
-    }
-    .contenedor .contenedor-peliculas .galeria .pelicula img {
-        height: 80%;
-        width: 80%;
-        margin-bottom: 2px;
     }
     .contenedor .contenedor-peliculas .galeria{
         display: grid;
@@ -247,9 +242,7 @@ footer {
     .contenedor .flecha-derecha {
         display: none;
     }
-
-
-    }
+}
 
 
 
