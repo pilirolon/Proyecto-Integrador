@@ -45,7 +45,6 @@ header .lupita{
     margin: auto;
 }
 
-
 body{
     background-color: black;
     font-family: 'Open Sans', sans-serif;
@@ -136,11 +135,6 @@ body{
     min-width: 20%;
 }
 
-/* ESTO FALTA AGREGAR !!!! */ 
-.contenedor-peliculas .galeria .pelicula.hover{
-    transform: scale(1.2); /* que crezca la pelicula con el cursor*/
-    transform-origin: center; /*que crezca de forma proporcionada del centro hacia afuera*/
-}
 .contenedor-peliculas .galeria .pelicula img{
         width: 180px;
         height: 250px;
