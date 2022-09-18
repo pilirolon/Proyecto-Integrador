@@ -12,10 +12,18 @@ body{
 .contenedor {
     width: 90%;
     margin: auto;
+    
 }
 
+
 header{
-    padding: 30px ;
+    padding: 10px ;
+    width: 100%;
+    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
+    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
+    background: rgba(0,0,0,0.9);
+
+
 }
 
 header .contenedor{
@@ -58,12 +66,14 @@ header .lupita{
     min-height: 80vh;
     color: #FFF;
     background: url(../img/Pinocho.jpeg);
-    background-position: center center; /* dos centers: lo centre de forma horizontal y luego vertical */
+    background-position: center end; /* dos centers: lo centre de forma horizontal y luego vertical */
     background-size: cover;
     margin-bottom: 50px;
     display: flex;  /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
     align-items: end;
+    padding-top: 150px;
 } 
+
 
 /* aca le quise sacar los margenes de arriba y abajo porque no me dejaba mover el texto para abajo */
 
@@ -116,7 +126,7 @@ header .lupita{
     width: 50px;
     color: white;
     cursor: pointer;
-    z-index: 500; /* que la flecha quede arriba de los elementos*/ 
+    z-index: 100; /* que la flecha quede arriba de los elementos*/ 
     transition: .2s ease all;
 }
 .contenedor .flecha-izquierda:hover,
