@@ -1,17 +1,9 @@
-<<<<<<< HEAD:css/detalle.css
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-=======
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
->>>>>>> 5d619028bd2c0cbaf0e539691e01c2cff21531bb:css/detallemovie.css
 body{
    background-color: black;
    font-family: 'Playfair Display', serif;
@@ -40,12 +32,9 @@ body{
    color: rgba(255, 255, 255, 0.706);
    font-size: 400%;
    margin: 2%;
-<<<<<<< HEAD:css/detalle.css
 
-=======
    padding-left: 8%;
    
->>>>>>> 5d619028bd2c0cbaf0e539691e01c2cff21531bb:css/detallemovie.css
 }
 
 .titulos {
@@ -172,9 +161,6 @@ footer {
    header .lupita{
     padding-top: 10px;
 }
-<<<<<<< HEAD:css/detalle.css
 }
 
 
-=======
->>>>>>> 5d619028bd2c0cbaf0e539691e01c2cff21531bb:css/detallemovie.css
