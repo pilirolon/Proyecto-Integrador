@@ -18,7 +18,7 @@ header{
 }
 
 .titulos{
-    padding-top: 80px;
+    padding-top: 130px;
 }
 header .contenedor{
     display: flex;
@@ -47,12 +47,11 @@ header .lupita{
 }
 
 .general{
-    color: red;
+    color:  rgba(255, 255, 255, 0.706);
     font-family: 'Open sans', sans-serif;
     font-size: 60px;
     text-align: center;
 }
-
 
 .generos{
     display:flex;
@@ -66,34 +65,47 @@ header .lupita{
 
 }
 
-.generos {
-    display: flex;
-    align-items: center;  
-    justify-content: center;
-}
-
-.generos .titulos {
-    background: rgba(242, 240, 240, 0.5);
-    border: none; 
-    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
-    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
-    color: black;
-    margin-right: 20px;  
-    font-size: 18px; 
-    height: 55px;
-    width: 150px;
-    text-decoration: none;
-}
-
-.generos .titulos:hover{
-    background: rgb(19, 19, 19);
-    color: #FFF;
-}
-
 .imagenes{
     width: 350px;
     height: 200px;
     margin: 15px ;
+}
+.borde{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.856);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    padding: 12px;
+    margin: 2%;
+    display: flex;
+}
+.caja{
+    text-align: center;
+}
+
+.generos .borde .genero-boton{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-family: 'open sans';
+    border: none; 
+    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
+    padding: 5px; /* CAMBIAR ESTAS MEDIDAS */
+    color: #FFF;
+    margin-right: 20px;  
+    font-size: 16px;
+
+
+}
+.generos .borde .genero-boton:hover{
+    background: #FFF;
+    color: black;
+}
+
+.titulo{
+    text-align: center;
+    font-family: 'Arial, Helvetica', sans-serif;
+    color: black;
 }
 
 footer {
