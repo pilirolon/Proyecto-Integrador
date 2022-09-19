@@ -1,20 +1,16 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
 }
 
-
-
-.container {
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 30px
-
-}
 header{
-    padding: 30px 0;
+    padding: 10px ;
+    width: 100%;
+    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
+    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
+    background: rgba(0,0,0,0.9);
 }
 
 header .contenedor{
@@ -25,6 +21,7 @@ header .contenedor{
 header .logo{
     width: 200px;
 }
+
 header nav a{
     color: #AAA;
     text-decoration: none;
@@ -43,45 +40,134 @@ header .lupita{
     background: rgb(0, 0, 0, 0.5);
 }
 
-.imagenes{
-    width: 180px;
-    height: 250px;
-    margin: 30px; 
-}
-
-body{
-    background-color: black;
-}
-
 .general {
     color: red;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     font-size: 60px;
     text-align: center;
-
-}
-.imagenes{
-    width: 180px;
-    height: 250px;
-    margin: 30px;  
-}
-.generales {
-    color: wheat ;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.peliculas {
+.titulos-generales {
+    font-family: 'open sans', sans-serif;
+    color: #fff;
+    margin-left: 80px;
+}
+
+.pelicula {
     color: white;
+    padding: 5px;
+    font-family: 'open sans', sans-serif;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+}
 
+.titulo{
+    font-family: "open sans", sans-serif;
+    color: white;
 }
 
 .fechas {
-    color: wheat ;
+    color: #AAA ;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial, Helvetica', sans-serif;
+}
 
+.contenedor {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.contenedor .flecha-izquierda,
+.contenedor .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    line-height: 40px;
+    width: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+    /* que la flecha quede arriba de los elementos*/
+    transition: .2s ease all;
+}
+
+.contenedor .flecha-izquierda:hover,
+.contenedor .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.contenedor .flecha-izquierda {
+    left: 0;
+}
+
+.contenedor .flecha-derecha {
+    right: 0;
+}
+
+.contenedor-peliculas {
+    width: 100%;
+    padding: 20px 0;
+    /* abajo y arriba 20, 0 a la izq y derecha*/
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */
+}
+
+.contenedor-peliculas .galeria {
+    display: flex;
+    flex-wrap: nowrap;
+    /* para que las imagenes queden una al lado de la otra */
+    text-align: center;
+}
+
+.contenedor-peliculas .galeria .pelicula {
+    transition: .3s ease all;
+    /* es para el efecto hover */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    /* el .3 es la transparencia*/
+    justify-content: space-between;
+    min-width: 20%;
+    font-family: 'Open sans', sans-serif;
+}
+
+.contenedor-peliculas .galeria .pelicula img {
+    width: 180px;
+    height: 250px;
+    margin: 30px;
+    vertical-align: top;
+    /* quitar margen que agregan los navegadores */
+}
+
+.boton-heart {
+    background: rgb(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    /* CAMBIAR ESTAS MEDIDAS */
+    padding: 15px;
+    /* CAMBIAR ESTAS MEDIDAS */
+    color: #FFF;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.boton-heart:hover {
+    background: #FFF;
+    color: black;
+}
+
+.primero{
+    padding-top: 140px;
+}
+footer {
+    color: #AAA;
+    size: 14px;
+    text-align: left;
+    font-family: "open sans", sans-serif;
+    padding-top: 50px;
 }
 
 @media (max-width: 800px){
@@ -93,6 +179,37 @@ body{
         flex-direction: column; 
         text-align: center;
         font-size: 14px;
+    }
+    header .lupita{
+        padding-top: 10px;
+    }
+    .contenedor {
+        max-width: 100%;
+    }
+    .contenedor .contenedor-peliculas .galeria{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* cada columna va a abarcar lo mismo*/
+        gap: 20px;
+    }
+    .contenedor .flecha-izquierda, 
+    .contenedor .flecha-derecha {
+        display: none;
+    }
+    .primero{
+        padding-top: 200px;
+    }
+    .primero .general{
+        font-size: 30px;
+    }
+    .titulos-generales {
+        font-size: 20px;
+    }
+    .pelicula {
+        color: white;
+        padding: 5px;
+        font-family: 'open sans', sans-serif;
+        text-align: center;
+        font-size: 13px;
     }
 }
 
