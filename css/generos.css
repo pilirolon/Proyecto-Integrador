@@ -47,7 +47,7 @@ header .lupita{
 }
 
 .general{
-    color:  rgba(255, 255, 255, 0.706);
+    color:  rgba(253, 4, 4, 0.706);
     font-family: 'Open sans', sans-serif;
     font-size: 60px;
     text-align: center;
@@ -60,8 +60,8 @@ header .lupita{
 }
 
 .subtitulo {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: wheat ;
+    font-family: 'Open sans', sans-serif;
+    color: #FFF ;
 
 }
 
@@ -102,10 +102,8 @@ header .lupita{
     color: black;
 }
 
-.titulo{
-    text-align: center;
-    font-family: 'Arial, Helvetica', sans-serif;
-    color: black;
+h2{
+    margin-left: 30px;
 }
 
 footer {
@@ -128,6 +126,31 @@ footer {
     }
     header .lupita{
         padding-top: 10px;
+    }
+    .generos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* cada columna va a abarcar lo mismo*/
+        gap: 20px;
+        padding-right: 80px;
+        padding-left: 80px;
+    }
+    .genero-boton{
+        margin-left: 100px;
+    }
+
+    .imagenes{
+        display: none;
+    }
+    .titulos{
+        padding-top: 200px;
+    }
+    .titulos .general{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 20px;
+        padding: 20px;
+        margin-left: 30px;
     }
 }
 
