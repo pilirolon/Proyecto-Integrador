@@ -1,31 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-<<<<<<< HEAD
 .container {
-=======
-
-
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
-    .container {
->>>>>>> 5d619028bd2c0cbaf0e539691e01c2cff21531bb
     display: flex;
     flex-wrap: nowrap;
     margin: 30px
+
 }
 header{
-    padding: 10px ;
-    width: 100%;
-    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
-    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
-    background: rgba(0,0,0,0.9);
+    padding: 30px 0;
 }
 
 header .contenedor{
@@ -69,7 +49,6 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 60px;
     text-align: center;
-    padding-top: 150px;
 
 }
 .imagenes{
@@ -96,14 +75,6 @@ body{
 
 }
 
-footer {
-    color: #AAA;
-    size: 14px;
-    text-align: left;
-    font-family: "open sans", sans-serif;
-    padding-top: 50px;
-}
-
 @media (max-width: 800px){
     header .logotipo {
         margin-bottom: 10px;
@@ -113,9 +84,6 @@ footer {
         flex-direction: column; 
         text-align: center;
         font-size: 14px;
-    }
-    header .lupita{
-        padding-top: 10px;
     }
 }
 
