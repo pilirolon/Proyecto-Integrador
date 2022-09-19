@@ -15,14 +15,12 @@ body{
     
 }
 
-
 header{
     padding: 10px ;
     width: 100%;
     position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
     z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
     background: rgba(0,0,0,0.9);
-
 
 }
 
@@ -187,6 +185,7 @@ footer {
         size: 14px;
         text-align: left;
         font-family: "open sans", sans-serif;
+        padding-top: 50px;
 }
 
 .pelicula {
@@ -199,8 +198,8 @@ footer {
 .titulo{
     font-family: "open sans", sans-serif;
     color: white;
-
 }
+
 .fechas {
     color: #AAA ;
     text-align: center;
