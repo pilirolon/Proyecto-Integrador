@@ -170,6 +170,13 @@ footer {
     padding-top: 50px;
 }
 
+footer {
+    color: #AAA;
+    size: 14px;
+    text-align: left;
+    font-family: "open sans", sans-serif;
+}
+
 @media (max-width: 800px){
     header .logotipo {
         margin-bottom: 10px;
