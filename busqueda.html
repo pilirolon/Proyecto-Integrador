@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <div class="contenedor">
+        <section class="contenedor">
             <a href="./index.html"><img class="logo" src="./img/logo crop.jpeg" alt="logo"></a>
             <nav class="inicio">
                 <a href="./index.html"> Inicio </a>
@@ -26,13 +26,13 @@
                 <a href="./favoritos.html"> Favoritos </a>
                 <a href="./busqueda.html" class="activo"> Resultados de búsqueda </a>
             </nav>
-            <form class="lupita" action="" method="get">
+            <form class="lupita" action= "./busqueda.html" method="get">
                 <input class="lupita" type="text" name="nombre" placeholder="¿Qué quiere ver?" value="">
-        </div>
+            </section>
     </header>
 
     <main>
-        <div class="busqueda">
+        <section class="busqueda">
             <div class="resultados">
                 <h3>Resultados de Busqueda</h3>
                 <p>Explora títulos relacionados con:</p>
@@ -41,18 +41,18 @@
                 <a href="./detail-serie.html"> Comedias de acción </a> |
                 <a href="./detail-serie.html"> Comedias familiares </a> |
             </div>
-        </div>
+        </section>
 
-            <div class="contenedor">
+            <section class="contenedor">
                 <button role ="boton" id ="flecha-derecha" class ="flecha-izquierda"><i class="icon-angle-left"></i></button>
-                <div class="contenedor-peliculas">
+                <article class="contenedor-peliculas">
                     <div class="galeria">
                         <div class="pelicula">
                             <img src="./img/10diaspeli.jpeg" alt="10diaspeli">
-                            <form>
-                                <a href="./favoritos.html">
-                                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                                </a>
+                            <form action="./favoritos.html" method="GET">
+                                <div>
+                                <button type="submit" class="boton-heart"><i class="icon-heart"></i></button>
+                                </div>
                             </form>
                         </div>
                         <div class="pelicula">
@@ -122,13 +122,13 @@
                         </div>
 
                     </div>
-                </div>
+                </article>
                 <button role ="boton" id ="flecha-derecha" class ="flecha-derecha"><i class="icon-angle-right"></i></button>
-            </div>
+            </section>
         
-        <div class="contenedor">
+        <section class="contenedor">
             <button role ="boton" id ="flecha-derecha" class ="flecha-izquierda"><i class="icon-angle-left"></i></button>
-            <div class="contenedor-peliculas">
+            <article class="contenedor-peliculas">
                 <div class="galeria">
                     <div class="pelicula">
                         <img src="./img/camprock.jpeg" alt="camprock">
@@ -203,9 +203,9 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </article>
             <button role ="boton" id ="flecha-derecha" class ="flecha-derecha"><i class="icon-angle-right"></i></button>
-        </div>
+        </section>
     </main>
 
 </body>

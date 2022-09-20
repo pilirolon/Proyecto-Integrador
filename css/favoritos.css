@@ -4,41 +4,140 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
     font-family: 'Open Sans', sans-serif;
 }
 
 header{
-    padding: 30px 0;
+    padding: 10px;
+    width: 100%;
+    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
+    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
+    background: rgba(0,0,0,0.9);
 }
 
-header .contenedor{
+header .contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header .logo{
+
+header .logo {
     width: 200px;
 }
-header nav a{
+
+header nav a {
     color: #AAA;
     text-decoration: none;
     margin-right: 20px;
     font-family: 'Open Sans', sans-serif;
 }
 
-/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
+/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/
 
 header nav a:hover,
 header nav a.activo {
     color: #FFF;
 }
 
-header .lupita{
+header .lupita {
     font-family: 'Open sans';
     color: #AAA;
     background: rgb(0, 0, 0, 0.5);
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contenedor .flecha-izquierda,
+.contenedor .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    line-height: 40px;
+    width: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 500;
+    /* que la flecha quede arriba de los elementos*/
+    transition: .2s ease all;
+}
+
+.contenedor .flecha-izquierda:hover,
+.contenedor .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.contenedor .flecha-izquierda {
+    left: 0;
+}
+
+.contenedor .flecha-derecha {
+    right: 0;
+}
+
+.contenedor-peliculas {
+    width: 100%;
+    padding: 20px 0;
+    /* abajo y arriba 20, 0 a la izq y derecha*/
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */
+}
+
+.contenedor-peliculas .galeria {
+    display: flex;
+    flex-wrap: nowrap;
+    /* para que las imagenes queden una al lado de la otra */
+    text-align: center;
+}
+
+.contenedor-peliculas .galeria .pelicula {
+    transition: .3s ease all;
+    /* es para el efecto hover */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    /* el .3 es la transparencia*/
+    justify-content: space-between;
+    min-width: 20%;
+}
+
+.contenedor-peliculas .galeria .pelicula img {
+    width: 180px;
+    height: 250px;
+    margin: 30px;
+    vertical-align: top;
+    /* quitar margen que agregan los navegadores */
+}
+
+.boton-heart {
+    background: rgb(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    color: #FFF;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.boton-heart:hover {
+    background: #FFF;
+    color: black;
+}
+
+.favoritos {
+    padding-top: 150px;
+}
+
+.seleccion{
+    font-family: 'open sans', sans-serif;
+    color: #fff;
+    margin-left: 80px;
 }
 
 footer {
@@ -46,21 +145,36 @@ footer {
     size: 14px;
     text-align: left;
     font-family: "open sans", sans-serif;
+    padding-top: 50px;
 }
 
-@media (max-width: 800px){
+@media (max-width: 768px) {
+
     header .logotipo {
         margin-bottom: 10px;
         font-size: 15px;
     }
     header .contenedor {
-        flex-direction: column; 
+        flex-direction: column;
         text-align: center;
         font-size: 14px;
     }
-    
-    
-
+    header .lupita{
+        padding-top: 10px;
+    }
+    .contenedor {
+        max-width: 100%;
+    }
+    .contenedor .contenedor-peliculas .galeria{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* cada columna va a abarcar lo mismo*/
+        gap: 20px;
+    }
+    .contenedor .flecha-izquierda, 
+    .contenedor .flecha-derecha {
+        display: none;
+    }
+    .favoritos{
+        padding-top: 200px;
+    }
 }
-
-

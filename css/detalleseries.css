@@ -1,61 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
    background-color: black;
    font-family: 'Playfair Display', serif;
-   background-image: url(../img/fotomujer.jpg);
+   background-image: url(../img/fondoriver.jpg);
    background-repeat: no-repeat;
    
 }
 
-.riverdale{
-
-        background-color: black;
-        font-family: 'Playfair Display', serif;
-        background-image: url(../img/fotomujer.jpg);
-        background-repeat: no-repeat;
-}
 .imagen {
-   height: 500px;
-   width: 400px;
-   margin: 30px;
-   padding-bottom: 3%;
-   padding-left: 1%;
-}
-.info{
-   color: white;
+    height: 600px;
+    width: 500px;
+    padding-right: 100px;
 }
 
- .letras{
-   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+.info{
+    color: white;
+    padding-top: 100px;
  }
 
+ .letras{
+   font-family: 'Open sans', sans-serif;
+ }
 
 .titulo {
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-family: 'open sans', sans-serif;
    color: rgba(255, 255, 255, 0.706);
    font-size: 400%;
    margin: 2%;
-
-
+   padding-left: 8%;
 }
 
 .titulos {
    color:  rgba(255, 255, 255, 0.706);
 }
-.bloque{
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-   align-items: center;
-}
 
+.bloque{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+ }
+ 
 .sub-container {
     display: flex;
     flex-direction: row;
+    padding-bottom: 150px;
     }
-
-ul {
-   list-style: none;
-}
 
 .boton{ 
    background: rgb(0, 0, 0, 0.5);
@@ -65,35 +60,30 @@ ul {
    color: #FFF;
    margin-right: 20px;  
    font-size: 18px; 
+   font-family: 'open sans', sans-serif;
 }
+
 .boton i{
    margin-right: 15px;
 }
 .boton:hover{
    background: #FFF;
    color: black;
-   background: #FFF;
-   color: black;
-    background: #FFF;
-    color: black;
-}
-
-
-.detalle{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .espacio{
     width: 60%;
     margin: 1%;
     padding-bottom: 2%;
+    padding-right: 20px;
 }
 
 header{
-    padding: 30px 0;
-    background-color: black;
+    padding: 10px ;
+    width: 100%;
+    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
+    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
+    background: rgba(0,0,0,0.9);
 }
 
 header .contenedor{
@@ -103,6 +93,7 @@ header .contenedor{
 }
 header .logo{
     width: 200px;
+    margin-left: 50px;
 }
 header nav a{
     color: #AAA;
@@ -110,6 +101,8 @@ header nav a{
     margin-right: 20px;
     font-family: 'Open Sans', sans-serif;
 }
+
+/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
 
 header nav a:hover,
 header nav a.activo {
@@ -120,6 +113,7 @@ header .lupita{
     font-family: 'Open sans';
     color: #AAA;
     background: rgb(0, 0, 0, 0.5);
+    margin-right: 20px;
 }
 
 .trailer {
@@ -138,9 +132,10 @@ footer {
     size: 14px;
     text-align: left;
     font-family: "open sans", sans-serif;
+    padding-top: 50px;
 }
 
-@media (max-width: 800px){
+@media (max-width: 768px){
    header .logotipo {
        margin-bottom: 10px;
        font-size: 15px;
@@ -150,8 +145,26 @@ footer {
        text-align: center;
        font-size: 14px;
    }
+   header .lupita{
+    padding-top: 10px;
+   }
+   .titulo {
+    padding-top: 100px;
+    font-size: 30px;
+   }
+   .bloque{
+    font-size: 10px;
+   }
+   .imagen{
+    height: 60%;
+    width: 60%;
+    margin-right: 0px;
+    padding-left: 80px;
+   }
+   .boton{
+    font-size: 13px;
+   }
 }
 
-.norespires{
-    padding-left: 3%;
-}
+
+

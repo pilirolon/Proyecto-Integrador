@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,91 +9,137 @@
     <link rel="stylesheet" href="./css/detalle-generos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 </head>
+
 <body>
     <header>
-        <div class = "contenedor">
+        <section class="contenedor">
             <a href="./index.html"><img class="logo" src="./img/logo crop.jpeg" alt="logo"></a>
-                <nav class="inicio">
-                    <a href="./index.html" > Inicio </a>
-                    <a href="./detail-serie.html"> Series </a>
-                    <a href="./detail-movie.html" class> Películas </a>
-                    <a href="./detail-genres.html"> Generos </a>
-                    <a href="./favoritos.html"> Favoritos </a>
-                    <a href="./busqueda.html" class = "activo"> Resultados de búsqueda </a>
-                </nav>
-                <form class ="lupita" action="" method="get">
-                <input class ="lupita" type="text" name="nombre" placeholder="¿Qué quiere ver?" value="">
-            </div>
+            <nav class="inicio">
+                <a href="./index.html"> Inicio </a>
+                <a href="./detail-serie.html"> Series </a>
+                <a href="./detail-movie.html" class> Películas </a>
+                <a href="./detail-genres.html"> Generos </a>
+                <a href="./favoritos.html"> Favoritos </a>
+                <a href="./busqueda.html" class="activo"> Resultados de búsqueda </a>
+            </nav>
+            <form class="lupita" action= "./busqueda.html" method="get">
+            <input class="lupita" type="text" name="nombre" placeholder="¿Qué quiere ver?" value="">
+        </section>
     </header>
-    <h1 class="general">Accion</h1>
 
-    <section>
-            <h2 class="titulos generales">Peliculas de accion</h2>
-            <section class="container">
-                    <article class="fotos">
-                        <a href="detail-movie.html"><img class="imagenes" src="img/top.jpg" alt="top gun"></a>
-                        <h4 class="titulos peliculas">Top gun: Maverick</h4>
-                        <p class="fechas"> 2022</p>
-                    </article>
-                    <article class="fotos">
-                        <a href="detail-movie.html"><img class="imagenes" src="./img/perdida.jpg" alt="ciudad perdida"></a> 
-                        <h4 class="titulos peliculas">La ciudad perdida</h4>
-                        <p class="fechas"> 2022</p>
-                    </article>
-                    <article class="fotos">
-                        <a href="detail-movie.html"><img class="imagenes" src="./img/invisible.jpg" alt="invisible"></a> 
-                        <h4 class="titulos peliculas"> El agente invisible </h4>
-                        <p class="fechas"> 2022 </p>
-                    </article>
-                    <article class="fotos">
-                        <a href="detail-movie.html"><img class="imagenes" src="./img/furisos.webp" alt="rapidos"></a> 
-                        <h4 class="titulos peliculas"> Rapidos y furiosos </h4>
-                        <p class="fechas"> 2019</p>
-                    </article>
-                    <article class="fotos">
-                        <a href="detail-movie.html"><img class="imagenes" src="./img/juegos.jpg" alt="juegos del hambre"></a> 
-                        <h4 class="titulos peliculas">Los juegos del hambre</h4>
-                        <p class="fechas"> 2012</p>
-                    </article>
-            </section>
+    <div class ="primero">
+        <h1 class="general">Acción</h1>
+    </div>
+
+    <h2 class="titulos-generales">Películas de acción</h2>
+
+    <section class="contenedor">
+        <button role="boton" id="flecha-derecha" class="flecha-izquierda"><i class="icon-angle-left"></i></button>
+        <article class="contenedor-peliculas">
+            <div class="galeria">
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="img/top.jpg" alt="top gun"></a>
+                    <h4 class="titulos peliculas">Top gun: Maverick</h4>
+                    <p class="fechas"> 2022</p>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="./img/perdida.jpg" alt="ciudad perdida"></a>
+                    <h4 class="titulos peliculas">La ciudad perdida</h4>
+                    <p class="fechas"> 2022</p>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="./img/invisible.jpg" alt="invisible"></a>
+                    <h4 class="titulos peliculas"> El agente invisible </h4>
+                    <p class="fechas"> 2022 </p>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="./img/rapidos.jpeg" alt="rapidos"></a>
+                    <h4 class="titulos peliculas"> Rapidos y furiosos </h4>
+                    <p class="fechas"> 2019</p>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="./img/juegos.jpg"
+                            alt="juegos del hambre"></a>
+                    <h4 class="titulos peliculas">Los juegos del hambre</h4>
+                    <p class="fechas"> 2012</p>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="./img/babydriver.jpeg" alt="baby driver"></a>
+                    <h4 class="titulos peliculas">Baby Driver</h4>
+                    <p class="fechas"> 2017</p>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+            </div>
+        </article>
+        <button role="boton" id="flecha-derecha" class="flecha-derecha"><i class="icon-angle-right"></i></button>
     </section>
 
-    <section>
-        <h2 class="titulos generales"> Series de accion</h2>
-        <section class="container">
-                <article class="fotos">
-                    <a href="detail-movie.html"><img class="imagenes" src="./img/3193634.jpg" alt="hanna"></a>
+    <h2 class="titulos-generales"> Series de acción</h2>
+
+    <section class="contenedor">
+        <button role="boton" id="flecha-derecha" class="flecha-izquierda"><i class="icon-angle-left"></i></button>
+        <article class="contenedor-peliculas">
+            <div class="galeria">
+                <div class="pelicula">
+                    <a href="detail-serie.html"><img class="imagenes" src="./img/3193634.jpg" alt="hanna"></a>
                     <h4 class="titulos peliculas">Hanna</h4>
                     <p class="fechas"> 2019</p>
-                </article>
-                <article class="fotos">
-                    <a href="detail-movie.html"><img class="imagenes" src="./img/perdida.jpg" alt="lista negra"></a> 
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-serie.html"><img class="imagenes" src="./img/perdida.jpg" alt="lista negra"></a>
                     <h4 class="titulos peliculas">Blacklist</h4>
                     <p class="fechas"> 2013</p>
-                </article>
-                <article class="fotos">
-                    <a href="detail-movie.html"><img class="imagenes" src="./img/small.jpg" alt="Smalville"></a> 
-                    <h4 class="titulos peliculas">  Smallville </h4>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-serie.html"><img class="imagenes" src="./img/small.jpg" alt="Smalville"></a>
+                    <h4 class="titulos peliculas"> Smallville </h4>
                     <p class="fechas"> 2001 </p>
-                </article>
-                <article class="fotos">
-                    <a href="detail-movie.html"><img class="imagenes" src="./img/blindspot.jpg" alt="blindspot"></a> 
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-serie.html"><img class="imagenes" src="./img/blindspot.jpg" alt="blindspot"></a>
                     <h4 class="titulos peliculas"> Blindspot </h4>
                     <p class="fechas"> 2015</p>
-                </article>
-                <article class="fotos">
-                    <a href="detail-movie.html"><img class="imagenes" src="./img/killing eve.jpg" alt="killing eve"></a> 
-                    <h4 class="titulos peliculas"> Killing eve </h4>
-                    <p class="fechas"> 2018</p>
-                </article>
-        </section>
-</section>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-serie.html"><img class="imagenes" src="./img/cobrakai.jpeg" alt="cobra kai"></a>
+                    <h4 class="titulos peliculas"> Cobra Kai</h4>
+                    <p class="fechas">2018</p>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-serie.html"><img class="imagenes" src="./img/narcos.jpeg" alt="narcos"></a>
+                    <h4 class="titulos peliculas">Narcos</h4>
+                    <p class="fechas">2015</p>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-serie.html"><img class="imagenes" src="./img/theflash.jpeg" alt="the flash"></a>
+                    <h4 class="titulos peliculas">The Flash</h4>
+                    <p class="fechas">2014</p>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+            </div>
+        </article>
+        <button role="boton" id="flecha-derecha" class="flecha-derecha"><i class="icon-angle-right"></i></button>
+    </section>
 
 </body>
 <footer>
     PCD Developers®. Developed by Pilar Rolon, Clara Pellet Lastra y Delfina Rawson
 </footer>
+
 </html>

@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
     background-color: black;
@@ -5,9 +10,16 @@ body{
 }
 
 header{
-    padding: 30px 0;
+    padding: 10px;
+    width: 100%;
+    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
+    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
+    background: rgba(0,0,0,0.9);
 }
 
+.titulos{
+    padding-top: 130px;
+}
 header .contenedor{
     display: flex;
     justify-content: space-between;
@@ -35,12 +47,11 @@ header .lupita{
 }
 
 .general{
-    color: red;
+    color:  rgba(253, 4, 4, 0.706);
     font-family: 'Open sans', sans-serif;
     font-size: 60px;
     text-align: center;
 }
-
 
 .generos{
     display:flex;
@@ -49,33 +60,9 @@ header .lupita{
 }
 
 .subtitulo {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: wheat ;
+    font-family: 'Open sans', sans-serif;
+    color: #FFF ;
 
-}
-
-.generos {
-    display: flex;
-    align-items: center;  
-    justify-content: center;
-}
-
-.generos .titulos {
-    background: rgba(242, 240, 240, 0.5);
-    border: none; 
-    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
-    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
-    color: black;
-    margin-right: 20px;  
-    font-size: 18px; 
-    height: 55px;
-    width: 150px;
-    text-decoration: none;
-}
-
-.generos .titulos:hover{
-    background: rgb(19, 19, 19);
-    color: #FFF;
 }
 
 .imagenes{
@@ -83,15 +70,50 @@ header .lupita{
     height: 200px;
     margin: 15px ;
 }
+.borde{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.856);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    padding: 12px;
+    margin: 2%;
+    display: flex;
+}
+.caja{
+    text-align: center;
+}
+
+.generos .borde .genero-boton{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-family: 'open sans';
+    border: none; 
+    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
+    padding: 5px; /* CAMBIAR ESTAS MEDIDAS */
+    color: #FFF;
+    margin-right: 20px;  
+    font-size: 16px;
+}
+
+.generos .borde .genero-boton:hover{
+    background: #FFF;
+    color: black;
+}
+
+h2{
+    margin-left: 30px;
+}
 
 footer {
     color: #AAA;
     size: 14px;
     text-align: left;
     font-family: "open sans", sans-serif;
+    padding-top: 50px;
 }
 
-@media (max-width: 800px){
+@media (max-width: 768px){
     header .logotipo {
         margin-bottom: 10px;
         font-size: 15px;
@@ -101,9 +123,34 @@ footer {
         text-align: center;
         font-size: 14px;
     }
-    
-    
-
+    header .lupita{
+        padding-top: 10px;
+    }
+    .generos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* cada columna va a abarcar lo mismo*/
+    }
+    .genero-boton{
+        margin-left: 100px;
+    }
+    .imagenes{
+        display: none;
+    }
+    .titulos{
+        padding-top: 200px;
+    }
+    .titulos .h1{
+        font-size: 20px;
+    }
+    .titulos .general{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 20px;
+        padding: 20px;
+        margin-left: 30px;
+    }
 }
+
 
 

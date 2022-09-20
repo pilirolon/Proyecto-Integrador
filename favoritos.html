@@ -9,12 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="./css/style.css">
-    <title> Favoritos</title>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Favoritos</title>
 </head>
 <body>
     <header>
-        <div class = "contenedor">
+        <section class = "contenedor">
            <a href="./index.html"><img class="logo" src="./img/logo crop.jpeg" alt="logo">
                 <nav class="inicio">
                     <a href="./index.html"> Inicio </a>
@@ -24,33 +25,109 @@
                     <a href="./favoritos.html" class ="activo"> Favoritos </a>
                     <a href="./busqueda.html"> Resultados de búsqueda </a>
                 </nav>
-                <form class ="lupita" action="" method="get">
-                <input class ="lupita" type="text" name="nombre" placeholder="¿Qué quiere ver?" value="">
-            </div>
+                <form class="lupita" action= "./busqueda.html" method="get">
+                <input class="lupita" type="text" name="nombre" placeholder="¿Qué quiere ver?" value="">
+                </section>
     </header>
-    <div class="titulos-generales-contenedor"> Seleccionadas como favoritas
-        <section class="containervol2">
-            <article class="fotoss">
-                <a href="detail-movie.html"><img class="imagenes" src="./img/riverdale.jpg" alt="riverdale"></a>
-                <h4 class="titulos peliculas">Riverdale</h4>
-                <p class="fechas"> 2017</p>
-            </article>
-            <article class="fotoss">
-                <a href="detail-movie.html"><img class="imagenes" src="../Proyecto-Integrador/img/suitsx2.jpg" alt="suits"></a>
-                <h4 class="titulos peliculas"> Suits</h4>
-                <p class="fechas"> 2011</p>
-            </article>
-            <article class="fotos">
-                <a href="detail-movie.html"><img class="imagenes" src="../Proyecto-Integrador/img/resizer.jpg"
+
+<div class ="favoritos">
+   <h3 class="seleccion">Selección de favoritos</h3>
+</div>
+
+    <section class="contenedor">
+        <button role ="boton" id ="flecha-derecha" class ="flecha-izquierda"><i class="icon-angle-left"></i></button>
+        <article class="contenedor-peliculas">
+            <div class="galeria">
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="./img/riverdale.jpg" alt="riverdale"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="../Proyecto-Integrador/img/suitsx2.jpg" alt="suits"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="../Proyecto-Integrador/img/resizer.jpg"
                         alt="titanic"></a>
-                <h4 class="titulos peliculas">Titanic</h4>
-                <p class="fechas"> 1997</p>
-            </article>
-            <article class="fotoss">
-                <a href="detail-movie.html"><img class="imagenes" src="./img/no respires.jpg" alt="miedo"></a>
-                <h4 class="titulos peliculas">No respires</h4>
-                <p class="fechas"> 2016</p>
-            </article>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/blindspot.jpg" alt="blindspot"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/greys.jpg" alt="Greys"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/harry potter.jpeg" alt="Harry"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/mamma mia.jpeg" alt="Mammamia"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/soul.jpeg" alt="Soul"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/thenotebook.jpg" alt="The Notebook"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+
+            </div>
+        </article>
+        <button role ="boton" id ="flecha-derecha" class ="flecha-derecha"><i class="icon-angle-right"></i></button>
+    </section>
+
+    <section class="contenedor">
+        <button role ="boton" id ="flecha-derecha" class ="flecha-izquierda"><i class="icon-angle-left"></i></button>
+        <article class="contenedor-peliculas">
+            <div class="galeria">
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="./img/Lapropuesta.jpeg" alt="lapropuesta"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="./img/romantic.jpeg" alt="suits"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img class="imagenes" src="./img/camprock2.jpeg"
+                        alt="camprock"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/raton.jpeg" alt="raton"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/juegos.jpg" alt="juegos"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/perdida.jpg" alt="perdida"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/killing eve.jpg" alt="killingeve"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/no respires.jpg" alt="Soul"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+                <div class="pelicula">
+                    <a href="detail-movie.html"><img src="./img/last song.jpg" alt="last song"></a>
+                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
+                </div>
+
+            </div>
+        </article>
+        <button role ="boton" id ="flecha-derecha" class ="flecha-derecha"><i class="icon-angle-right"></i></button>
+    </section>
+
 </body>
 <footer>
     PCD Developers®. Developed by Pilar Rolon, Clara Pellet Lastra y Delfina Rawson
