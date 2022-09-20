@@ -177,7 +177,7 @@ footer {
     font-family: "open sans", sans-serif;
 }
 
-@media (max-width: 800px){
+@media (max-width: 768px){
     header .logotipo {
         margin-bottom: 10px;
         font-size: 15px;
