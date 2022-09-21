@@ -98,7 +98,7 @@ body{
     width: 50px;
     color: white;
     cursor: pointer;
-    z-index: 500; /* que la flecha quede arriba de los elementos*/ 
+    z-index: 100; /* que la flecha quede arriba de los elementos*/ 
     transition: .2s ease all;
 }
 .contenedor .flecha-izquierda:hover,

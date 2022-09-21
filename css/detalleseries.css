@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body{
@@ -9,7 +8,6 @@ body{
    font-family: 'Playfair Display', serif;
    background-image: url(../img/fondoriver.jpg);
    background-repeat: no-repeat;
-   
 }
 
 .imagen {
@@ -24,8 +22,8 @@ body{
  }
 
  .letras{
-   font-family: 'Open sans', sans-serif;
- }
+    font-family: 'Open sans', sans-serif;
+  }
 
 .titulo {
    font-family: 'open sans', sans-serif;
@@ -50,7 +48,7 @@ body{
     display: flex;
     flex-direction: row;
     padding-bottom: 150px;
-    }
+}
 
 .boton{ 
    background: rgb(0, 0, 0, 0.5);
@@ -66,6 +64,7 @@ body{
 .boton i{
    margin-right: 15px;
 }
+
 .boton:hover{
    background: #FFF;
    color: black;
@@ -124,7 +123,6 @@ header .lupita{
     margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
     display: flex; 
     /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
- 
 }
 
 footer {
@@ -136,6 +134,9 @@ footer {
 }
 
 @media (max-width: 768px){
+    *{
+        box-sizing: border-box;
+    }
    header .logotipo {
        margin-bottom: 10px;
        font-size: 15px;
