@@ -95,6 +95,7 @@ header .contenedor{
 }
 header .logo{
     width: 200px;
+    margin-left: 50px;
 }
 header nav a{
     color: #AAA;
@@ -102,6 +103,8 @@ header nav a{
     margin-right: 20px;
     font-family: 'Open Sans', sans-serif;
 }
+
+/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
 
 header nav a:hover,
 header nav a.activo {
@@ -111,8 +114,10 @@ header nav a.activo {
 header .lupita{
     font-family: 'Open sans';
     color: #AAA;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(0, 0, 0, 0.5);
+    margin-right: 20px;
 }
+
 
 .trailer {
     font-size: 16px;
@@ -147,7 +152,7 @@ footer {
     *{
         box-sizing: border-box;
     }
-    header .logotipo {
+    header .logo {
         margin-bottom: 10px;
         font-size: 15px;
     }
@@ -157,7 +162,12 @@ footer {
         font-size: 14px;
     }
     header .lupita{
-     padding-top: 10px;
+        padding-top: 10px;
+    }
+    header .contenedor {
+        flex-direction: column; 
+        text-align: center;
+        font-size: 14px;
     }
     .titulo {
      padding-top: 100px;

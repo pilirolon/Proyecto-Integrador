@@ -137,18 +137,18 @@ footer {
     *{
         box-sizing: border-box;
     }
-   header .logotipo {
-       margin-bottom: 10px;
-       font-size: 15px;
-   }
-   header .contenedor {
-       flex-direction: column; 
-       text-align: center;
-       font-size: 14px;
-   }
-   header .lupita{
-    padding-top: 10px;
-   }
+    header .logo {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    header .contenedor {
+        flex-direction: column; 
+        text-align: center;
+        font-size: 14px;
+    }
+    header .lupita{
+        padding-top: 10px;
+    }
    .titulo {
     padding-top: 100px;
     font-size: 30px;
