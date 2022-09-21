@@ -51,7 +51,7 @@ body{
 }
 
 .boton{ 
-   background: rgb(0, 0, 0, 0.5);
+   background: rgba(0, 0, 0, 0.5);
    border: none; 
    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
@@ -111,7 +111,7 @@ header nav a.activo {
 header .lupita{
     font-family: 'Open sans';
     color: #AAA;
-    background: rgb(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     margin-right: 20px;
 }
 
