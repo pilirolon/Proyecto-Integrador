@@ -1,16 +1,12 @@
 
-let ruta = "https://randomuser.me/api/";
+let ruta = "https://api.themoviedb.org/3/movie/550?api_key=45d43a6901861343cdb188d4f3bafd7c'"
 
-fetch (ruta)
-    .then(function(response){
-        return response.json()
-    })
-    .then (function(buscador){
-        let buscador  = document.querySelector(".header.lupita");
-        return "Search Movies"
-      })
-    .catch(function(e){
-        console.log(e)
-    })
+let lupita = document.querySelector('.lupita')
 
-    
+lupita.addEventListener('click', function(){
+    window.open(this) // aca va el link de lo q quiero buscar
+});
+
+lupita.addEventListener('mouseover', function(){
+    window.open(this) // aca va el link de lo q quiero buscar
+});
