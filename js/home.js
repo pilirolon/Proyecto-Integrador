@@ -11,7 +11,6 @@ lupita.addEventlistener('click', function(){
     window.open
 })
 
-
 lupita.addEventListener('click', function(){
     window.open(this) // aca va el link de lo q quiero buscar
 });
