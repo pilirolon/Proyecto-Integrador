@@ -1,4 +1,3 @@
-
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 const query = queryStringObj.get('busqueda');	
@@ -10,14 +9,19 @@ fetch(url)
 	    return response.json();
     })
 	.then(function(data){
-        console.log(`Resultados de busqueda de ${query}`)
+        results = console.log(`Resultados de busqueda de  ${query}`)
 	    console.log(data.results);
 
         const h3 = document.querySelector('h3');
         h3.innerText += query;
 
-       // for 
-
+        for (let i=0; i < data.length; i++){
+          resultadosJS.innerHTML()
+          //  innerHTML en que elemento del API hace referencia al titulo
+           // que arme un article para cada uno con nombre, descripcion, como rick and morty
+           // referencia a ese array
+        }
+    
     })
 	.catch(function(error){
 	    console.log('El error es: ' + error);
