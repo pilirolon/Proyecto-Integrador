@@ -11,9 +11,20 @@ fetch(ruta)
 	then(function(response){
 	return response.json();
 })
+
 	.then(function(data){
 	console.log(data);
 })
 	.catch(function(error){
 	console.log('El error es: ' + error);
 })
+
+
+lupita.addEventListener('click', function(){
+    window.open(this) // aca va el link de lo q quiero buscar
+});
+
+lupita.addEventListener('mouseover', function(){
+    window.open(this) // aca va el link de lo q quiero buscar
+});
+
