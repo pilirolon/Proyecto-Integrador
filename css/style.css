@@ -12,8 +12,11 @@ body{
 .contenedor {
     width: 90%;
     margin: auto;
-    
+    display: flex;
+    align-items: center;
+    position: relative;
 }
+    
 
 header{
     padding: 10px ;
@@ -28,7 +31,9 @@ header .contenedor{
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
+
 header .logo{
     width: 200px;
 }
@@ -52,13 +57,7 @@ header .lupita{
     background: rgb(0, 0, 0, 0.5);
 }
 
-.container {
-    display: flex;
-    flex-wrap: nowrap;
-    margin: 30px
 
-}
-/* Aca hice lo de la pelicula principal */
 .pelicula-principal {
     font-size: 16px;
     min-height: 100vh;
@@ -69,7 +68,7 @@ header .lupita{
     margin-bottom: 50px;
     display: flex;  /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
     align-items: end;
-    padding-top: 150px;
+
 } 
 
 /* aca le quise sacar los margenes de arriba y abajo porque no me dejaba mover el texto para abajo */
@@ -106,11 +105,7 @@ header .lupita{
     background: #FFF;
     color: black;
 }
-.contenedor{
-    display: flex;
-    align-items: center;
-    position: relative;
-}
+
 
 .contenedor .flecha-izquierda,
 .contenedor .flecha-derecha{

@@ -59,14 +59,10 @@ body{
 
 .resultados {
     display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    margin-right: 20px;
-    flex-wrap: nowrap;
     justify-content: space-between;
     margin-top: 150px;
-    margin-bottom: 0px;
 }
+
 .resultados a {
     text-decoration: none;
     color: white;
