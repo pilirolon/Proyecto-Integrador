@@ -1,29 +1,38 @@
 
-const url = "https://api.themoviedb.org/3/genre/movie/list?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US"
+let url = "https://api.themoviedb.org/3/genre/movie/list?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US"
+
+//buscamos la info
 fetch(url) 
-.then(function(response) {
+  .then(function(response) {
+ //convertimos la info en formato json
 	return response.json()
+
   })
-  .then(function(data) {
-	console.log(data);
-  for (var i = 0; i < listaGeneros.genres.length; i++) {
-    document.querySelector("section.generos").innerHTML += "<li><a href='detalleGenero.html?idGenero="+listaGeneros.genres[i].id+"'>"+listaGeneros.genres[i].name+"</a></li>"
+  .then(function(listaGeneros) {
+    console.log(listaGeneros);
+    //capturar el section en el que voy a meter los generos. 
+    let generos = listaGeneros.generos;
+    let lista = document.querySelector(".listaGeneros")
+
+  //recorremos el array de datos, los generos
+    for (let i = 0; i<generos.length; i++); {
+      // queremos que en cada vuelta nos ponga la info de cada genero
+      // en este caso como queremos meter una etiqueta completa es HTML
+        lista.innerHTML += `<li>${generos[i].name} </li>`
     }})
-  //capturar el section en el que voy a meter los generos, 
-  //for xa recorrer el array de data(recorrre todos los genero), 
   //capturar el section en el que voy a meter los generos, agregar un article(ancor pata redirigir al detalle, 
   //le paso una query para el id) por cada genero al section capture antes
-  .catch(function(error) {
+    .catch(function(error) {
 	console.log("Error: " + error);
   })
-  
-  fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=942febef73deb21c3f70ec6b055cb722")
-  .then(function (response) {
-    return response.json();
-    })
-  .then(function (listaGenerosSerie) {
-    console.log(listaGenerosSerie);
-    for (var i = 0; i < listaGenerosSerie.genres.length; i++) {
-      document.querySelector("section.generosSerie").innerHTML += "<li><a href='detalleGenero.html?idGenero="+listaGenerosSerie.genres[i].id+"'>"+listaGenerosSerie.genres[i].name+"</a></li>"
-      }})
 
+//para las series
+let ruta = "https://api.themoviedb.org/3/genre/tv/list?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US"
+
+fetch (ruta)
+.then(function(response) {
+   return response.json()
+  })
+.then (function(GenerosTV) {
+  console.log(GenerosTV);
+})
