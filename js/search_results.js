@@ -68,7 +68,7 @@ fetch(url) // buscamos info de la api
 
         for(let i=0; i<info.length; i++){
             contenidoMovie += `<article class="ResultadosJS"> 
-                                <img src=${info[i].poster_path} alt=''/>
+                                <img src='https://image.tmdb.org/t/p/w500/${info[i].poster_path}' alt=''/>
                                 <a href='./detail-movie.html?id=${info[i].id}'><p>Titulo: ${info[i].title}</p></a> 
                                 <p>Release Date: ${info[i].release_date}</a>
         
@@ -94,7 +94,7 @@ fetch(url2)
         let info = data.results
         
         // creamos las variables del campo
-        let series = document.querySelector('.ResultadosJS')
+        let series = document.querySelector('.ResultadosJS');
         let nada = '';
 
         // condicionales chequeamos el contenido
@@ -125,7 +125,6 @@ fetch(url2)
         }
 
         serieContainer.innerHTML += contenidoSerie;
-
     })
 
     // error???
