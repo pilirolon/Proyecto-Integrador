@@ -55,7 +55,7 @@ fetch(url) // buscamos info de la api
 
         //limpiamos el mensaje de error cuando el usuario modifica el contenido
         buscador.addEventListener('input', function(){
-            tracks.innerText= '';
+            aviso.innerText= '';
 
         })
 
@@ -129,7 +129,7 @@ fetch(url2)
     })
 
     // error???
-    
+
     .catch(function(error){
 	    console.log('El error es: ' + error);
     });
