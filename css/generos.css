@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body{
@@ -17,9 +16,6 @@ header{
     background: rgba(0,0,0,0.9);
 }
 
-.titulos{
-    padding-top: 130px;
-}
 header .contenedor{
     display: flex;
     justify-content: space-between;
@@ -43,7 +39,7 @@ header nav a.activo {
 header .lupita{
     font-family: 'Open sans';
     color: #AAA;
-    background: rgb(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .general{
@@ -51,6 +47,10 @@ header .lupita{
     font-family: 'Open sans', sans-serif;
     font-size: 60px;
     text-align: center;
+}
+
+.titulos{
+    padding-top: 120px;
 }
 
 .generos{
@@ -94,9 +94,8 @@ header .lupita{
     color: #FFF;
     margin-right: 20px;  
     font-size: 16px;
-
-
 }
+
 .generos .borde .genero-boton:hover{
     background: #FFF;
     color: black;
@@ -116,8 +115,8 @@ footer {
     padding-top: 50px;
 }
 
-@media (max-width: 800px){
-    header .logotipo {
+@media (max-width: 768px){
+    header .logo {
         margin-bottom: 10px;
         font-size: 15px;
     }
@@ -128,6 +127,30 @@ footer {
     }
     header .lupita{
         padding-top: 10px;
+    }
+    .generos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* cada columna va a abarcar lo mismo*/
+    }
+    .genero-boton{
+        margin-left: 100px;
+    }
+    .imagenes{
+        display: none;
+    }
+    .titulos{
+        padding-top: 200px;
+    }
+    .titulos .h1{
+        font-size: 20px;
+    }
+    .titulos .general{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 20px;
+        padding: 20px;
+        margin-left: 30px;
     }
 }
 

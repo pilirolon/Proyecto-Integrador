@@ -1,12 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: black;
-    font-family: 'Open Sans', sans-serif;
 }
 
 header{
@@ -44,7 +38,7 @@ header nav a.activo {
 header .lupita {
     font-family: 'Open sans';
     color: #AAA;
-    background: rgb(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .contenedor {
@@ -71,7 +65,7 @@ header .lupita {
 
 .contenedor .flecha-izquierda:hover,
 .contenedor .flecha-derecha:hover {
-    background: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .contenedor .flecha-izquierda {
@@ -101,7 +95,7 @@ header .lupita {
 .contenedor-peliculas .galeria .pelicula {
     transition: .3s ease all;
     /* es para el efecto hover */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     /* el .3 es la transparencia*/
     justify-content: space-between;
     min-width: 20%;
@@ -116,7 +110,7 @@ header .lupita {
 }
 
 .boton-heart {
-    background: rgb(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 5px;
     padding: 15px;
@@ -148,14 +142,14 @@ footer {
     padding-top: 50px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
 
-    header .logotipo {
+    header .logo {
         margin-bottom: 10px;
         font-size: 15px;
     }
     header .contenedor {
-        flex-direction: column;
+        flex-direction: column; 
         text-align: center;
         font-size: 14px;
     }

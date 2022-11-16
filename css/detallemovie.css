@@ -1,7 +1,6 @@
 *{
     margin: 0%;
     padding: 0%;
-    box-sizing: border-box;
 }
 
 body{
@@ -33,7 +32,6 @@ body{
    color: rgba(255, 255, 255, 0.706);
    font-size: 400%;
    margin: 2%;
-
    padding-left: 8%;
    
 }
@@ -57,7 +55,7 @@ body{
 
 
 .boton{ 
-   background: rgb(0, 0, 0, 0.5);
+   background: rgba(0, 0, 0, 0.5);
    border: none; 
    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
@@ -97,6 +95,7 @@ header .contenedor{
 }
 header .logo{
     width: 200px;
+    margin-left: 50px;
 }
 header nav a{
     color: #AAA;
@@ -115,8 +114,10 @@ header nav a.activo {
 header .lupita{
     font-family: 'Open sans';
     color: #AAA;
-    background: rgb(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
 }
+
 
 .trailer {
     font-size: 16px;
@@ -126,7 +127,6 @@ header .lupita{
     margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
     display: flex; 
     /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
- 
 }
 
 
@@ -148,8 +148,11 @@ footer {
     padding-top: 50px;
 }
 
-@media (max-width: 800px){
-    header .logotipo {
+@media (max-width: 768px){
+    *{
+        box-sizing: border-box;
+    }
+    header .logo {
         margin-bottom: 10px;
         font-size: 15px;
     }
@@ -159,7 +162,12 @@ footer {
         font-size: 14px;
     }
     header .lupita{
-     padding-top: 10px;
+        padding-top: 10px;
+    }
+    header .contenedor {
+        flex-direction: column; 
+        text-align: center;
+        font-size: 14px;
     }
     .titulo {
      padding-top: 100px;

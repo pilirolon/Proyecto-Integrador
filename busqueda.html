@@ -26,192 +26,169 @@
                 <a href="./favoritos.html"> Favoritos </a>
                 <a href="./busqueda.html" class="activo"> Resultados de búsqueda </a>
             </nav>
-            <form class="lupita" action= "./busqueda.html" method="get">
-                <input class="lupita" type="text" name="nombre" placeholder="¿Qué quiere ver?" value="">
-            </section>
+            <form class="lupita" action="./busqueda.html" method="get">
+                <input class="lupita" type="text" name="busqueda" placeholder="¿Qué quiere ver?" value="">
+        </section>
     </header>
 
     <main>
-        <section class="busqueda">
-            <div class="resultados">
-                <h3>Resultados de Busqueda</h3>
-                <p>Explora títulos relacionados con:</p>
-                <a href="./detail-serie.html"> Comedias </a> |
-                <a href="./detail-serie.html"> Comedias Románticas </a> |
-                <a href="./detail-serie.html"> Comedias de acción </a> |
-                <a href="./detail-serie.html"> Comedias familiares </a> |
-            </div>
-        </section>
+        <h3>Resultados de Busqueda de: </h3>
 
-            <section class="contenedor">
-                <button role ="boton" id ="flecha-derecha" class ="flecha-izquierda"><i class="icon-angle-left"></i></button>
-                <article class="contenedor-peliculas">
-                    <div class="galeria">
-                        <div class="pelicula">
-                            <img src="./img/10diaspeli.jpeg" alt="10diaspeli">
-                            <form action="./favoritos.html" method="GET">
-                                <div>
-                                <button type="submit" class="boton-heart"><i class="icon-heart"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="pelicula">
-                            <img src="./img/10thing.jpeg"
-                                alt="10thingspeli">
-                                <form>
-                                    <a href="./favoritos.html">
-                                        <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                                    </a>
-                                </form>
-                        </div>
-                        <div class="pelicula">
-                            <img src="./img/esposamentira.jpg" alt="esposamentira">
-                            <form>
-                                <a href="./favoritos.html">
-                                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                                </a>
-                            </form>
-                        </div>
-                        <div class="pelicula">
-                            <img src="./img/soncomoniños.jpg" alt="soncomoniños">
-                            <form>
-                                <a href="./favoritos.html">
-                                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                                </a>
-                            </form>
-                        </div>
-                        <div class="pelicula">
-                            <img src="./img/locaporlascompras.jpg" alt="locacompras">
-                            <form>
-                                <a href="./favoritos.html">
-                                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                                </a>
-                            </form>
-                        </div>
-                        <div class="pelicula">
-                            <img src="./img/docena.jpeg" alt="docena">
-                            <form>
-                                <a href="./favoritos.html">
-                                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                                </a>
-                            </form>
-                        </div>
-                        <div class="pelicula">
-                            <img src="./img/docena2.jpeg" alt="docena2">
-                            <form>
-                                <a href="./favoritos.html">
-                                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                                </a>
-                            </form>
-                        </div>
-                        <div class="pelicula">
-                            <img src="./img/romantic.jpeg" alt="romantic">
-                            <form>
-                                <a href="./favoritos.html">
-                                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                                </a>
-                            </form>
-                        </div>
-                        <div class="pelicula">
-                            <img src="./img/Lapropuesta.jpeg" alt="propuesta">
-                            <form>
-                                <a href="./favoritos.html">
-                                    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                                </a>
-                            </form>
-                        </div>
+        <section class ="ResultadosJS"></section>
+
+        <!-- <section class="contenedor">
+            <button role="boton" id="flecha-derecha" class="flecha-izquierda"><i class="icon-angle-left"></i></button>
+            <article class="contenedor-peliculas">
+                <div class="galeria">
+                    <div class="pelicula">
+                        <img src="./img/10diaspeli.jpeg" alt="10diaspeli">
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
+                        </form>
+                    </div>
+                    <div class="pelicula">
+                        <img src="./img/10thing.jpeg" alt="10thingspeli">
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
+                        </form>
+                    </div>
+                    <div class="pelicula">
+                        <img src="./img/esposamentira.jpg" alt="esposamentira">
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
+                        </form>
 
                     </div>
-                </article>
-                <button role ="boton" id ="flecha-derecha" class ="flecha-derecha"><i class="icon-angle-right"></i></button>
-            </section>
-        
+                    <div class="pelicula">
+                        <img src="./img/soncomoniños.jpg" alt="soncomoniños">
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
+                        </form>
+                    </div>
+                    <div class="pelicula">
+                        <img src="./img/locaporlascompras.jpg" alt="locacompras">
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
+                        </form>
+                    </div>
+                    <div class="pelicula">
+                        <img src="./img/docena.jpeg" alt="docena">
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
+                        </form>
+                    </div>
+                    <div class="pelicula">
+                        <img src="./img/docena2.jpeg" alt="docena2">
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
+                        </form>
+                    </div>
+                    <div class="pelicula">
+                        <img src="./img/romantic.jpeg" alt="romantic">
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
+                        </form>
+                    </div>
+                    <div class="pelicula">
+                        <img src="./img/Lapropuesta.jpeg" alt="propuesta">
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
+                        </form>
+                    </div>
+
+                </div>
+            </article>
+            <button role="boton" id="flecha-derecha" class="flecha-derecha"><i class="icon-angle-right"></i></button>
+        </section>
+
         <section class="contenedor">
-            <button role ="boton" id ="flecha-derecha" class ="flecha-izquierda"><i class="icon-angle-left"></i></button>
+            <button role="boton" id="flecha-derecha" class="flecha-izquierda"><i class="icon-angle-left"></i></button>
             <article class="contenedor-peliculas">
                 <div class="galeria">
                     <div class="pelicula">
                         <img src="./img/camprock.jpeg" alt="camprock">
-                        <form>
-                            <a href="./favoritos.html">
-                                <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                            </a>
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
                         </form>
                     </div>
-                    <div class= "pelicula">
-                        <img src="./img/highschoolmusical.jpeg" alt ="high school musical">
-                        <form>
-                            <a href="./favoritos.html">
-                                <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                            </a>
+                    <div class="pelicula">
+                        <img src="./img/highschoolmusical.jpeg" alt="high school musical">
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
                         </form>
                     </div>
                     <div class="pelicula">
                         <img src="./img/highschoolmusical2.jpeg" alt="high school musical 2">
-                        <form>
-                            <a href="./favoritos.html">
-                                <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                            </a>
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
                         </form>
                     </div>
                     <div class="pelicula">
                         <img src="./img/camprock2.jpeg" alt="camprock2">
-                        <form>
-                            <a href="./favoritos.html">
-                                <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                            </a>
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
                         </form>
                     </div>
                     <div class="pelicula">
                         <img src="./img/soul.jpeg" alt="soul">
-                        <form>
-                            <a href="./favoritos.html">
-                                <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                            </a>
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
                         </form>
                     </div>
                     <div class="pelicula">
                         <img src="./img/luca.jpeg" alt="luca">
-                        <form>
-                            <a href="./favoritos.html">
-                                <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                            </a>
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
                         </form>
                     </div>
                     <div class="pelicula">
                         <img src="./img/last song.jpg" alt="last song">
-                        <form>
-                            <a href="./favoritos.html">
-                                <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                            </a>
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
                         </form>
                     </div>
                     <div class="pelicula">
                         <img src="./img/raton.jpeg" alt="ratatouille">
-                        <form>
-                            <a href="./favoritos.html">
-                                <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                            </a>
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
                         </form>
                     </div>
                     <div class="pelicula">
                         <img src="./img/jackandgill.jpeg" alt="jackandgill">
-                        <form>
-                            <a href="./favoritos.html">
-                                <button role="button" class="boton-heart"><i class="icon-heart"></i></button>
-                            </a>
+                        <form action="./favoritos.html" method="GET">
+                            <button type="submit" role="button" class="boton-heart"><i
+                                    class="icon-heart"></i></button></a>
                         </form>
                     </div>
                 </div>
             </article>
-            <button role ="boton" id ="flecha-derecha" class ="flecha-derecha"><i class="icon-angle-right"></i></button>
-        </section>
+            <button role="boton" id="flecha-derecha" class="flecha-derecha"><i class="icon-angle-right"></i></button>
+        </section> -->
     </main>
 
+    <footer>
+        PCD Developers®. Developed by Pilar Rolon, Clara Pellet Lastra y Delfina Rawson
+    </footer>
+
+    <script src="./js/busqueda.js" type="text/javascript"></script>
 </body>
 
-<footer>
-    PCD Developers®. Developed by Pilar Rolon, Clara Pellet Lastra y Delfina Rawson
-</footer>
 
 </html>

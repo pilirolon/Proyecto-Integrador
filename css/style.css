@@ -24,7 +24,6 @@ header{
     position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
     z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
     background: rgba(0,0,0,0.9);
-
 }
 
 header .contenedor{
@@ -44,8 +43,6 @@ header nav a{
     font-family: 'Open Sans', sans-serif;
 }
 
-/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
-
 header nav a:hover,
 header nav a.activo {
     color: #FFF;
@@ -54,10 +51,17 @@ header nav a.activo {
 header .lupita{
     font-family: 'Open sans';
     color: #AAA;
-    background: rgb(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px
+}
+
+/* Aca hice lo de la pelicula principal */
 .pelicula-principal {
     font-size: 16px;
     min-height: 100vh;
@@ -90,10 +94,10 @@ header .lupita{
     margin-bottom: 2vh;
 }
 .pelicula-principal .boton{ 
-    background: rgb(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     border: none; 
-    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
-    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
+    border-radius: 5px; 
+    padding: 15px; 
     color: #FFF;
     margin-right: 20px;  
     font-size: 18px; 
@@ -106,6 +110,13 @@ header .lupita{
     color: black;
 }
 
+.contenedor{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
 
 .contenedor .flecha-izquierda,
 .contenedor .flecha-derecha{
@@ -118,7 +129,7 @@ header .lupita{
     width: 50px;
     color: white;
     cursor: pointer;
-    z-index: 100; /* que la flecha quede arriba de los elementos*/ 
+    z-index: 100; 
     transition: .2s ease all;
 }
 .contenedor .flecha-izquierda:hover,
@@ -137,32 +148,32 @@ header .lupita{
 .contenedor-peliculas{
     width: 100%;
     padding: 20px 0;
-    /* abajo y arriba 20, 0 a la izq y derecha*/ 
     overflow-x: scroll;
-    scroll-behavior: smooth; /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */ 
+    scroll-behavior: smooth; 
 }
 
 .contenedor-peliculas .galeria{
     display: flex;
-    flex-wrap: nowrap; /* para que las imagenes queden una al lado de la otra */
+    flex-wrap: nowrap; 
 }
 
 .contenedor-peliculas .galeria .pelicula{
-    transition: .3s ease all; /* es para el efecto hover */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); /* el .3 es la transparencia*/
+    transition: .3s ease all; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); 
     justify-content: space-between;
     min-width: 20%;
 }
 
 .boton-heart {
-    background: rgb(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     border: none; 
-    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
-    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
+    border-radius: 5px; 
+    padding: 15px; 
     color: #FFF;
     margin-right: 20px;  
     font-size: 18px;  
 }
+
 .boton-heart:hover{
     background: #FFF;
     color: black;
@@ -172,7 +183,7 @@ header .lupita{
         width: 180px;
         height: 250px;
         margin: 30px; 
-        vertical-align: top; /* quitar margen que agregan los navegadores */
+        vertical-align: top;
     }
 
 footer {
@@ -199,14 +210,10 @@ footer {
     color: #AAA ;
     text-align: center;
     font-family: 'Arial, Helvetica', sans-serif;
-
 }
 
-
-/* MEDIA QUERIE */
-
-@media (max-width: 800px){
-    header .logotipo {
+@media (max-width: 768px){
+    header .logo {
         margin-bottom: 10px;
         font-size: 15px;
     }
