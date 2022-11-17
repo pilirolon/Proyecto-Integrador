@@ -11,7 +11,7 @@ fetch(url)
   .then(function(listaGeneros) {
     console.log(listaGeneros);
     //capturar el section en el que voy a meter los generos. 
-    let generos = listaGeneros.generos;
+    let generos = listaGeneros.genres;
     let lista = document.querySelector(".listaGeneros")
 
   //recorremos el array de datos, los generos
@@ -22,7 +22,8 @@ fetch(url)
     }})
   //capturar el section en el que voy a meter los generos, agregar un article(ancor pata redirigir al detalle, 
   //le paso una query para el id) por cada genero al section capture antes
-    .catch(function(error) {
+  
+  .catch(function(error) {
 	console.log("Error: " + error);
   })
 
@@ -35,4 +36,9 @@ fetch (ruta)
   })
 .then (function(GenerosTV) {
   console.log(GenerosTV);
+  let generosSeries = GenerosTV.genres;
+  let lista = document.querySelector(".listaGeneros")
 })
+.catch(function(error) {
+	console.log("Error: " + error);
+  })
