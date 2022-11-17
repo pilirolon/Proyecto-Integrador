@@ -7,11 +7,13 @@ window.addEventListener('load', function () { // load es un evento que controla 
     let aviso = document.querySelector('.aviso') // aca quiero avisar 
 
     //condicionales chequeamos el contenido
-    formulario.addEventListener('submit', function () { //cuando el usuario submit algo, verifica con el evento
+    formulario.addEventListener('submit', function (e) { 
+        e.preventDefault();
+
         if (buscador.value == "") {
-            alert('El buscador no puede estar vacío'); // o aviso.innerText('')
+            aviso.innerText='El buscador no puede estar vacío'; // o aviso.innerText('')
         } else if (buscador.value.length < 3) {
-            alert('Por favor ingrese más de tres caracteres');  // o aviso.innerText('')
+            aviso.innerText = 'Por favor ingrese más de tres caracteres';  // o aviso.innerText('')
         } else {
             this.submit(); 
         }
@@ -31,7 +33,7 @@ window.addEventListener('load', function () { // load es un evento que controla 
     // Buscar y q aparezca en el texto
 
     let busqresults = document.querySelector('h3')
-    busqresults.innerText = `Resultados de busqueda de: ${query}`;
+    busqresults.innerText = `Resultados de busqueda de: "${query}"`;
         buscador.addEventListener('input', function(){
             busqresults.innerText= '';
             })
@@ -53,8 +55,11 @@ window.addEventListener('load', function () { // load es un evento que controla 
             let nada = '';
 
             if (info.length == 0) {
-                nada += `<h2 class= "no"> No se encontaron resultados para ${query}</h2>
-                            <h2 class="pero">Búsqueda relacionada:</h2>`;
+                nada += `<h2 class= "no"> No se encontaron resultados para ${query}</h2>`;
+                let flecha = document.querySelector('#flecha')
+                flecha.style.display = "none";
+                let flechai = document.querySelector('.flecha-derecha')
+                flechai.style.display = "none";
             }
             movies.innerHTML += nada
 
@@ -65,14 +70,14 @@ window.addEventListener('load', function () { // load es un evento que controla 
             })
 
             console.log(info);
+            
             let movieContainer = document.querySelector('.galeria');
-            let contenidoMovie = '';
+         
 
             // recorremos la info 
-            for (let i = 0; i < info.length; i++) {
-                contenidoMovie += `<div class="pelicula">
-                <a href="./detail-movie.html"><img clas ="img" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}
-                " alt="spiderman"></a>
+            for(let i=0; i<info.length; i++){
+                movieContainer.innerHTML += `<div class="pelicula">
+                <a href="./detail-movie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
                 <h4 class="titulos-peliculas">${info[i].title}</h4>
                 <p class="fechas">${info[i].release_date}</p>
                 <form action="./favoritos.html" method="GET">
@@ -82,7 +87,7 @@ window.addEventListener('load', function () { // load es un evento que controla 
             }
 
             // editamos nuestro HTML 
-            movieContainer.innerHTML += contenidoMovie
+           
         })
 
     // buscador SERIES
@@ -98,14 +103,26 @@ window.addEventListener('load', function () { // load es un evento que controla 
         .then(function (data) {
             let info = data.results
 
+            let series = document.querySelector('.contseries') // creamos la variable del campo 
+            let nada = '';
+
+            if (info.length == 0) {
+                nada += `<h2 class= "no"> No se encontaron resultados para ${query}</h2>`;
+                let flecha1 = document.querySelector('#flecha1')
+                flecha1.style.display = "none";
+                let flecha2 = document.querySelector('#flecha2')
+                flecha2.style.display = "none";
+            }
+            series.innerHTML += nada
+
             console.log(info);
 
-            let serieContainer = document.querySelector('.contenedor-series');
-            let contenidoSerie = '';
+            let serieContainer = document.querySelector('.serie');
+            
 
             for (let i = 0; i < info.length; i++) {
-                contenidoSerie += `<div class="pelicula">
-                <a href="./detail-movie.html"><img class ="img" src=${info[i].poster_path} alt=''/></a>
+                serieContainer.innerHTML += `<div class="pelicula">
+                <a href="./detail-serie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="series"></a>
                 <h4 class="titulos-peliculas">${info[i].original_name}</h4>
                 <p class="fechas">${info[i].first_air_date}</p>
                 <form action="./favoritos.html" method="GET">
@@ -114,7 +131,6 @@ window.addEventListener('load', function () { // load es un evento que controla 
             </div>`
             }
 
-            serieContainer.innerHTML += contenidoSerie;
         })
 
         .catch(function (error) {

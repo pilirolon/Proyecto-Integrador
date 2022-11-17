@@ -46,16 +46,21 @@ body{
 
 h3 {
     padding-top: 150px;
+    color: red;
+    padding-left: 30px;
+    font-size: 40px;
 }
 
-.contenedor {
+.contenedor{
     display: flex;
     align-items: center;
     position: relative;
+    width: 90%;
+    margin: auto;
 }
 
 .contenedor .flecha-izquierda,
-.contenedor .flecha-derecha {
+.contenedor .flecha-derecha{
     position: absolute;
     border: none;
     background: rgba(0, 0, 0, 0.3);
@@ -65,80 +70,39 @@ h3 {
     width: 50px;
     color: white;
     cursor: pointer;
-    z-index: 500;
-    /* que la flecha quede arriba de los elementos*/
+    z-index: 100; 
     transition: .2s ease all;
 }
-
 .contenedor .flecha-izquierda:hover,
 .contenedor .flecha-derecha:hover {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, .9);
 }
 
-.contenedor .flecha-izquierda {
+.contenedor .flecha-izquierda{
     left: 0;
 }
 
-.contenedor .flecha-derecha {
+.contenedor .flecha-derecha{
     right: 0;
 }
 
-.contenedor-peliculas {
+.contenedor-peliculas{
     width: 100%;
     padding: 20px 0;
-    /* abajo y arriba 20, 0 a la izq y derecha*/
     overflow-x: scroll;
-    scroll-behavior: smooth;
-    /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */
+    scroll-behavior: smooth; 
 }
 
-.contenedor-peliculas .galeria {
+.contenedor-peliculas .galeria{
     display: flex;
-    flex-wrap: nowrap;
-    /* para que las imagenes queden una al lado de la otra */
-    text-align: center;
+    flex-wrap: nowrap; 
 }
 
-.contenedor-peliculas .galeria .pelicula {
-    transition: .3s ease all;
-    /* es para el efecto hover */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    /* el .3 es la transparencia*/
+.contenedor-peliculas .galeria .pelicula{
+    transition: .3s ease all; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); 
     justify-content: space-between;
     min-width: 20%;
-}
-
-.contenedor-series {
-    width: 100%;
-    padding: 20px 0;
-    /* abajo y arriba 20, 0 a la izq y derecha*/
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */
-}
-
-.contenedor-series .galeria {
-    display: flex;
-    flex-wrap: nowrap;
-    /* para que las imagenes queden una al lado de la otra */
-    text-align: center;
-}
-
-.contenedor-series .galeria .serie {
-    transition: .3s ease all;
-    /* es para el efecto hover */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    /* el .3 es la transparencia*/
-    justify-content: space-between;
-    min-width: 20%;
-}
-
-.img {
-    width: 180px;
-    height: 250px;
-    margin: 30px;
-    vertical-align: top;
-    /* quitar margen que agregan los navegadores */
 }
 
 .boton-heart {
@@ -156,6 +120,44 @@ h3 {
     color: black;
 }
 
+.contenedor-peliculas .galeria .pelicula img{
+        width: 180px;
+        height: 250px;
+        margin: 30px; 
+        vertical-align: top;
+    }
+
+footer {
+        color: #AAA;
+        size: 14px;
+        text-align: left;
+        font-family: "open sans", sans-serif;
+        padding-top: 50px;
+}
+
+.pelicula {
+    color: white;
+    padding: 5px;
+    font-family: 'open sans', sans-serif;
+    text-align: center;
+}
+
+.titulo{
+    font-family: "open sans", sans-serif;
+    color: white;
+}
+
+.fechas {
+    color: #AAA ;
+    text-align: center;
+    font-family: 'Arial, Helvetica', sans-serif;
+}
+
+.aviso{
+    color: red;
+    padding-top: 10px;
+
+}
 /* 
     @media (max-width: 768px) {
 
