@@ -49,7 +49,7 @@ window.addEventListener('load', function () { // load es un evento que controla 
             // Buscador PELICULAS
 
             let info = data.results // capture el end point
-            let movies = document.querySelector('.container') // creamos la variable del campo 
+            let movies = document.querySelector('.contenedor-peliculas') // creamos la variable del campo 
             let nada = '';
 
             if (info.length == 0) {
@@ -65,17 +65,20 @@ window.addEventListener('load', function () { // load es un evento que controla 
             })
 
             console.log(info);
-            let movieContainer = document.querySelector('.contenedor-peliculas');
+            let movieContainer = document.querySelector('.galeria');
             let contenidoMovie = '';
 
             // recorremos la info 
             for (let i = 0; i < info.length; i++) {
-                contenidoMovie += `<div class="pelicula"> 
-                                <img src='https://image.tmdb.org/t/p/w500/${info[i].poster_path}' alt=''/>
-                                <a href='./detail-movie.html?id=${info[i].id}'><p>Titulo: ${info[i].title}</p></a> 
-                                <p>Release Date: ${info[i].release_date}</a>
-        
-                            </div>`
+                contenidoMovie += `<div class="pelicula">
+                <a href="./detail-movie.html"><img clas ="img" src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}
+                " alt="spiderman"></a>
+                <h4 class="titulos-peliculas">${info[i].title}</h4>
+                <p class="fechas">${info[i].release_date}</p>
+                <form action="./favoritos.html" method="GET">
+                    <button type="submit" role="button" class="boton-heart"><i class="icon-heart"></i></button></a>
+                </form>
+            </div>`
             }
 
             // editamos nuestro HTML 
@@ -95,35 +98,20 @@ window.addEventListener('load', function () { // load es un evento que controla 
         .then(function (data) {
             let info = data.results
 
-            // creamos las variables del campo
-            let series = document.querySelector('.container');
-            let nada = '';
-
-            // condicionales chequeamos el contenido
-
-            if (info.length == 0) {
-                nada += `<h2 class= "no"> No se encontaron resultados para ${query}</h2>
-                        <h2 class="pero">Búsqueda relacionada:</h2>`;
-            }
-            series.innerHTML += nada
-
-            //limpiamos el mensaje de error cuando el usuario modifica el contenido
-            buscador.addEventListener('submit', function () {
-                error.innerText = '';
-            })
-
             console.log(info);
 
             let serieContainer = document.querySelector('.contenedor-series');
             let contenidoSerie = '';
 
             for (let i = 0; i < info.length; i++) {
-                contenidoMovie += `<div class="serie"> 
-                                <img src=${info[i].poster_path} alt=''/>
-                                <a href='./detail-movie.html?id=${info[i].id}'><p>Titulo: ${info[i].original_name}</p></a> 
-                                <p>Release Date: ${info[i].first_air_date}</a>
-        
-                            </div>`
+                contenidoSerie += `<div class="pelicula">
+                <a href="./detail-movie.html"><img class ="img" src=${info[i].poster_path} alt=''/></a>
+                <h4 class="titulos-peliculas">${info[i].original_name}</h4>
+                <p class="fechas">${info[i].first_air_date}</p>
+                <form action="./favoritos.html" method="GET">
+                    <button type="submit" role="button" class="boton-heart"><i class="icon-heart"></i></button></a>
+                </form>
+            </div>`
             }
 
             serieContainer.innerHTML += contenidoSerie;

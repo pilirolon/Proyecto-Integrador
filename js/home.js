@@ -10,7 +10,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 
 // PELICULAS End point: Movies --> /search/movie
 
-	const url = `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US&page=1&include_adult=false` // obtener la info qu esta dentro de nuestro form
+	const url = `https://api.themoviedb.org/3/movie/popular76341?api_key=45d43a6901861343cdb188d4f3bafd7c` // obtener la info qu esta dentro de nuestro form
 
 	fetch(url)
         .then(function(response){
@@ -21,7 +21,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
             let info = data.results
             console.log(info);
 
-            let movieContainer= document.querySelector('.listas');
+            let movieContainer= document.querySelector('.pelicula');
             let contenidoMovie= '';
 
 		//recorremos la info
@@ -42,7 +42,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 
 // SERIES End point /search/tv
 
-    const url2 = `https://api.themoviedb.org/3/search/tv?query=${query}&api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US&page=1&include_adult=false` // obtener la info qu esta dentro de nuestro form
+    const url2 = `https://api.themoviedb.org/3/tv/latest76341?api_key=45d43a6901861343cdb188d4f3bafd7c` // obtener la info qu esta dentro de nuestro form
 
 	fetch(url2)
         .then(function (response) {
@@ -52,7 +52,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
             let info = data.results
 
             // creamos las variables del campo
-            let series = document.querySelector('.seriones');
+            let series = document.querySelector('.pelicula');
             let nada = '';
 
             for (let i = 0; i < info.length; i++) {
