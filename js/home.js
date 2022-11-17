@@ -10,7 +10,11 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 
 // PELICULAS End point: Movies --> /search/movie
 
+<<<<<<< HEAD
 	const url = `https://api.themoviedb.org/3/movie/popular76341?api_key=45d43a6901861343cdb188d4f3bafd7c` // obtener la info qu esta dentro de nuestro form
+=======
+	const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US` // obtener la info qu esta dentro de nuestro form
+>>>>>>> b9dc005d4adb54a0d5a54e88d721645a444ff852
 
 	fetch(url)
         .then(function(response){
@@ -21,19 +25,27 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
             let info = data.results
             console.log(info);
 
+<<<<<<< HEAD
             let movieContainer= document.querySelector('.pelicula');
             let contenidoMovie= '';
+=======
+            let movieContainer= document.querySelector('.galeria');
+
+>>>>>>> b9dc005d4adb54a0d5a54e88d721645a444ff852
 
 		//recorremos la info
 		for(let i=0; i<info.length; i++){
-			contenidoMovie += `<li class="caja"> 
-									<img src='https://image.tmdb.org/t/p/w500/${info[i].poster_path}' alt=''/>
-									<a href='./detail-movie.html?id=${info[i].id}'><p>Titulo: ${info[i].title}</p></a> 
-									<p>Release Date: ${info[i].release_date}</a>
-								</li>`
+			movieContainer.innerHTML += `<div class="pelicula">
+            <a href="./detail-movie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
+            <h4 class="titulos-peliculas">${info[i].title}</h4>
+            <p class="fechas">${info[i].release_date}</p>
+            <form action="./favoritos.html" method="GET">
+                <button type="submit" role="button" class="boton-heart"><i class="icon-heart"></i></button></a>
+            </form>
+        </div>`
 		}
 		//editamos nuestro html
-		movieContainer.innerHTML += contenidoMovie
+
 	})
 
 	.catch(function(error){
@@ -42,7 +54,11 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 
 // SERIES End point /search/tv
 
+<<<<<<< HEAD
     const url2 = `https://api.themoviedb.org/3/tv/latest76341?api_key=45d43a6901861343cdb188d4f3bafd7c` // obtener la info qu esta dentro de nuestro form
+=======
+    const url2 = `https://api.themoviedb.org/3/tv/popular?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US` // obtener la info qu esta dentro de nuestro form
+>>>>>>> b9dc005d4adb54a0d5a54e88d721645a444ff852
 
 	fetch(url2)
         .then(function (response) {
@@ -50,24 +66,67 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
         })
         .then(function (data) {
             let info = data.results
-
+            console.log(info);
             // creamos las variables del campo
+<<<<<<< HEAD
             let series = document.querySelector('.pelicula');
             let nada = '';
+=======
+            let  serieContainer = document.querySelector('.serie');
+>>>>>>> b9dc005d4adb54a0d5a54e88d721645a444ff852
 
             for (let i = 0; i < info.length; i++) {
-                contenidoSerie += `<li class="caja"> 
-                                	<img src=${info[i].poster_path} alt=''/>
-                                	<a href='./detail-movie.html?id=${info[i].id}'><p>Titulo: ${info[i].original_name}</p></a> 
-                                	<p> Release Date: ${info[i].first_air_date}</a>
-                            </li>`
+                serieContainer.innerHTML += `<div class="pelicula">
+                <a href="./detail-serie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="series"></a>
+                <h4 class="titulos-peliculas">${info[i].original_name}</h4>
+                <p class="fechas">${info[i].first_air_date}</p>
+                <form action="./favoritos.html" method="GET">
+                    <button type="submit" role="button" class="boton-heart"><i class="icon-heart"></i></button></a>
+                </form>
+            </div>`
             }
 
-            serieContainer.innerHTML += contenidoSerie;
+
         })
 
         .catch(function (error) {
             console.log('El error es: ' + error);
         });
+
+
+//peliculas del momento
+
+const url3 = `https://api.themoviedb.org/3/movie/now_playing?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US` // obtener la info qu esta dentro de nuestro form
+
+fetch(url3)
+    .then(function(response){
+        return response.json()//convertimos la info en formato json
+    })
+
+    .then(function(data){
+        let info = data.results
+        console.log(info);
+
+        let nuevasContainer= document.querySelector('.lanzamiento');
+
+
+    //recorremos la info
+    for (let i=0; i<info.length; i++){
+        nuevasContainer.innerHTML += `<div class="pelicula">
+        <a href="./detail-movie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
+        <h4 class="titulos-peliculas">${info[i].title}</h4>
+        <p class="fechas">${info[i].release_date}</p>
+        <form action="./favoritos.html" method="GET">
+            <button type="submit" role="button" class="boton-heart"><i class="icon-heart"></i></button></a>
+        </form>
+    </div>`
+    }
+    //editamos nuestro html
+
+})
+
+.catch(function(error){
+    console.log(error);
+})  
 
 })
