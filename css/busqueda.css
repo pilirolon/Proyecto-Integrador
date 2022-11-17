@@ -48,6 +48,35 @@ h3 {
     padding-top: 150px;
 }
 
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.contenedor-peliculas{
+    width: 100%;
+    padding: 20px 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.pelicula {
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    justify-content: space-between;
+    min-width: 20%;
+}
+
+
+/* 
 .contenedor {
     display: flex;
     position: relative;
@@ -56,24 +85,20 @@ h3 {
 .contenedor-peliculas {
     width: 100%;
     padding: 20px 0;
-    /* abajo y arriba 20, 0 a la izq y derecha*/
     overflow-x: scroll;
     scroll-behavior: smooth;
-    /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */
 }
 
 .contenedor-peliculas .galeria {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* cada columna va a abarcar lo mismo*/
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
 }
 
 
 .contenedor-peliculas .galeria .pelicula {
     transition: .3s ease all;
-    /* es para el efecto hover */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    /* el .3 es la transparencia*/
     justify-content: space-between;
     min-width: 20%;
 }
@@ -84,31 +109,26 @@ h3 {
     height: 250px;
     margin: 30px;
     vertical-align: top;
-    /* quitar margen que agregan los navegadores */
 }
 
 .contenedor-series {
         width: 100%;
         padding: 20px 0;
-        /* abajo y arriba 20, 0 a la izq y derecha*/
         overflow-x: scroll;
         scroll-behavior: smooth;
-        /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */
+    
 }
 
 .contenedor-series .galeria {
     display: flex;
     flex-wrap: nowrap;
-    /* para que las imagenes queden una al lado de la otra */
     text-align: center;
 }
 
 
 .contenedor-series .galeria .serie {
     transition: .3s ease all;
-    /* es para el efecto hover */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    /* el .3 es la transparencia*/
     justify-content: space-between;
     min-width: 20%;
 }
@@ -119,7 +139,15 @@ h3 {
     height: 250px;
     margin: 30px;
     vertical-align: top;
-    /* quitar margen que agregan los navegadores */
+
+}  */
+
+footer {
+    color: #AAA;
+    size: 14px;
+    text-align: left;
+    font-family: "open sans", sans-serif;
+    padding-top: 50px;
 }
 
 
@@ -230,14 +258,6 @@ h3 {
         background: #FFF;
         color: black;
     } */
-
-footer {
-        color: #AAA;
-        size: 14px;
-        text-align: left;
-        font-family: "open sans", sans-serif;
-        padding-top: 50px;
-}
 
 /* MEDIA QUERIE */
 

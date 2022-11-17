@@ -28,7 +28,7 @@ window.addEventListener('load', function () { // load es un evento que controla 
     let queryStringObj = new URLSearchParams(queryString); // La transformamos en objeto literal
     const query = queryStringObj.get('busqueda');	// como es objeto literal, con get obtenemos resultados
 
-    // buscar y q aparezca en el texto
+    // Buscar y q aparezca en el texto
 
     let busqresults = document.querySelector('h3')
     busqresults.innerText = `Resultados de busqueda de: ${query}`;
@@ -46,10 +46,10 @@ window.addEventListener('load', function () { // load es un evento que controla 
         })
         .then(function (data) {
 
-            // buscador PELICULAS
+            // Buscador PELICULAS
 
             let info = data.results // capture el end point
-            let movies = document.querySelector('.contenedor') // creamos la variable del campo 
+            let movies = document.querySelector('.container') // creamos la variable del campo 
             let nada = '';
 
             if (info.length == 0) {
@@ -96,7 +96,7 @@ window.addEventListener('load', function () { // load es un evento que controla 
             let info = data.results
 
             // creamos las variables del campo
-            let series = document.querySelector('.contenedor');
+            let series = document.querySelector('.container');
             let nada = '';
 
             // condicionales chequeamos el contenido
