@@ -1,7 +1,9 @@
+
+// capturamos el formulario 
+
 let ruta = "https://api.themoviedb.org/3/movie/popular?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US&page=1"
  
 let peliculas=document.querySelector(".pelicula-principal")
-
 
 
 fetch(ruta) 

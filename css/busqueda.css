@@ -27,8 +27,6 @@ header nav a{
     font-family: 'Open Sans', sans-serif;
 }
 
-/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
-
 header nav a:hover,
 header nav a.activo {
     color: #FFF;
@@ -40,16 +38,23 @@ header .lupita{
     background: rgba(0, 0, 0, 0.5);
 }
 
-.contenedor {
-    width: 90%;
-    margin: auto;
-}
-
 body{
     background-color: black;
     font-family: 'Open Sans', sans-serif;
     color: #AAA;
 }
+
+
+/* .aviso{
+    color:white ;
+    margin-top: 100px;
+    border: solid 3px white;
+    margin-right: 20px;
+    font-size: 100px;
+} */
+
+
+
 
 .busqueda{
     margin-left: 15px;
@@ -61,12 +66,12 @@ h3 {
     padding-top: 150px;
 }
 
-.resultados {
+/* .resultados {
     display: flex;
     justify-content: space-between;
     margin-top: 150px;
-}
-
+} */
+/* 
 .resultados a {
     text-decoration: none;
     color: white;
@@ -75,18 +80,51 @@ h3 {
 }
 .resultados a:hover {
     color: red;
-}
-.busqueda h3{
+} */
+
+/* .busqueda h3{
     margin-bottom: 15px;
     font-family: 'Open sans', sans-serif;
     font-size: 15px;
 }
-.contenedor{
+
+.ResultadosJS {
     display: flex;
     align-items: center;
     position: relative;
+    width: 90%;
+    margin: auto;
+} */
+/* 
+.contenedor-peliculas{
+    width: 100%;
+    padding: 2px 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth; 
 }
 
+.contenedor-peliculas .galeria{
+    display: flex;
+    flex-wrap: nowrap; 
+    text-align: center;
+}
+
+.contenedor-peliculas .galeria .pelicula{
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); 
+    justify-content: space-between;
+    min-width: 20%;
+}
+
+.contenedor-peliculas .galeria .pelicula img{
+        width: 180px;
+        height: 250px;
+        margin: 30px; 
+        vertical-align: top; 
+    } */
+/* 
+
+/* 
 .contenedor .flecha-izquierda,
 .contenedor .flecha-derecha{
     position: absolute;
@@ -99,8 +137,8 @@ h3 {
     color: white;
     cursor: pointer;
     z-index: 100; /* que la flecha quede arriba de los elementos*/ 
-    transition: .2s ease all;
-}
+    /* transition: .2s ease all; */
+/* }
 .contenedor .flecha-izquierda:hover,
 .contenedor .flecha-derecha:hover {
     background: rgba(0, 0, 0, .9);
@@ -112,35 +150,7 @@ h3 {
 
 .contenedor .flecha-derecha{
     right: 0;
-}
-
-.contenedor-peliculas{
-    width: 100%;
-    padding: 2px 0;
-    /* abajo y arriba 20, 0 a la izq y derecha*/ 
-    overflow-x: scroll;
-    scroll-behavior: smooth; /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */ 
-}
-
-.contenedor-peliculas .galeria{
-    display: flex;
-    flex-wrap: nowrap; /* para que las imagenes queden una al lado de la otra */
-    text-align: center;
-}
-
-.contenedor-peliculas .galeria .pelicula{
-    transition: .3s ease all; /* es para el efecto hover */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); /* el .3 es la transparencia*/
-    justify-content: space-between;
-    min-width: 20%;
-}
-
-.contenedor-peliculas .galeria .pelicula img{
-        width: 180px;
-        height: 250px;
-        margin: 30px; 
-        vertical-align: top; /* quitar margen que agregan los navegadores */
-    }
+} */ 
 
 .boton-heart {
         background: rgba(0, 0, 0, 0.5);
@@ -201,5 +211,4 @@ footer {
         display: none;
     }
 }
-
 

@@ -28,41 +28,48 @@
             </nav>
             <form class="lupita" action="./busqueda.html" method="get">
                 <input class="lupita" type="text" name="busqueda" placeholder="¿Qué quiere ver?" value="">
+                <button type="submit" class="button">Buscar</button>
                 <p class="aviso"></p>
             </form>
         </section>
     </header>
 
     <main>
+        <div class ="favoritos">
             <h3>Resultados de Busqueda de: </h3>
-
             <h2 class ="no"></h2>
             <h2 class ="pero"></h2>
+        </div>
+        
+       
+        <div class ="ResultadosJS">
 
-            <article class ="ResultadosJS">
+            <div class ="contenedor-peliculas">
+            <article class="pelicula">
+                <a href="genres.html" class="titulos">PELICULAS</a>
+                    <ul class="resultadosPelis"> 
+                    </ul>
+                </article>
+            </div>
 
-            </article>
+            <div class ="contenedor-series">
+            <article class="serie" >
+                <a href="genres.html" class="titulos">SERIES</a>
+                    <ul class="resultadosSeries"> 
+                    </ul>
+                </article>
+            </div>
+
+        </div>
 
             <ul class="detailx">
 
             </ul>
 
-            <section class="Container">
 
-                <article class="contenedor-peliculas">
-                    <a href="genres.html" class="titulos">PELICULAS</a>
-                    <ul class="resultadosPelis"> 
-                    </ul>
-                </article>
-
-                <article class="contenedor-series" >
-                    <a href="genres.html" class="titulos">SERIES</a>
-                    <ul class="resultadosSeries"> 
-                    </ul>
-                </article>
+               
 
 
-            </section>
 
 
         <!-- <section class="contenedor">
