@@ -10,11 +10,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 
 // PELICULAS End point: Movies --> /search/movie
 
-<<<<<<< HEAD
-	const url = `https://api.themoviedb.org/3/movie/popular76341?api_key=45d43a6901861343cdb188d4f3bafd7c` // obtener la info qu esta dentro de nuestro form
-=======
 	const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US` // obtener la info qu esta dentro de nuestro form
->>>>>>> b9dc005d4adb54a0d5a54e88d721645a444ff852
 
 	fetch(url)
         .then(function(response){
@@ -25,13 +21,8 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
             let info = data.results
             console.log(info);
 
-<<<<<<< HEAD
-            let movieContainer= document.querySelector('.pelicula');
-            let contenidoMovie= '';
-=======
             let movieContainer= document.querySelector('.galeria');
 
->>>>>>> b9dc005d4adb54a0d5a54e88d721645a444ff852
 
 		//recorremos la info
 		for(let i=0; i<info.length; i++){
@@ -54,11 +45,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 
 // SERIES End point /search/tv
 
-<<<<<<< HEAD
-    const url2 = `https://api.themoviedb.org/3/tv/latest76341?api_key=45d43a6901861343cdb188d4f3bafd7c` // obtener la info qu esta dentro de nuestro form
-=======
     const url2 = `https://api.themoviedb.org/3/tv/popular?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US` // obtener la info qu esta dentro de nuestro form
->>>>>>> b9dc005d4adb54a0d5a54e88d721645a444ff852
 
 	fetch(url2)
         .then(function (response) {
@@ -68,12 +55,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
             let info = data.results
             console.log(info);
             // creamos las variables del campo
-<<<<<<< HEAD
-            let series = document.querySelector('.pelicula');
-            let nada = '';
-=======
             let  serieContainer = document.querySelector('.serie');
->>>>>>> b9dc005d4adb54a0d5a54e88d721645a444ff852
 
             for (let i = 0; i < info.length; i++) {
                 serieContainer.innerHTML += `<div class="pelicula">
