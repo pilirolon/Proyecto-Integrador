@@ -7,11 +7,13 @@ window.addEventListener('load', function () { // load es un evento que controla 
     let aviso = document.querySelector('.aviso') // aca quiero avisar 
 
     //condicionales chequeamos el contenido
-    formulario.addEventListener('submit', function () { //cuando el usuario submit algo, verifica con el evento
+    formulario.addEventListener('submit', function (e) { 
+        e.preventDefault();
+
         if (buscador.value == "") {
-            alert('El buscador no puede estar vacío'); // o aviso.innerText('')
+            aviso.innerText='El buscador no puede estar vacío'; // o aviso.innerText('')
         } else if (buscador.value.length < 3) {
-            alert('Por favor ingrese más de tres caracteres');  // o aviso.innerText('')
+            aviso.innerText = 'Por favor ingrese más de tres caracteres';  // o aviso.innerText('')
         } else {
             this.submit(); 
         }
