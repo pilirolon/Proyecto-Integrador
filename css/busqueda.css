@@ -44,6 +44,84 @@ body{
     color: #AAA;
 }
 
+h3 {
+    padding-top: 150px;
+}
+
+.contenedor {
+    display: flex;
+    position: relative;
+}
+
+.contenedor-peliculas {
+    width: 100%;
+    padding: 20px 0;
+    /* abajo y arriba 20, 0 a la izq y derecha*/
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */
+}
+
+.contenedor-peliculas .galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* cada columna va a abarcar lo mismo*/
+    gap: 20px;
+}
+
+
+.contenedor-peliculas .galeria .pelicula {
+    transition: .3s ease all;
+    /* es para el efecto hover */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    /* el .3 es la transparencia*/
+    justify-content: space-between;
+    min-width: 20%;
+}
+
+
+.contenedor-peliculas .galeria .pelicula img {
+    width: 180px;
+    height: 250px;
+    margin: 30px;
+    vertical-align: top;
+    /* quitar margen que agregan los navegadores */
+}
+
+.contenedor-series {
+        width: 100%;
+        padding: 20px 0;
+        /* abajo y arriba 20, 0 a la izq y derecha*/
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */
+}
+
+.contenedor-series .galeria {
+    display: flex;
+    flex-wrap: nowrap;
+    /* para que las imagenes queden una al lado de la otra */
+    text-align: center;
+}
+
+
+.contenedor-series .galeria .serie {
+    transition: .3s ease all;
+    /* es para el efecto hover */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    /* el .3 es la transparencia*/
+    justify-content: space-between;
+    min-width: 20%;
+}
+
+
+.contenedor-series .galeria .serie img {
+    width: 180px;
+    height: 250px;
+    margin: 30px;
+    vertical-align: top;
+    /* quitar margen que agregan los navegadores */
+}
+
 
 /* .aviso{
     color:white ;
@@ -52,19 +130,6 @@ body{
     margin-right: 20px;
     font-size: 100px;
 } */
-
-
-
-
-.busqueda{
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 2%;
-}
-
-h3 {
-    padding-top: 150px;
-}
 
 /* .resultados {
     display: flex;
@@ -152,11 +217,11 @@ h3 {
     right: 0;
 } */ 
 
-.boton-heart {
+/* .boton-heart {
         background: rgba(0, 0, 0, 0.5);
         border: none; 
-        border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
-        padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
+        border-radius: 5px; 
+        padding: 15px; 
         color: #FFF;
         margin-right: 20px;  
         font-size: 18px;  
@@ -164,7 +229,7 @@ h3 {
 .boton-heart:hover{
         background: #FFF;
         color: black;
-    }
+    } */
 
 footer {
         color: #AAA;

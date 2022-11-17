@@ -49,7 +49,7 @@ window.addEventListener('load', function () { // load es un evento que controla 
             // buscador PELICULAS
 
             let info = data.results // capture el end point
-            let movies = document.querySelector('.ResultadosJS') // creamos la variable del campo 
+            let movies = document.querySelector('.contenedor') // creamos la variable del campo 
             let nada = '';
 
             if (info.length == 0) {
@@ -70,12 +70,12 @@ window.addEventListener('load', function () { // load es un evento que controla 
 
             // recorremos la info 
             for (let i = 0; i < info.length; i++) {
-                contenidoMovie += `<article class="pelicula"> 
+                contenidoMovie += `<div class="pelicula"> 
                                 <img src='https://image.tmdb.org/t/p/w500/${info[i].poster_path}' alt=''/>
                                 <a href='./detail-movie.html?id=${info[i].id}'><p>Titulo: ${info[i].title}</p></a> 
                                 <p>Release Date: ${info[i].release_date}</a>
         
-                            </article>`
+                            </div>`
             }
 
             // editamos nuestro HTML 
@@ -96,7 +96,7 @@ window.addEventListener('load', function () { // load es un evento que controla 
             let info = data.results
 
             // creamos las variables del campo
-            let series = document.querySelector('.ResultadosJS');
+            let series = document.querySelector('.contenedor');
             let nada = '';
 
             // condicionales chequeamos el contenido
@@ -118,12 +118,12 @@ window.addEventListener('load', function () { // load es un evento que controla 
             let contenidoSerie = '';
 
             for (let i = 0; i < info.length; i++) {
-                contenidoMovie += `<article class="serie"> 
+                contenidoMovie += `<div class="serie"> 
                                 <img src=${info[i].poster_path} alt=''/>
                                 <a href='./detail-movie.html?id=${info[i].id}'><p>Titulo: ${info[i].original_name}</p></a> 
                                 <p>Release Date: ${info[i].first_air_date}</a>
         
-                            </article>`
+                            </div>`
             }
 
             serieContainer.innerHTML += contenidoSerie;
