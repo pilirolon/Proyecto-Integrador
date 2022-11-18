@@ -1,15 +1,25 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     background-color: black;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-;
 }
 
+.contenedor {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+    
+
 header{
-    padding: 10px;
+    padding: 10px ;
     width: 100%;
     position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
     z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
@@ -20,7 +30,9 @@ header .contenedor{
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
+
 header .logo{
     width: 200px;
 }
@@ -42,70 +54,53 @@ header .lupita{
     background: rgba(0, 0, 0, 0.5);
 }
 
+
 .general{
-    color:  rgba(234, 86, 86, 0.706);
+    color:  red;
     font-family: 'Open sans', sans-serif;
     font-size: 60px;
     text-align: center;
-}
-
-.titulos{
     padding-top: 120px;
 }
 
 .generos{
-    display:flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* cada columna va a abarcar lo mismo*/
 }
 
 .subtitulo {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: wheat ;
-
+    color: red ;
+    padding-left: 20px;
+    padding-top: 30px;
 }
 
-.imagenes{
-    width: 350px;
-    height: 200px;
-    margin: 15px ;
-}
 .borde{
-    color: white;
-    background-color: rgba(255, 255, 255, 0.856);
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 15px;
+    background-color: white;
     padding: 12px;
-    margin: 2%;
-
-}
-.caja{
+    margin: 5%;
     text-align: center;
 }
 
-.generos .borde .genero-boton{
-    background-color: rgba(0,0,0,0.5);
-    color: white;
+.genero-boton{
+    color: black;
     font-family: 'open sans';
     border: none; 
     border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
     padding: 5px; /* CAMBIAR ESTAS MEDIDAS */
-    color: #FFF;
     margin-right: 20px;  
     font-size: 16px;
+    text-decoration: none;
 }
 
-.generos .borde .genero-boton:hover{
-    background: #FFF;
-    color: black;
+.generos .borde:hover{
+    background-color: red;
 }
 
-.titulo{
-    text-align: center;
-    font-family: 'Arial, Helvetica', sans-serif;
-    color: black;
+.genero-boton:hover{
+    color: white;
 }
+
 
 footer {
     color: #AAA;
