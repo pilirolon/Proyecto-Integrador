@@ -54,6 +54,12 @@ header .lupita{
     background: rgba(0, 0, 0, 0.5);
 }
 
+.button{ 
+    font-family: 'open sans', sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+}
+
 
 .general{
     color:  red;

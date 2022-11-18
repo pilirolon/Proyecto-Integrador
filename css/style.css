@@ -54,6 +54,11 @@ header .lupita{
     background: rgba(0, 0, 0, 0.5);
 }
 
+.button{ 
+    font-family: 'open sans', sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+}
 
 .container {
     display: flex;
@@ -72,7 +77,6 @@ header .lupita{
     margin-bottom: 50px;
     display: flex;  /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
     align-items: end;
-
 } 
 
 /* aca le quise sacar los margenes de arriba y abajo porque no me dejaba mover el texto para abajo */
@@ -186,19 +190,20 @@ header .lupita{
         vertical-align: top;
     }
 
+.pelicula {
+        color: white;
+        padding: 5px;
+        font-family: 'open sans', sans-serif;
+        text-align: center;
+}
+
+    
 footer {
         color: #AAA;
         size: 14px;
         text-align: left;
         font-family: "open sans", sans-serif;
         padding-top: 50px;
-}
-
-.pelicula {
-    color: white;
-    padding: 5px;
-    font-family: 'open sans', sans-serif;
-    text-align: center;
 }
 
 .titulo{

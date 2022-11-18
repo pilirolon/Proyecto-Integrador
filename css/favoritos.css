@@ -41,14 +41,21 @@ header .lupita {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.contenedor {
+.button{ 
+    font-family: 'open sans', sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+}
+.contenedor{
     display: flex;
     align-items: center;
     position: relative;
+    width: 90%;
+    margin: auto;
 }
 
 .contenedor .flecha-izquierda,
-.contenedor .flecha-derecha {
+.contenedor .flecha-derecha{
     position: absolute;
     border: none;
     background: rgba(0, 0, 0, 0.3);
@@ -58,80 +65,75 @@ header .lupita {
     width: 50px;
     color: white;
     cursor: pointer;
-    z-index: 500;
-    /* que la flecha quede arriba de los elementos*/
+    z-index: 100; 
     transition: .2s ease all;
 }
-
 .contenedor .flecha-izquierda:hover,
 .contenedor .flecha-derecha:hover {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, .9);
 }
 
-.contenedor .flecha-izquierda {
+.contenedor .flecha-izquierda{
     left: 0;
 }
 
-.contenedor .flecha-derecha {
+.contenedor .flecha-derecha{
     right: 0;
 }
 
-.contenedor-peliculas {
+.contenedor-peliculas{
     width: 100%;
     padding: 20px 0;
-    /* abajo y arriba 20, 0 a la izq y derecha*/
     overflow-x: scroll;
-    scroll-behavior: smooth;
-    /* scroll con animacion, sin cambio brusco, nos vamos a desplazar con una animacion de la pagina */
+    scroll-behavior: smooth; 
 }
 
-.contenedor-peliculas .galeria {
+.contenedor-peliculas .galeria{
     display: flex;
-    flex-wrap: nowrap;
-    /* para que las imagenes queden una al lado de la otra */
-    text-align: center;
+    flex-wrap: nowrap; 
 }
 
-.contenedor-peliculas .galeria .pelicula {
-    transition: .3s ease all;
-    /* es para el efecto hover */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    /* el .3 es la transparencia*/
+.contenedor-peliculas .galeria .pelicula{
+    transition: .3s ease all; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); 
     justify-content: space-between;
     min-width: 20%;
 }
 
-.contenedor-peliculas .galeria .pelicula img {
-    width: 180px;
-    height: 250px;
-    margin: 30px;
-    vertical-align: top;
-    /* quitar margen que agregan los navegadores */
-}
-
 .boton-heart {
     background: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 5px;
-    padding: 15px;
+    border: none; 
+    border-radius: 5px; 
+    padding: 15px; 
     color: #FFF;
-    margin-right: 20px;
-    font-size: 18px;
+    margin-right: 20px;  
+    font-size: 18px;  
 }
 
-.boton-heart:hover {
+.boton-heart:hover{
     background: #FFF;
     color: black;
 }
 
-.favoritos {
-    padding-top: 150px;
+.contenedor-peliculas .galeria .pelicula img{
+        width: 180px;
+        height: 250px;
+        margin: 30px; 
+        vertical-align: top;
+    }
+
+.pelicula {
+        color: white;
+        padding: 5px;
+        font-family: 'open sans', sans-serif;
+        text-align: center;
 }
 
 .seleccion{
     font-family: 'open sans', sans-serif;
     color: #fff;
     margin-left: 80px;
+    padding-top: 150px;
 }
 
 footer {

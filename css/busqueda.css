@@ -1,4 +1,5 @@
-* {
+ 
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,6 +38,22 @@ header .lupita{
     color: #AAA;
     background: rgba(0, 0, 0, 0.5);
 }
+
+.button{ 
+    font-family: 'open sans', sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+}
+
+footer {
+    color: #AAA;
+    size: 14px;
+    text-align: left;
+    font-family: "open sans", sans-serif;
+    padding-top: 50px;
+}
+
+/* para todas las paginas */ 
 
 body{
     background-color: black;
@@ -127,14 +144,6 @@ h3 {
         vertical-align: top;
     }
 
-footer {
-        color: #AAA;
-        size: 14px;
-        text-align: left;
-        font-family: "open sans", sans-serif;
-        padding-top: 50px;
-}
-
 .pelicula {
     color: white;
     padding: 5px;
@@ -158,9 +167,9 @@ footer {
     padding-top: 10px;
 
 }
-/* 
-    @media (max-width: 768px) {
 
+
+@media (max-width: 768px) {
         header .logo {
             margin-bottom: 10px;
             font-size: 15px;
@@ -179,7 +188,7 @@ footer {
         .contenedor .contenedor-peliculas .galeria{
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* cada columna va a abarcar lo mismo*/
-            /* gap: 20px;
+            gap: 20px;
         }
         .contenedor .flecha-izquierda, 
         .contenedor .flecha-derecha {
@@ -188,4 +197,4 @@ footer {
         .favoritos{
             padding-top: 200px;
         }
-    } 
+} 
