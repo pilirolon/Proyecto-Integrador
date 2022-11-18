@@ -42,7 +42,11 @@ fetch (ruta)
   console.log(GenerosTV);
   let generosSeries = GenerosTV.genres;
   let lista = document.querySelector(".tv")
-})
+  for (let i=0; i<generosSeries.length; i++) {
+      lista.innerHTML += `<article class="borde">
+      <a href="./detail-genres.html?id=${generosSeries[i].id}" class="genero-boton">${generosSeries[i].name}</a>
+      </article>`    
+}})
 .catch(function(error) {
 	console.log("Error: " + error);
   })
