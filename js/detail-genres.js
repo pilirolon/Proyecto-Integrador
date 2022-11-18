@@ -13,20 +13,17 @@ fetch (url)
    return response.json()
   })
 .then (function(generoDetalle){
-  console.log(generoDetalle)
-  let lista = document.querySelector(".tv")
-  for (var i = 0; i < generoDetalle.genres.length; i++) {
-    if (id == generoDetalle[i].id){
-      genreTitle.innerText = `Peliculas de ${generoDetalle.genres[i].name} `
-    }
+  console.log(generoDetalle);
+  for (var i = 0; i < generoDetalle.results.length; i++) {
+    let seleccion = document.querySelector(".galeria")
+    seleccion.innerHTML += `<a href="detail-movie.html"><img class="imagenes" src=${generoDetalle.results[i].poster_path} alt="top gun"></a>
+    <h4 class="titulos peliculas">${generoDetalle.results[i].original_title}</h4>
+    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>`
   }
-  
-  
-  {lista.innerHTML += `<article class="galeria">
-  <a href='detail-serie.html?idSerie="` + generoDetalle.results[i].id + "'><img src=" + URLPoster + generoDetalle.results[i].poster_path + `alt=''></a></li>`;
-}})
-})
+  })
+
 .catch(function(error) {
 	console.log("Error: " + error);
   })
 
+})
