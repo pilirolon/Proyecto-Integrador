@@ -27,8 +27,8 @@ window.addEventListener('load', function () { // load es un evento que controla 
 
     // Capturamos el formulario
     let queryString = location.search; // capturamos el queryString
-    let queryStringObj = new URLSearchParams(queryString); // La transformamos en objeto literal
-    const query = queryStringObj.get('busqueda');	// como es objeto literal, con get obtenemos resultados
+    let queryStringObj = new URLSearchParams(queryString); 
+    const query = queryStringObj.get('busqueda');	
 
     // Buscar y q aparezca en el texto
 

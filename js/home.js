@@ -27,7 +27,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 		//recorremos la info
 		for(let i=0; i<info.length; i++){
 			movieContainer.innerHTML += `<div class="pelicula">
-            <a href="./detail-movie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
+            <a href="./detail-movie.html?id=${info[i].id}"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
             <h4 class="titulos-peliculas">${info[i].title}</h4>
             <p class="fechas">${info[i].release_date}</p>
             <form action="./favoritos.html" method="GET">
@@ -45,7 +45,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 
 // SERIES End point /search/tv
 
-    const url2 = `https://api.themoviedb.org/3/tv/popular?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US` // obtener la info qu esta dentro de nuestro form
+    const url2 = (`https://api.themoviedb.org/3/tv/popular?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`) // obtener la info qu esta dentro de nuestro form
 
 	fetch(url2)
         .then(function (response) {
@@ -59,7 +59,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 
             for (let i = 0; i < info.length; i++) {
                 serieContainer.innerHTML += `<div class="pelicula">
-                <a href="./detail-serie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="series"></a>
+                <a href="./detail-serie.html?id=${info[i].id}"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="series"></a>
                 <h4 class="titulos-peliculas">${info[i].original_name}</h4>
                 <p class="fechas">${info[i].first_air_date}</p>
                 <form action="./favoritos.html" method="GET">
@@ -95,7 +95,7 @@ fetch(url3)
     //recorremos la info
     for (let i=0; i<info.length; i++){
         nuevasContainer.innerHTML += `<div class="pelicula">
-        <a href="./detail-movie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
+        <a href="./detail-movie.html?id=${info[i].id}"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
         <h4 class="titulos-peliculas">${info[i].title}</h4>
         <p class="fechas">${info[i].release_date}</p>
         <form action="./favoritos.html" method="GET">

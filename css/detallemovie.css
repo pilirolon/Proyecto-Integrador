@@ -6,7 +6,7 @@
 body{
    background-color: black;
    font-family: 'Playfair Display', serif;
-   background-image: url(../img/fotomujer.jpg);
+   /* background-image: url(../img/fotomujer.jpg); */
    background-repeat: no-repeat;
    
 }
