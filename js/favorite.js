@@ -36,7 +36,7 @@ function buscarYMostrarFavoritos (id){
         .then(function(data){
             console.log(data);
             seccion.innerHTML += `<div class="pelicula">
-            <a href="./detail-movie.html"><img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="pelis"></a>
+            <a href="./detail-movie.html?id=${info[i].id}"><img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="pelis"></a>
             <h4 class="titulos-peliculas">${data.title}</h4>
             <p class="fechas">${data.release_date}</p>
         </div>`
