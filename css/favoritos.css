@@ -41,6 +41,13 @@ header .lupita {
     background: rgba(0, 0, 0, 0.5);
 }
 
+.subtitulos{
+    color: red;
+    font-size: 24px;
+    padding-left: 80px;
+    padding-top: 40px;
+}
+
 .button{ 
     font-family: 'open sans', sans-serif;
     background: rgba(0, 0, 0, 0.5);
@@ -119,6 +126,7 @@ header .lupita {
     color: #fff;
     margin-left: 80px;
     padding-top: 150px;
+    font-size: 36px;
 }
 
 footer {
