@@ -38,16 +38,16 @@ window.addEventListener('load', function(){
 		favoritosSerie = JSON.parse(recuperoStorageSerie);
 	}
 
-	let botonheart = document.querySelector('.boton-heart');
+	let botonheart1 = document.querySelector('.boton-heart');
 
-	botonheart.addEventListener('click', function(e){
+	botonheart1.addEventListener('click', function(e){
 		if (favoritosSerie.includes(tv_id) == true){
 			let index=favoritosSerie.indexOf(tv_id)
 			favoritosSerie.splice(index, 1)
-			botonheart.innerHTML="Agregar a favoritos"
+			botonheart1.innerHTML="Agregar a favoritos"
 	} else {
 			favoritosSerie.push(tv_id);
-			botonheart.innerHTML="Quitar de favoritos"
+			botonheart1.innerHTML="Quitar de favoritos"
 	}
 
 	let infoParaStorageFavSerie=JSON.stringify(favoritosSerie);

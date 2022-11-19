@@ -22,7 +22,7 @@ window.addEventListener('load', function(){
         document.querySelector('.estreno').innerHTML = peliculaDetalle.release_date;
         document.querySelector('.duracion').innerHTML = `${peliculaDetalle.runtime} Minutos`;
         document.querySelector('.rate').innerHTML = peliculaDetalle.vote_average;
-        
+
         // document.querySelector('boton-heart').innerHTL = `<button class="boton-heart" id=${info[i].id}><i class="icon-heart"></i></button>`
         
         // let generoContainer = document.querySelector('.genero');

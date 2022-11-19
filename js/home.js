@@ -55,7 +55,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 	
 				for (let i = 0; i < info.length; i++) {
 					serieContainer.innerHTML += `<div class="pelicula">
-					<a href="./detail-serie.htm?id=${info[i].id}"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="series"></a>
+					<a href="./detail-serie.html?id=${info[i].id}"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="series"></a>
 					<h4 class="titulos-peliculas">${info[i].original_name}</h4>
 					<p class="fechas">${info[i].first_air_date}</p>
 				</div>`
