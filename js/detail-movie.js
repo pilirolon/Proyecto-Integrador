@@ -1,4 +1,4 @@
-//DEATALLE PELICULAS
+//DETALLE PELICULAS
 
 window.addEventListener('load', function(){
 
@@ -23,6 +23,8 @@ window.addEventListener('load', function(){
         document.querySelector('.duracion').innerHTML = `${peliculaDetalle.runtime} Minutos`;
         document.querySelector('.rate').innerHTML = peliculaDetalle.vote_average;
         
+        // document.querySelector('boton-heart').innerHTL = `<button class="boton-heart" id=${info[i].id}><i class="icon-heart"></i></button>`
+        
         // let generoContainer = document.querySelector('.genero');
         // let genres = peliculaDetalle.genres;
 
@@ -34,5 +36,33 @@ window.addEventListener('load', function(){
         //por cada genero va a sumar un <p> a generoContainer
     })
 
+    //FAVORITOS
+
+    let recuperoStorage= localStorage.getItem("favoritos");
+
+	if (recuperoStorage == null ){
+		favoritos = [];
+	}
+	else {
+		favoritos = JSON.parse(recuperoStorage);
+	}
+
+	let botonheart = document.querySelector('.boton-heart');
+
+	botonheart.addEventListener('click', function(e){
+		if (favoritos.includes(movie_id) == true){
+			let index=favoritos.indexOf(movie_id)
+			favoritos.splice(index, 1)
+			botonheart.innerHTML="Agregar a favoritos"
+	} else {
+			favoritos.push(movie_id);
+			botonheart.innerHTML="Quitar de favoritos"
+	}
+
+	let infoParaStorageFav=JSON.stringify(favoritos);
+	localStorage.setItem("favoritos", infoParaStorageFav)
+	console.log(localStorage);
+
+    })
 
 })

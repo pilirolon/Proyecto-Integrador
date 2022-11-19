@@ -80,9 +80,6 @@ window.addEventListener('load', function () { // load es un evento que controla 
                 <a href="./detail-movie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
                 <h4 class="titulos-peliculas">${info[i].title}</h4>
                 <p class="fechas">${info[i].release_date}</p>
-                <form action="./favoritos.html" method="GET">
-                    <button type="submit" role="button" class="boton-heart"><i class="icon-heart"></i></button></a>
-                </form>
             </div>`
             }
 
@@ -125,9 +122,6 @@ window.addEventListener('load', function () { // load es un evento que controla 
                 <a href="./detail-serie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="series"></a>
                 <h4 class="titulos-peliculas">${info[i].original_name}</h4>
                 <p class="fechas">${info[i].first_air_date}</p>
-                <form action="./favoritos.html" method="GET">
-                    <button type="submit" role="button" class="boton-heart"><i class="icon-heart"></i></button></a>
-                </form>
             </div>`
             }
 

@@ -53,8 +53,7 @@ body{
     padding-bottom: 150px;
     }
 
-
-.boton{ 
+.boton-heart{ 
    background: rgba(0, 0, 0, 0.5);
    border: none; 
    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
@@ -65,10 +64,7 @@ body{
    font-family: 'open sans', sans-serif;
 }
 
-.boton i{
-   margin-right: 15px;
-}
-.boton:hover{
+.boton-heart:hover{
    background: #FFF;
    color: black;
 }
@@ -135,12 +131,6 @@ header .lupita{
 }
 
 
-footer {
-    color: #AAA;
-    size: 14px;
-    text-align: left;
-    font-family: "open sans", sans-serif;
-}
 .norespires{
     padding-left: 3%;
 }

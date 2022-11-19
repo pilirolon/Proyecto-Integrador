@@ -23,9 +23,36 @@ window.addEventListener('load', function(){
             document.querySelector('.episodios').innerHTML = `${serieDetalle.number_of_episodes} EPISODIOS`;
             document.querySelector('.temporadas').innerHTML = `${serieDetalle.number_of_seasons} TEMPORADAS`;
             document.querySelector('.calificacion').innerHTML = serieDetalle.vote_average;
-            document.querySelector('.genero').innerHTML =  peliculaDetalle.genres;
+            document.querySelector('.genero').innerHTML =  serieDetalle.genres;
     
+    })
 
+    //FAVORITOS
 
-})
+    let recuperoStorageSerie = localStorage.getItem("favoritos");
+
+	if (recuperoStorageSerie == null ){
+		favoritosSerie = [];
+	}
+	else {
+		favoritosSerie = JSON.parse(recuperoStorageSerie);
+	}
+
+	let botonheart = document.querySelector('.boton-heart');
+
+	botonheart.addEventListener('click', function(e){
+		if (favoritosSerie.includes(tv_id) == true){
+			let index=favoritosSerie.indexOf(tv_id)
+			favoritosSerie.splice(index, 1)
+			botonheart.innerHTML="Agregar a favoritos"
+	} else {
+			favoritosSerie.push(tv_id);
+			botonheart.innerHTML="Quitar de favoritos"
+	}
+
+	let infoParaStorageFavSerie=JSON.stringify(favoritosSerie);
+	localStorage.setItem("favoritos", infoParaStorageFavSerie)
+	console.log(localStorage);
+
+    })
 })

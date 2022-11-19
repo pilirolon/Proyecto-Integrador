@@ -40,11 +40,6 @@ header .lupita{
     background: rgba(0, 0, 0, 0.5);
 }
 
-.button{ 
-    font-family: 'open sans', sans-serif;
-    background: rgba(0, 0, 0, 0.5);
-    color:white;
-}
 
 .general {
     color: red;
@@ -146,23 +141,6 @@ header .lupita{
     margin: 30px;
     vertical-align: top;
     /* quitar margen que agregan los navegadores */
-}
-
-.boton-heart {
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 5px;
-    /* CAMBIAR ESTAS MEDIDAS */
-    padding: 15px;
-    /* CAMBIAR ESTAS MEDIDAS */
-    color: #FFF;
-    margin-right: 20px;
-    font-size: 18px;
-}
-
-.boton-heart:hover {
-    background: #FFF;
-    color: black;
 }
 
 .primero{

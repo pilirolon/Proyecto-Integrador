@@ -29,11 +29,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 				<a href="./detail-movie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
 				<h4 class="titulos-peliculas">${info[i].title}</h4>
 				<p class="fechas">${info[i].release_date}</p>
-				<button class="boton-heart" id=${info[i].id}><i class="icon-heart"></i></button>
 			</div>`
-
-	
-			
 		}
 			//editamos nuestro html
 
@@ -62,15 +58,8 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 					<a href="./detail-serie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="series"></a>
 					<h4 class="titulos-peliculas">${info[i].original_name}</h4>
 					<p class="fechas">${info[i].first_air_date}</p>
-					<button class="boton-heart"><i class="icon-heart"></i></button>
 				</div>`
 				}
-				
-				let button = document.querySelector('.boton-heart');
-				button.addEventListener('click', function(e){
-				console.log('hola');
-				})
-	
 	
 			})
 	
@@ -101,7 +90,6 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 			<a href="./detail-movie.html"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
 			<h4 class="titulos-peliculas">${info[i].title}</h4>
 			<p class="fechas">${info[i].release_date}</p>
-			<button class="boton-heart"><i class="icon-heart"></i></button>
 		</div>`
 		}
 		//editamos nuestro html

@@ -24,7 +24,6 @@ if (seleccionados == null || seleccionados.length == 0){
     }
 }
 
-
 function buscarYMostrarFavoritos (id){
     
     let url = `https://api.themoviedb.org/3/movie/${id}?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`
@@ -40,15 +39,12 @@ function buscarYMostrarFavoritos (id){
             <a href="./detail-movie.html"><img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="pelis"></a>
             <h4 class="titulos-peliculas">${data.title}</h4>
             <p class="fechas">${data.release_date}</p>
-            <form action="./favoritos.html" method="GET">
-                <button type="submit" role="button" class="boton-heart"><i class="icon-heart"></i></button></a>
-            </form>
         </div>`
         })
-
         .catch(function(e){
         console.log(e);
         })
 }
                
 })
+

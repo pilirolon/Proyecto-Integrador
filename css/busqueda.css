@@ -122,7 +122,7 @@ h3 {
     min-width: 20%;
 }
 
-.boton-heart {
+/* NO LO USAMOS, PODEMOS SACARLO .boton-heart {
     background: rgba(0, 0, 0, 0.5);
     border: none; 
     border-radius: 5px; 
@@ -135,7 +135,7 @@ h3 {
 .boton-heart:hover{
     background: #FFF;
     color: black;
-}
+} */
 
 .contenedor-peliculas .galeria .pelicula img{
         width: 180px;

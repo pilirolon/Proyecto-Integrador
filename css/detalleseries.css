@@ -5,6 +5,45 @@
     background-color:  rgba(0,0,0,0.9);
 }
 
+
+header{
+    padding: 10px ;
+    width: 100%;
+    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
+    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
+    background: rgba(0,0,0,0.9);
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    width: 200px;
+}
+header nav a{
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
+
+header nav a:hover,
+header nav a.activo {
+    color: #FFF;
+}
+
+header .lupita{
+    font-family: 'Open sans';
+    color: #AAA;
+    background: rgb(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
 body{
    background-color: black;
    font-family: 'Playfair Display', serif;
@@ -54,26 +93,21 @@ body{
     padding-bottom: 150px;
 }
 
-
-.boton{ 
-   background: rgba(0, 0, 0, 0.5);
-   border: none; 
-   border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
-   padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
-   color: #FFF;
-   margin-right: 20px;  
-   font-size: 18px; 
-   font-family: 'open sans', sans-serif;
-}
-
-.boton i{
-   margin-right: 15px;
-}
-
-.boton:hover{
-   background: #FFF;
-   color: black;
-}
+.boton-heart{ 
+    background: rgba(0, 0, 0, 0.5);
+    border: none; 
+    border-radius: 5px; /* CAMBIAR ESTAS MEDIDAS */
+    padding: 15px; /* CAMBIAR ESTAS MEDIDAS */
+    color: #FFF;
+    margin-right: 20px;  
+    font-size: 18px; 
+    font-family: 'open sans', sans-serif;
+ }
+ 
+ .boton-heart:hover{
+    background: #FFF;
+    color: black;
+ }
 
 .espacio{
     width: 60%;
@@ -82,59 +116,6 @@ body{
     padding-right: 20px;
 }
 
-header{
-    padding: 10px ;
-    width: 100%;
-    position: fixed; /*para que el menú de navegación se quede fijo en pantalla*/
-    z-index: 200; /*que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla, que se muestren por debajo de nuestro menú si es que navegamos hacia abajo por la pagina*/
-    background: rgba(0,0,0,0.9);
-}
-
-header .contenedor{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header .logo{
-    width: 200px;
-}
-header nav a{
-    color: #AAA;
-    text-decoration: none;
-    margin-right: 20px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-/* busque como hacer lo del efecto hover, es cuando pasas por arriba con el mouse y se pone blanco, primero aclara lo de hover y despues lo de activo, es decir, cuando estoy en una pagina esa se pone en blanco en este caso inicio*/ 
-
-header nav a:hover,
-header nav a.activo {
-    color: #FFF;
-}
-
-header .lupita{
-    font-family: 'Open sans';
-    color: #AAA;
-    background: rgb(0, 0, 0, 0.5);
-    background: rgba(0, 0, 0, 0.5);
-    margin-right: 20px;
-}
-
-.button{ 
-    font-family: 'open sans', sans-serif;
-    background: rgba(0, 0, 0, 0.5);
-    color:white;
-}
-
-.trailer {
-    font-size: 16px;
-    width: 85vw;
-    height: 50vw;
-    color: #FFF;
-    margin-bottom: 12vh; /* se trabaja con tamaños vh en vez de px para que se adapte a las pantallas */
-    display: flex; 
-    /* se aplica el display flex aca porque los textos estan arriba y quiero posicionarlos */
-}
 
 footer {
     color: #AAA;
