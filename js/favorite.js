@@ -3,6 +3,8 @@ window.addEventListener('load', function(){
 
 //lista de favoritos
 
+// PELICULAS
+
 // 1 - recuperar el storage 
 let recuperoStorage= localStorage.getItem("favoritos");
 console.log(recuperoStorage);
@@ -23,8 +25,6 @@ if (seleccionados == null || seleccionados.length == 0){
         buscarYMostrarFavoritos(seleccionados[i])
     }
 }
-
-// PELICULAS
 
 function buscarYMostrarFavoritos (id){
     
@@ -50,32 +50,29 @@ function buscarYMostrarFavoritos (id){
 
 // SERIES 
 
-    let recuperoStorageSerie= localStorage.getItem("favoritosSerie");
-    console.log(recuperoStorageSerie);
+    let recuperoStorage2 = localStorage.getItem('favoritostv'); // recupero storage, tengo un string
+    console.log(recuperoStorage2);
 
-    series = JSON.parse(recuperoStorageSerie); // los paso a objeto literal
+    let series = JSON.parse(recuperoStorage2); // los paso a array con parse
     console.log(series);
 
-    let secciontv = document.querySelector(".tv");
+    let secciontv = document.querySelector(".seriestv"); // destino de los datos en el html
     
-    if (series == null  || series.length == 0){
-        secciontv.innerHTML = `<p> No hay favoritos seleccionados </p>`
-    } else {
-        for (let i= 0; i<series.length; i++){
-            buscarYMostrarFavoritosSeries(series[i])
-        } 
+    for (let i= 0; i<series.length; i++){
+        buscarYMostrarFavoritosSeries(series[i])
     } 
+    
+    function buscarYMostrarFavoritosSeries(tv_id){ 
 
-    function buscarYMostrarFavoritosSeries (idSerie){ 
+        let url2 = `https://api.themoviedb.org/3/tv/${tv_id}?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`
 
-        let url2 = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`
-
-        fetch(url2)
+        fetch(url2) // info de la api
             .then(function(response){
-                return response.json();
+                return response.json(); // convierto en formato json
             })
             .then(function(data){
-                console.log(data);
+                console.log(data)
+
                 secciontv.innerHTML += `<div class="pelicula">
                 <a href="./detail-serie.html?id=${data.id}"><img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="series"></a>
                 <h4 class="titulos-peliculas">${data.original_name}</h4>
