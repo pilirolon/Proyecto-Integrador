@@ -44,7 +44,7 @@ window.addEventListener('load', function(){
     }
 
     if (favoritostv.includes(tv_id)){
-        document.querySelector('.boton-heart') = "Quitar de favoritos";
+        document.querySelector('.boton-heart').innerText = "Quitar de favoritos";
     }
 
     let botonfav = document.querySelector(".boton-heart");
@@ -59,7 +59,7 @@ window.addEventListener('load', function(){
         }else {
             favoritostv.push(tv_id);
             console.log(favoritostv);
-            document.querySelector('.boton-heart').innerText = "Quitar de favoritos"
+            document.querySelector('.boton-heart').innerText = "Quitar de favoritos";
         }
 
         let favoritostvparaStorage = JSON.stringify(favoritostv);
