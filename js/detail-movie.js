@@ -27,7 +27,30 @@ window.addEventListener('load', function(){
             let genero = document.querySelector(".genero");
             genero.innerHTML +=  `<a href="detail-genres.html?id=${peliculaDetalle.genres[i].id}"> ${peliculaDetalle.genres[i].name}</a>`
           }
+
     })
+
+    // GET PROVIDERS
+
+    let url2 = (`https://api.themoviedb.org/3/movie/${movie_id}/watch/providers?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`)
+
+    fetch(url2)
+    .then(function(response){
+        return response.json();
+    })
+
+    .then(function(peliculaProviders){
+        console.log(peliculaProviders);
+
+        for (var i =0; i < peliculaProviders.results.length; i++) {
+            let region = peliculaProviders.results[i];
+
+            for (var i =0; i < region.flatrate,length; i++){
+                document.querySelector('.providers').innerHTML += `<p>${region.flatrate[i].provider_name}</p>`
+            }
+        }
+    })
+
 
     //FAVORITOS
 
