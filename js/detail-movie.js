@@ -23,22 +23,16 @@ window.addEventListener('load', function(){
         document.querySelector('.duracion').innerHTML = `${peliculaDetalle.runtime} Minutos`;
         document.querySelector('.rate').innerHTML = peliculaDetalle.vote_average;
 
-        // document.querySelector('boton-heart').innerHTL = `<button class="boton-heart" id=${info[i].id}><i class="icon-heart"></i></button>`
-        
-        // let generoContainer = document.querySelector('.genero');
-        // let genres = peliculaDetalle.genres;
-
-        // for (i=0, i<genres.length, i++){
-        //     generoContainer += `<p>${genres[i].name}</p>`
-        // }
-
-        //for que recorre el array de peliculaDetalle.genres
-        //por cada genero va a sumar un <p> a generoContainer
+        for (var i = 0; i < peliculaDetalle.genres.length; i++) {
+            let genero = document.querySelector(".genero");
+            genero.innerHTML +=  `<a href="detail-genres.html?id=${peliculaDetalle.genres[i].id}"> ${peliculaDetalle.genres[i].name}</a>`
+          }
     })
 
     //FAVORITOS
-
+    
     let recuperoStorage= localStorage.getItem("favoritos");
+    console.log(recuperoStorage);
 
 	if (recuperoStorage == null ){
 		favoritos = [];
