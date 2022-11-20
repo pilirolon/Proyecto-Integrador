@@ -18,6 +18,11 @@ header .contenedor{
     align-items: center;
 }
 
+.logo2{
+    width: 150px;
+    display: flex;
+    align-items: flex-end;
+}
 header .logo{
     width: 200px;
 }

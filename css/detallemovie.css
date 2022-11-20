@@ -18,6 +18,12 @@ body{
     margin-left: 100px;
 }
 
+.logo2{
+    width: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+
 .info{
     color: white;
     padding-top: 80px;

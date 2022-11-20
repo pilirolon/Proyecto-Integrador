@@ -45,6 +45,11 @@ header .lupita{
     color:white;
     margin-left: 30px;
 }
+.logo2{
+    width: 150px;
+    display: flex;
+    align-items: flex-end;
+}
 
 footer {
     color: #AAA;
