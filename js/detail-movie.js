@@ -30,7 +30,7 @@ window.addEventListener('load', function(){
     })
 
     //FAVORITOS
-    
+
     let recuperoStorage= localStorage.getItem("favoritos");
     console.log(recuperoStorage);
 
@@ -53,7 +53,7 @@ window.addEventListener('load', function(){
 			botonheart.innerHTML="Quitar de favoritos"
 	}
 
-	let infoParaStorageFav=JSON.stringify(favoritos);
+	let infoParaStorageFav = JSON.stringify(favoritos);
 	localStorage.setItem("favoritos", infoParaStorageFav)
 	console.log(localStorage);
 
