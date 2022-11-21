@@ -85,6 +85,30 @@ window.addEventListener('load', function(){
 
     })
 
+    // TRAILER
+
+    // let url4 = (`https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`)
+
+    // fetch(url4)
+    // .then(function(response){
+    //     return response.json();
+    // })
+    // .then(function(info){
+    //     console.log(info);
+
+    //     let resultados = info.results
+    //     let botonReproducir = document.querySelector('.trailer')
+
+    //     botonReproducir.addEventListener('click', function(e){
+    //         e.preventDefault();
+            
+    //         document.querySelector('.video').src = `https://www.youtube.com/embed/${resultados.iso_639_1}`;
+
+            
+
+    //     })
+
+
 
     //FAVORITOS
 
@@ -117,3 +141,4 @@ window.addEventListener('load', function(){
     })
 
 })
+

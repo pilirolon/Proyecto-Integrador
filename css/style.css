@@ -171,6 +171,11 @@ header .lupita{
     min-width: 20%;
 }
 
+.espacio .genero{
+    color: white;
+    text-decoration: none;
+}
+
 /* NO LO USAMOS, PODEMOS SACARLO .boton-heart {
     background: rgba(0, 0, 0, 0.5);
     border: none; 
