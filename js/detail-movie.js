@@ -53,6 +53,36 @@ window.addEventListener('load', function(){
         console.log(error);
     })
 
+    let url3 = (`https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US&page=1`)
+
+    fetch(url3)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+        let resultados = data.results
+        let botonRecomendaciones = document.querySelector('.recomendaciones') // el boton
+        let recomendacion = document.querySelector('.galeria')
+
+        botonRecomendaciones.addEventListener('click', function(e){
+            e.preventDefault();
+
+            for (let i=0; i<resultados.length; i++){
+                document.querySelector('.subtitle').innerText = "Recomendaciones"
+                recomendacion.innerHTML += `<div class="pelicula">
+                <a href="./detail-movie.html?id=${resultados[i].id}"><img src="https://image.tmdb.org/t/p/w500/${resultados[i].poster_path}" alt="pelis"></a>
+                <h4 class="titulos-peliculas">${resultados[i].title}</h4>
+                <p class="fechas">${resultados[i].release_date}</p>
+            </div>`
+            }
+
+        })
+
+        
+
+    })
+
 
     //FAVORITOS
 

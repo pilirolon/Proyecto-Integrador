@@ -31,8 +31,7 @@ window.addEventListener('load', function(){
     
     })
 
-    let url2 = (`
-    https://api.themoviedb.org/3/tv/${tv_id}/watch/providers?api_key=45d43a6901861343cdb188d4f3bafd7c`)
+    let url2 = (`https://api.themoviedb.org/3/tv/${tv_id}/watch/providers?api_key=45d43a6901861343cdb188d4f3bafd7c`)
 
     fetch(url2)
     .then(function(response){
@@ -52,6 +51,8 @@ window.addEventListener('load', function(){
     .catch(function(error){
         console.log(error);
     })
+
+
 
 
     //FAVORITOS agregar serie a fav
