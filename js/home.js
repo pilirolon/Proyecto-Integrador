@@ -8,6 +8,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 	//Aca agregarle el formulario cuando lo terminemos!!!!
 	
 	// PELICULAS End point: Movies --> /search/movie
+
 	
 		const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US` // obtener la info qu esta dentro de nuestro form
 	

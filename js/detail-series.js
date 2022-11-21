@@ -23,36 +23,49 @@ window.addEventListener('load', function(){
             document.querySelector('.episodios').innerHTML = `${serieDetalle.number_of_episodes} EPISODIOS`;
             document.querySelector('.temporadas').innerHTML = `${serieDetalle.number_of_seasons} TEMPORADAS`;
             document.querySelector('.calificacion').innerHTML = serieDetalle.vote_average;
-            document.querySelector('.genero').innerHTML =  serieDetalle.genres;
+
+            for (var i = 0; i < serieDetalle.genres.length; i++) {
+                let genero = document.querySelector(".genero");
+                genero.innerHTML +=  `<a href="detail-genres.html?id=${serieDetalle.genres[i].id}"> ${serieDetalle.genres[i].name}</a>`
+              }
     
     })
 
-    //FAVORITOS
+    //FAVORITOS agregar serie a fav
 
-    let recuperoStorageSerie = localStorage.getItem("favoritos");
+    let favoritostv = []; 
 
-	if (recuperoStorageSerie == null ){
-		favoritosSerie = [];
-	}
-	else {
-		favoritosSerie = JSON.parse(recuperoStorageSerie);
-	}
+    let recuperoStorageSerie = localStorage.getItem("favoritostv");
+    console.log(recuperoStorageSerie);
 
-	let botonheart1 = document.querySelector('.boton-heart');
 
-	botonheart1.addEventListener('click', function(e){
-		if (favoritosSerie.includes(tv_id) == true){
-			let index=favoritosSerie.indexOf(tv_id)
-			favoritosSerie.splice(index, 1)
-			botonheart1.innerHTML="Agregar a favoritos"
-	} else {
-			favoritosSerie.push(tv_id);
-			botonheart1.innerHTML="Quitar de favoritos"
-	}
+    if (recuperoStorageSerie != null){  
+        favoritostv = JSON.parse(recuperoStorageSerie); 
+    }
 
-	let infoParaStorageFavSerie=JSON.stringify(favoritosSerie);
-	localStorage.setItem("favoritos", infoParaStorageFavSerie)
-	console.log(localStorage);
+    if (favoritostv.includes(tv_id)){
+        document.querySelector('.boton-heart').innerText = "Quitar de favoritos";
+    }
+
+    let botonfav = document.querySelector(".boton-heart");
+    console.log(botonfav);
+
+    botonfav.addEventListener('click', function(e){
+        e.preventDefault();
+        if (favoritostv.includes(tv_id)){
+            let index = favoritostv.indexOf(tv_id);
+            favoritostv.splice(index, 1);
+            document.querySelector('.boton-heart').innerText = "Agregar a favoritos";
+        }else {
+            favoritostv.push(tv_id);
+            console.log(favoritostv);
+            document.querySelector('.boton-heart').innerText = "Quitar de favoritos";
+        }
+
+        let favoritostvparaStorage = JSON.stringify(favoritostv);
+        localStorage.setItem("favoritostv", favoritostvparaStorage)
+        console.log(localStorage);
 
     })
-})
+
+})  

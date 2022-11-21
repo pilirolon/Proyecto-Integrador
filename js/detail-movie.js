@@ -23,22 +23,39 @@ window.addEventListener('load', function(){
         document.querySelector('.duracion').innerHTML = `${peliculaDetalle.runtime} Minutos`;
         document.querySelector('.rate').innerHTML = peliculaDetalle.vote_average;
 
-        // document.querySelector('boton-heart').innerHTL = `<button class="boton-heart" id=${info[i].id}><i class="icon-heart"></i></button>`
-        
-        // let generoContainer = document.querySelector('.genero');
-        // let genres = peliculaDetalle.genres;
+        for (var i = 0; i < peliculaDetalle.genres.length; i++) {
+            let genero = document.querySelector(".genero");
+            genero.innerHTML +=  `<a href="detail-genres.html?id=${peliculaDetalle.genres[i].id}"> ${peliculaDetalle.genres[i].name}</a>`
+          }
 
-        // for (i=0, i<genres.length, i++){
-        //     generoContainer += `<p>${genres[i].name}</p>`
-        // }
-
-        //for que recorre el array de peliculaDetalle.genres
-        //por cada genero va a sumar un <p> a generoContainer
     })
+
+    // GET PROVIDERS
+
+    let url2 = (`https://api.themoviedb.org/3/movie/${movie_id}/watch/providers?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`)
+
+    fetch(url2)
+    .then(function(response){
+        return response.json();
+    })
+
+    .then(function(peliculaProviders){
+        console.log(peliculaProviders);
+
+        for (var i =0; i < peliculaProviders.results.length; i++) {
+            let region = peliculaProviders.results[i];
+
+            for (var i =0; i < region.flatrate,length; i++){
+                document.querySelector('.providers').innerHTML += `<p>${region.flatrate[i].provider_name}</p>`
+            }
+        }
+    })
+
 
     //FAVORITOS
 
     let recuperoStorage= localStorage.getItem("favoritos");
+    console.log(recuperoStorage);
 
 	if (recuperoStorage == null ){
 		favoritos = [];
@@ -59,7 +76,7 @@ window.addEventListener('load', function(){
 			botonheart.innerHTML="Quitar de favoritos"
 	}
 
-	let infoParaStorageFav=JSON.stringify(favoritos);
+	let infoParaStorageFav = JSON.stringify(favoritos);
 	localStorage.setItem("favoritos", infoParaStorageFav)
 	console.log(localStorage);
 

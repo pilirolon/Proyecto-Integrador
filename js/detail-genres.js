@@ -15,6 +15,8 @@ fetch (url)
   
 .then (function(generoDetalle){
   console.log(generoDetalle);
+  document.querySelector("section.imagen img").src = `https://image.tmdb.org/t/p/original${generoDetalle.poster_path}` ;
+
   for (var i = 0; i < generoDetalle.results.length; i++) {
     let seleccion = document.querySelector(".galeria")
     seleccion.innerHTML += `<a href="detail-movie.html?id=${generoDetalle.results[i].idGenero}"><img class="imagenes" src=${generoDetalle.results[i].poster_path} alt="top gun"></a>
@@ -28,3 +30,8 @@ fetch (url)
   })
 
 })
+
+
+
+
+

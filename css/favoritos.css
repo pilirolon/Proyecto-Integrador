@@ -17,6 +17,12 @@ header .contenedor {
     align-items: center;
 }
 
+.logo2{
+    width: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+
 header .logo {
     width: 200px;
 }
@@ -52,7 +58,9 @@ header .lupita {
     font-family: 'open sans', sans-serif;
     background: rgba(0, 0, 0, 0.5);
     color:white;
+    margin-left: 30px;
 }
+
 .contenedor{
     display: flex;
     align-items: center;
