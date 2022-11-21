@@ -54,7 +54,7 @@ window.addEventListener('load', function(){
     })
 
     // RECOMENDACIONES 
-    
+
     let url3 = (`https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US&page=1`)
 
     fetch(url3)
@@ -78,10 +78,7 @@ window.addEventListener('load', function(){
                 <p class="fechas">${resultados[i].release_date}</p>
             </div>`
             }
-
         })
-
-        
 
     })
 
