@@ -14,7 +14,6 @@ fetch(url)
     //capturar el section en el que voy a meter los generos. 
     let generos = listaGeneros.genres;
     let lista = document.querySelector(".generos")
-
   //recorremos el array de datos, los generos
     for (let i=0; i<generos.length; i++) {
       // queremos que en cada vuelta nos ponga la info de cada genero

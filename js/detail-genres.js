@@ -18,13 +18,13 @@ fetch (url)
   document.querySelector("section.imagen img").src = `https://image.tmdb.org/t/p/original${generoDetalle.poster_path}` ;
 
   for (var i = 0; i < generoDetalle.results.length; i++) {
+    let foto = data.results[i].poster_path
+    let foto2 = `https://image.tmdb.org/t/p/w500${foto}`
+    let id = generoDetalle.results[i].id
     let seleccion = document.querySelector(".galeria")
-    seleccion.innerHTML += `<a href="detail-movie.html?id=${generoDetalle.results[i].idGenero}"><img class="imagenes" src=${generoDetalle.results[i].poster_path} alt="top gun"></a>
-    <h4 class="titulos peliculas">${generoDetalle.results[i].original_title}</h4>
-    <button role="button" class="boton-heart"><i class="icon-heart"></i></button>`
+    seleccion.innerHTML +=`<article class="contenedor-peliculas"> <a href="detail-movie.html?id=${id}" <img class="imagenes" src=${foto2} alt="top gun">`
   }
   })
-
 .catch(function(error) {
 	console.log("Error: " + error);
   })
