@@ -30,7 +30,7 @@ window.addEventListener('load', function(){
 
     })
 
-    // GET PROVIDERS
+    // GET PROVIDERS -- watch providers -- 
 
     let url2 = (`https://api.themoviedb.org/3/movie/${movie_id}/watch/providers?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`)
 
@@ -38,17 +38,19 @@ window.addEventListener('load', function(){
     .then(function(response){
         return response.json();
     })
+    .then(function(data){
+        console.log(data);
+        peliculaProviders = data.results 
+        let providers = document.querySelector('.providers')
 
-    .then(function(peliculaProviders){
-        console.log(peliculaProviders);
-
-        for (var i =0; i < peliculaProviders.results.length; i++) {
-            let region = peliculaProviders.results[i];
-
-            for (var i =0; i < region.flatrate,length; i++){
-                document.querySelector('.providers').innerHTML += `<p>${region.flatrate[i].provider_name}</p>`
-            }
+        if (peliculaProviders.AR !== undefined) {  // si esta disponible en argentina
+            providers.innerHTML += `<p>${peliculaProviders.AR.flatrate[0].provider_name}</p>` // flatrate es un array
+        } else{
+            providers.innerHTML += "No esta disponible en Argentina"
         }
+    })
+    .catch(function(error){
+        console.log(error);
     })
 
 

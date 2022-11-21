@@ -31,6 +31,29 @@ window.addEventListener('load', function(){
     
     })
 
+    let url2 = (`
+    https://api.themoviedb.org/3/tv/${tv_id}/watch/providers?api_key=45d43a6901861343cdb188d4f3bafd7c`)
+
+    fetch(url2)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+        serieDetalle = data.results 
+        let tvproviders = document.querySelector('.providers')
+
+        if (serieDetalle.AR !== undefined) {  // si esta disponible en argentina
+            tvproviders.innerHTML += `<p>${serieDetalle.AR.flatrate[0].provider_name}</p>` // flatrate es un array
+        } else{
+            tvproviders.innerHTML += "No esta disponible en Argentina"
+        }
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+
+
     //FAVORITOS agregar serie a fav
 
     let favoritostv = []; 
