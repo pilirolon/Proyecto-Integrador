@@ -111,6 +111,23 @@ window.addEventListener('load', function(){
         
     })
 
+    // ADICIONALES - TRAILER !
+
+    // let url5 = (`https://api.themoviedb.org/3/tv/$tv_id}/videos?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`)
+
+    // fetch(url5)
+    // .then(function(response){
+    //     return response.json();
+    // })
+    // .then(function(info){
+    //     console.log(info);
+
+
+
+
+    // })
+
+
     //FAVORITOS agregar serie a fav
 
     let favoritostv = []; 
