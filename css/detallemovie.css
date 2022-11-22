@@ -1,6 +1,8 @@
 *{
     margin: 0%;
     padding: 0%;
+    font-family: 'open sans';
+    color: white;
 }
 
 body{
@@ -222,9 +224,23 @@ header .lupita{
 .boton i{
     margin-right: 15px;
 }
+
 .boton:hover{
     background: #FFF;
     color: black;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 15px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.cadareview{
+    padding-bottom: 15px;
 }
 
 footer {
@@ -238,9 +254,15 @@ footer {
 .subtitulos{
     color: red;
     font-size: 24px;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-top: 40px;
     font-family: 'open sans';
+    margin-left: 50px;
+}
+
+.reseña{
+    margin-left: 50px;
+
 }
 
 

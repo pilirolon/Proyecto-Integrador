@@ -82,6 +82,38 @@ window.addEventListener('load', function(){
 
     })
 
+    // ADICIONALES - GET REVIEWS! 
+
+    let url4 = `https://api.themoviedb.org/3/movie/${movie_id}/reviews?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US&page=1`
+
+    fetch(url4)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+
+        let resultados = data.results
+        let botonReviews = document.querySelector('.reviews')
+        let contenedorReviews = document.querySelector('.comments')
+
+        botonReviews.addEventListener('click', function(e){
+            e.preventDefault();
+
+            for (let i=0; i<resultados.length; i++){
+                document.querySelector('.reseña').innerText = "Reviews"
+
+                contenedorReviews.innerHTML += `<article class="cadareview"> 
+                <p class="autor">Autor: ${resultados[i].author}</p>
+                <p class="comentario">Comentario: "${resultados[i].content}"</p>
+                </article> `
+            }
+        })
+        
+    })
+
+
+
     // TRAILER
 
     // let url4 = (`https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`)
