@@ -89,7 +89,7 @@ header .lupita{
 .sub-container {
     display: flex;
     flex-direction: row;
-    padding-bottom: 150px;
+    padding-bottom: 45px;
 }
 
 .boton-heart{ 
@@ -111,7 +111,7 @@ header .lupita{
 .espacio{
     width: 60%;
     margin: 1%;
-    padding-bottom: 2%;
+    padding-bottom: 5px;
     padding-right: 20px;
 }
 
@@ -223,7 +223,7 @@ footer {
 .subtitulos{
     color: red;
     font-size: 24px;
-    padding-left: 80px;
+    padding-left: 40px;
     padding-top: 40px;
     font-family: 'open sans';
 }
