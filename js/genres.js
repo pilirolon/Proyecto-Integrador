@@ -2,10 +2,8 @@ window.addEventListener('load', function() {
 
 let url = "https://api.themoviedb.org/3/genre/movie/list?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US"
 
-//buscamos la info
 fetch(url) 
   .then(function(response) {
- //convertimos la info en formato json
 	return response.json()
 
   })
@@ -31,6 +29,7 @@ fetch(url)
   })
 
 //para las series
+
 let ruta = "https://api.themoviedb.org/3/genre/tv/list?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US"
 
 fetch (ruta)

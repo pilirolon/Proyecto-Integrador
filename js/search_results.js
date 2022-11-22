@@ -7,15 +7,15 @@ window.addEventListener('load', function () { // load es un evento que controla 
     let aviso = document.querySelector('.aviso') // aca quiero avisar 
 
     //condicionales chequeamos el contenido
-    formulario.addEventListener('submit', function (e) { 
+    formulario.addEventListener('submit', function (e) {
         e.preventDefault();
 
         if (buscador.value == "") {
-            aviso.innerText='El buscador no puede estar vacío'; // o aviso.innerText('')
+            aviso.innerText = 'El buscador no puede estar vacío'; // o aviso.innerText('')
         } else if (buscador.value.length < 3) {
             aviso.innerText = 'Por favor ingrese más de tres caracteres';  // o aviso.innerText('')
         } else {
-            this.submit(); 
+            this.submit();
         }
     })
 
@@ -27,16 +27,16 @@ window.addEventListener('load', function () { // load es un evento que controla 
 
     // Capturamos el formulario
     let queryString = location.search; // capturamos el queryString
-    let queryStringObj = new URLSearchParams(queryString); 
-    const query = queryStringObj.get('busqueda');	
+    let queryStringObj = new URLSearchParams(queryString);
+    const query = queryStringObj.get('busqueda');
 
     // Buscar y q aparezca en el texto
 
     let busqresults = document.querySelector('h3')
     busqresults.innerText = `Resultados de busqueda de: "${query}"`;
-        buscador.addEventListener('input', function(){
-            busqresults.innerText= '';
-            })
+    buscador.addEventListener('input', function () {
+        busqresults.innerText = '';
+    })
 
     // Buscador de pelis
 
@@ -70,12 +70,12 @@ window.addEventListener('load', function () { // load es un evento que controla 
             })
 
             console.log(info);
-            
+
             let movieContainer = document.querySelector('.galeria');
-         
+
 
             // recorremos la info 
-            for(let i=0; i<info.length; i++){
+            for (let i = 0; i < info.length; i++) {
                 movieContainer.innerHTML += `<div class="pelicula">
                 <a href="./detail-movie.html?id=${info[i].id}"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt="pelis"></a>
                 <h4 class="titulos-peliculas">${info[i].title}</h4>
@@ -84,7 +84,7 @@ window.addEventListener('load', function () { // load es un evento que controla 
             }
 
             // editamos nuestro HTML 
-           
+
         })
 
     // buscador SERIES
@@ -115,7 +115,7 @@ window.addEventListener('load', function () { // load es un evento que controla 
             console.log(info);
 
             let serieContainer = document.querySelector('.serie');
-            
+
 
             for (let i = 0; i < info.length; i++) {
                 serieContainer.innerHTML += `<div class="pelicula">

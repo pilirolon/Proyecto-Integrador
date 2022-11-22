@@ -112,7 +112,7 @@ window.addEventListener('load', function () {
 
         })
 
-    // ADICIONALES TRAILER - falta ver como hacer para que aparezca solo uno 
+    // ADICIONALES TRAILER Y VER MAS TRAILERS
 
     let url5 = (`https://api.themoviedb.org/3/movie/${movie_id}/videos?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US`)
 
@@ -126,18 +126,25 @@ window.addEventListener('load', function () {
             let resultados = data.results
             let botonTrailer = document.querySelector('.play')
             let contenedorTrailer = document.querySelector('.trailer')
+            let contenedorTrailers = document.querySelector('.trailers')
 
             botonTrailer.addEventListener('click', function (e) {
 
                 for (let i = 0; i < resultados.length; i++) {
-                    if (resultados[i].name == "Trailer" || "Official Trailer") {
-                        document.querySelector('.verTrailer').innerText = "Trailers"
+                    if (resultados[i].name != "Trailer" || resultados[i].name != "Official Trailer") {
+                        document.querySelector('.verTrailers').innerText = "Otros trailers y videos"
+                        contenedorTrailers.innerHTML += `<iframe class= "youtube" width="300" height="215" src="https://www.youtube.com/embed/${resultados[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
                     } else {
                         document.querySelector('.verTrailer').innerText = "No hay trailers disponibles"
                     }
                 }
-                
-                contenedorTrailer.innerHTML += `<iframe width="560" height="315" src="https://www.youtube.com/embed/${resultados[0].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+
+                if (resultados[0].name == "Trailer" || resultados[0].name == "Official Trailer"){
+                    document.querySelector('.verTrailer').innerText = "Trailer"
+                        contenedorTrailer.innerHTML += `<iframe class= "youtube" width="300" height="215" src="https://www.youtube.com/embed/${resultados[0].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                        document.querySelector('.verTrailer').innerText = "Trailer"
+                }
+
             })
 
             //FAVORITOS
