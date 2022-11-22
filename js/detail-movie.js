@@ -132,11 +132,12 @@ window.addEventListener('load', function () {
                 for (let i = 0; i < resultados.length; i++) {
                     if (resultados[i].name == "Trailer" || "Official Trailer") {
                         document.querySelector('.verTrailer').innerText = "Trailers"
-                        contenedorTrailer.innerHTML += `<iframe width="560" height="315" src="https://www.youtube.com/embed/${resultados[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
                     } else {
                         document.querySelector('.verTrailer').innerText = "No hay trailers disponibles"
                     }
                 }
+                
+                contenedorTrailer.innerHTML += `<iframe width="560" height="315" src="https://www.youtube.com/embed/${resultados[0].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
             })
 
             //FAVORITOS
