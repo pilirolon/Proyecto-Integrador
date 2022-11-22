@@ -43,8 +43,8 @@ fetch(url2)
      console.log(results);
      let GeneroEspecifico= ''
 
-    for(let i=0; i<4; i++){
-        GeneroEspecifico += `<div class="series">
+    for(let i=0; i<results.length; i++){
+        GeneroEspecifico += `<div class="pelicula">
         <a href="./detail-serie.html?id=${results[i].id}"><img src="https://image.tmdb.org/t/p/w500/${results[i].poster_path}" alt="series"></a>
         <h4 class="titulos-series">${results[i].original_name}</h4>
         <p class="fechas">${results[i].first_air_date}</p>
