@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'open sans';
+    color: white;
 }
 
 body{
@@ -89,7 +90,7 @@ header .lupita{
 .sub-container {
     display: flex;
     flex-direction: row;
-    padding-bottom: 150px;
+    padding-bottom: 45px;
 }
 
 .boton-heart{ 
@@ -111,7 +112,7 @@ header .lupita{
 .espacio{
     width: 60%;
     margin: 1%;
-    padding-bottom: 2%;
+    padding-bottom: 5px;
     padding-right: 20px;
 }
 
@@ -133,6 +134,120 @@ footer {
     display: flex;
     align-items: flex-end;
 }
+
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.contenedor .flecha-izquierda,
+.contenedor .flecha-derecha{
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    line-height: 40px;
+    width: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 100; 
+    transition: .2s ease all;
+}
+.contenedor .flecha-izquierda:hover,
+.contenedor .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.contenedor .flecha-izquierda{
+    left: 0;
+}
+
+.contenedor .flecha-derecha{
+    right: 0;
+}
+
+.contenedor-peliculas{
+    width: 100%;
+    padding: 20px 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth; 
+}
+
+.contenedor-peliculas .galeria{
+    display: flex;
+    flex-wrap: nowrap; 
+}
+
+.contenedor-peliculas .galeria .pelicula{
+    transition: .3s ease all; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3); 
+    justify-content: space-between;
+    min-width: 20%;
+}
+
+.contenedor-peliculas .galeria .pelicula img{
+        width: 180px;
+        height: 250px;
+        margin: 30px; 
+        vertical-align: top;
+    }
+
+.pelicula {
+        color: white;
+        padding: 5px;
+        font-family: 'open sans', sans-serif;
+        text-align: center;
+}
+
+.boton{ 
+    background: rgba(0, 0, 0, 0.5);
+    border: none; 
+    border-radius: 5px; 
+    padding: 15px; 
+    color: #FFF;
+    margin-right: 20px;  
+    font-size: 18px; 
+}
+.boton i{
+    margin-right: 15px;
+}
+.boton:hover{
+    background: #FFF;
+    color: black;
+}
+
+.subtitulos{
+    color: red;
+    font-size: 24px;
+    padding-left: 30px;
+    padding-top: 40px;
+    font-family: 'open sans';
+    margin-left: 50px;
+}
+
+.reseña{
+    margin-left: 50px;
+
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 15px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.cadareview{
+    padding-bottom: 15px;
+}
+
 
 @media (max-width: 800px){
    header .logotipo {

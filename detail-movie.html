@@ -24,8 +24,6 @@
             <a href="./index.html"><img class="logo" src="./img/logo crop.jpeg" alt="logo"></a>
             <nav class="inicio">
                     <a href="./index.html"> Inicio </a>
-                    <a href="./detail-serie.html"> Series </a>
-                    <a href="#" class="activo"> Películas </a>
                     <a href="./genres.html"> Generos </a>
                     <a href="./favoritos.html"> Favoritos </a>
                     <a href="./busqueda.html"> Resultados de búsqueda </a>
@@ -40,25 +38,23 @@
         <h1 class="titulo"></h1>
         <article class="bloque">
             <div class="sub-container">
-                <img class="imagen" src="./img/no respires.jpg" alt="no respires">
+                <img class="imagen" src="" alt="no respires">
                 <div class="letras">
                     <div class="titulos espacio">FECHA DE ESTRENO</div>
                     <div class="espacio estreno"></div>
                     <div class="titulos espacio">DURACION</div>
-                    <div class = "espacio duracion"> 88min </div>
-                    <!-- <div class="titulos espacio"> DIRECTOR </div>
-                    <div class="espacio"> Fede Alvarez</div> -->
+                    <div class = "espacio duracion"></div>
                     <div class="titulos espacio">GENERO</div>
                     <div class="espacio genero"></div>
                     <div class="titulos espacio">RESUMEN</div>
-                    <div class="espacio sinopsis">Rocky, Alex y Money ya han robado casas en otras ocasiones.
-                        <div>Ahora preparan un nuevo golpe, el que permitirá a Rocky sadivr de Detroit </div>
-                        <div>y salvar a su hermana pequeña del maltrato de su madre y de una vida sin futuro.</div>
-                    </div>
+                    <div class="espacio sinopsis"></div>
                     <div class="titulos espacio">CALIFICACION</div>
                     <div class="espacio rate"></div>
                     <button class="boton-heart"><i class="icon-heart"></i></button>
                     <button class="boton recomendaciones">Ver Recomendaciones</button>
+                    <button class="boton reviews">Ver Reviews</button>
+                    <button class="boton play">Trailer  <i class="fa-solid fa-play"></i></button>
+                    <!-- <button role="button" class="boton trailer"><i class="fa-solid fa-play"></i>Ver Trailer</button> -->
                     <div class="titulos espacio">PLATAFORMAS</div>
                     <div class="espacio providers"></div>
         
@@ -68,22 +64,41 @@
         </article>
     </section>
 
+    <h2 class="subtitulos reseña"></h2>
+
+    <section class= "comments">
+
+        <!-- <article class="cadareview"> 
+            <p class="autor"></p>
+            <p class="comentario"></p> 
+        </article>  -->
+
+    </section>
+
+    <h2 class="subtitulos subtitle"></h2>
+
     <section class= "contenedor">
 
         <article class="contenedor-peliculas">
-            <h2 class="subtitulos subtitle"></h2>
             <div class="galeria">
                <!-- <div class = "pelicula" aca van las peliculas de js -->
             </div>
         </article>
-        
+
     </section>
 
-    <script src="./js/detail-movie.js" type="text/javascript"></script>
+    <h2 class="subtitulos verTrailer"></h2>
+
+    <section class = "trailer">
+
+    </section>
+
     <footer>
-        <img class="logo2" src="../Proyectointegrador/img/tmdb.png"alt="tmdb">
+        <img class="logo2" src="./img/tmdb.png"alt="tmdb">
         PCD Developers®. Developed by Pilar Rolon, Clara Pellet Lastra y Delfina Rawson
     </footer>
+
+    <script src="./js/detail-movie.js" type="text/javascript"></script>
     
 </body>
 
