@@ -20,10 +20,6 @@ fetch(url)
         <a href="./detail-genres.html?id=${generos[i].id}" class="genero-boton">${generos[i].name}</a>
         </article>`    
     }})
-
-  //capturar el section en el que voy a meter los generos, agregar un article(ancor pata redirigir al detalle, 
-  //le paso una query para el id) por cada genero al section capture antes
-  
   .catch(function(error) {
 	console.log("Error: " + error);
   })
@@ -44,6 +40,8 @@ fetch (ruta)
       lista.innerHTML += `<article class="borde">
       <a href="./detail-genres.html?id=${generosSeries[i].id}" class="genero-boton">${generosSeries[i].name}</a>
       </article>`    
+
+
 }})
 .catch(function(error) {
 	console.log("Error: " + error);
