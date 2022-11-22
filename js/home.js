@@ -1,14 +1,7 @@
-// La página principal del sitio deberá mostrar 3 listados de al menos 5 elementos con la oferta de películas y/ o series obtenidas de los end points "TV" y "Movies".
-// Cada listado tendrá su título que lo identifica.
-// Cada elemento de la lista tendrá al menos una foto, un texto con el título/ nombre y la fecha de estreno.
-// Al hacer click sobre cualquiera de los elementos debe redirigir a la página de detalle (punto 4).
 
 window.addEventListener('load', function() {//controlar que todo el html esté cargado en el navegador
-
-	//Aca agregarle el formulario cuando lo terminemos!!!!
 	
-	// PELICULAS End point: Movies --> /search/movie
-
+	// TOP RATES MOVIES End point --> /movie/top_rated
 	
 		const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US` // obtener la info qu esta dentro de nuestro form
 	
@@ -23,7 +16,6 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 	
 				let movieContainer= document.querySelector('.galeria');
 	
-	
 			//recorremos la info
 			for(let i=0; i<info.length; i++){
 				movieContainer.innerHTML += `<div class="pelicula">
@@ -32,15 +24,12 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 				<p class="fechas">${info[i].release_date}</p>
 			</div>`
 		}
-			//editamos nuestro html
-
-			// FAVORTOS boton con event clase agregar a favoritos con un event listener que cuando cliqueas el boton lo agrega a favortios.  
 		})
 		.catch(function(error){
 			console.log(error);
 		})  
 	
-	// SERIES End point /search/tv
+	// TV POPULAR End point /tv/popular
 	
 		const url2 = `https://api.themoviedb.org/3/tv/popular?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US` // obtener la info qu esta dentro de nuestro form
 	
@@ -69,7 +58,7 @@ window.addEventListener('load', function() {//controlar que todo el html esté c
 			});
 	
 	
-	//peliculas del momento
+	//NOW PLAYING - End point /now_playing
 	
 	const url3 = `https://api.themoviedb.org/3/movie/now_playing?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US` // obtener la info qu esta dentro de nuestro form
 	
