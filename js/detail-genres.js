@@ -23,7 +23,7 @@ fetch (url)
     seccion.innerHTML += `<div class="pelicula">
 					<a href="./detail-serie.html?id=${results[i].id}"><img src="https://image.tmdb.org/t/p/w500/${results[i].poster_path}" alt="series"></a>
 					<h4 class="titulos-peliculas">${results[i].title}</h4>
-					<p class="fechas">${results[i].release_date}</p>
+					<p class="fechas">${results[i].release_date}</p> 
 				</div>`
   }
   })

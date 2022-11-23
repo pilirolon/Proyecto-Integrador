@@ -46,7 +46,7 @@ window.addEventListener('load', function(){
         if (peliculaProviders.AR !== undefined) {  // si esta disponible en argentina
             providers.innerHTML += `<p>${peliculaProviders.AR.flatrate[0].provider_name}</p>` // flatrate es un array
         } else{
-            providers.innerHTML += "No esta disponible en Argentina"
+            providers.innerText += "No esta disponible en Argentina"
         }
     })
     .catch(function(error){
