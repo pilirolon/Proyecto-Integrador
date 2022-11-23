@@ -2,10 +2,8 @@ window.addEventListener('load', function() {
 
 let url = "https://api.themoviedb.org/3/genre/movie/list?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US"
 
-//buscamos la info
 fetch(url) 
   .then(function(response) {
- //convertimos la info en formato json
 	return response.json()
 
   })
@@ -22,15 +20,12 @@ fetch(url)
         <a href="./detail-genres.html?id=${generos[i].id}" class="genero-boton">${generos[i].name}</a>
         </article>`    
     }})
-
-  //capturar el section en el que voy a meter los generos, agregar un article(ancor pata redirigir al detalle, 
-  //le paso una query para el id) por cada genero al section capture antes
-  
   .catch(function(error) {
 	console.log("Error: " + error);
   })
 
 //para las series
+
 let ruta = "https://api.themoviedb.org/3/genre/tv/list?api_key=45d43a6901861343cdb188d4f3bafd7c&language=en-US"
 
 fetch (ruta)
@@ -45,6 +40,8 @@ fetch (ruta)
       lista.innerHTML += `<article class="borde">
       <a href="./detail-genres.html?id=${generosSeries[i].id}" class="genero-boton">${generosSeries[i].name}</a>
       </article>`    
+
+
 }})
 .catch(function(error) {
 	console.log("Error: " + error);

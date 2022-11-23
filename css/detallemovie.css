@@ -1,6 +1,8 @@
 *{
     margin: 0%;
     padding: 0%;
+    font-family: 'open sans';
+    color: white;
 }
 
 body{
@@ -56,7 +58,7 @@ body{
 .sub-container {
     display: flex;
     flex-direction: row;
-    padding-bottom: 150px;
+    padding-bottom: 45px;
     }
 
 .boton-heart{ 
@@ -78,7 +80,7 @@ body{
 .espacio{
     width: 60%;
     margin: 1%;
-    padding-bottom: 2%;
+    padding-bottom: 5px;
     padding-right: 20px;
 }
 
@@ -222,10 +224,42 @@ header .lupita{
 .boton i{
     margin-right: 15px;
 }
+
 .boton:hover{
     background: #FFF;
     color: black;
 }
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 15px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.cadareview{
+    padding-bottom: 15px;
+}
+
+.subtitulos{
+    color: red;
+    font-size: 24px;
+    padding-left: 30px;
+    padding-top: 40px;
+    font-family: 'open sans';
+    margin-left: 50px;
+}
+
+.reseña{
+    margin-left: 50px;
+}
+
+.verTrailer{
+    padding-bottom: 30px;
+}
+
 
 footer {
     color: #AAA;
@@ -235,14 +269,21 @@ footer {
     padding-top: 50px;
 }
 
-.subtitulos{
-    color: red;
-    font-size: 24px;
-    padding-left: 80px;
-    padding-top: 40px;
-    font-family: 'open sans';
+.youtube{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
+.trailer{
+    padding: 0px;
+    margin: 0px;
+}
+
+.trailers{
+    margin: 0px;
+}
 
 @media (max-width: 768px){
     *{
