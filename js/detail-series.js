@@ -70,8 +70,10 @@ window.addEventListener('load', function () {
 
             botonRecomendaciones.addEventListener('click', function (e) {
                 e.preventDefault();
+
+                document.querySelector('.subtitle').innerText = "Recomendaciones";
+
                 for (let i = 0; i < resultados.length; i++) {
-                    document.querySelector('.subtitle').innerText = "Recomendaciones"
                     recomendacion.innerHTML += `<div class="pelicula">
                 <a href="./detail-serie.html?id=${resultados[i].id}"><img src="https://image.tmdb.org/t/p/w500/${resultados[i].poster_path}" alt="pelis"></a>
                 <h4 class="titulos-peliculas">${resultados[i].original_name}</h4>
@@ -100,6 +102,7 @@ window.addEventListener('load', function () {
                         e.preventDefault();
 
                         for (let i = 0; i < resultados.length; i++) {
+
                             document.querySelector('.reseña').innerText = "Reviews"
 
                             contenedorReviews.innerHTML += `<article class="cadareview"> 

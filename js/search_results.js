@@ -26,7 +26,8 @@ window.addEventListener('load', function () { // load es un evento que controla 
     // Resultados de busqueda 
 
     // Capturamos el formulario
-    let queryString = location.search; // capturamos el queryString
+
+    let queryString = location.search;                                              // capturamos el queryString
     let queryStringObj = new URLSearchParams(queryString);
     const query = queryStringObj.get('busqueda');
 
@@ -95,12 +96,12 @@ window.addEventListener('load', function () { // load es un evento que controla 
 
     fetch(url2)
         .then(function (response) {
-            return response.json() // convertir la info a json
+            return response.json()
         })
         .then(function (data) {
             let info = data.results
 
-            let series = document.querySelector('.contseries') // creamos la variable del campo 
+            let series = document.querySelector('.contseries')
             let nada = '';
 
             if (info.length == 0) {

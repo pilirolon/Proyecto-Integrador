@@ -70,8 +70,9 @@ window.addEventListener('load', function () {
             botonRecomendaciones.addEventListener('click', function (e) {
                 e.preventDefault();
 
+                document.querySelector('.subtitle').innerText = "Recomendaciones";
+
                 for (let i = 0; i < resultados.length; i++) {
-                    document.querySelector('.subtitle').innerText = "Recomendaciones"
                     recomendacion.innerHTML += `<div class="pelicula">
                 <a href="./detail-movie.html?id=${resultados[i].id}"><img src="https://image.tmdb.org/t/p/w500/${resultados[i].poster_path}" alt="pelis"></a>
                 <h4 class="titulos-peliculas">${resultados[i].title}</h4>
@@ -100,9 +101,9 @@ window.addEventListener('load', function () {
             botonReviews.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                for (let i = 0; i < resultados.length; i++) {
-                    document.querySelector('.reseña').innerText = "Reviews"
+                document.querySelector('.reseña').innerText = "Reviews";
 
+                for (let i = 0; i < resultados.length; i++) {
                     contenedorReviews.innerHTML += `<article class="cadareview"> 
                 <p class="autor">Autor: ${resultados[i].author}</p>
                 <p class="comentario">Comentario: "${resultados[i].content}"</p>
@@ -139,10 +140,10 @@ window.addEventListener('load', function () {
                     }
                 }
 
-                if (resultados[0].name == "Trailer" || resultados[0].name == "Official Trailer"){
+                if (resultados[0].name == "Trailer" || resultados[0].name == "Official Trailer") {
                     document.querySelector('.verTrailer').innerText = "Trailer"
-                        contenedorTrailer.innerHTML += `<iframe class= "youtube" width="300" height="215" src="https://www.youtube.com/embed/${resultados[0].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-                        document.querySelector('.verTrailer').innerText = "Trailer"
+                    contenedorTrailer.innerHTML += `<iframe class= "youtube" width="300" height="215" src="https://www.youtube.com/embed/${resultados[0].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                    document.querySelector('.verTrailer').innerText = "Trailer"
                 }
 
             })

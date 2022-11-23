@@ -89,5 +89,5 @@ window.addEventListener('load', function () {//controlar que todo el html esté 
 		.catch(function (error) {
 			console.log(error);
 		})
-
+			
 })
